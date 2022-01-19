@@ -1,0 +1,26 @@
+.flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.flexjustify {
+  display: flex;
+  justify-content: center;
+}
+
+.iconspacing {
+  margin-right: 0.1rem;
+}
+
+.spacer {
+  margin-right: 0.5rem;
+}
+
+@media screen and (max-width: 319px) {
+  .flexjustifyend {
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+  }
+}
