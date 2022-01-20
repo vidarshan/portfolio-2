@@ -1,10 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Be Vietnam Pro", sans-serif !important;
+  font-family: "Manrope", sans-serif !important;
 }
 
 a {
@@ -16,12 +15,23 @@ a {
   box-sizing: border-box;
 }
 
-.mantine-datxwl {
-  font-family: "Be Vietnam Pro", sans-serif !important;
+.mantine-datxwl,
+.mantine-1oqsa6w,
+.mantine-17m1sye,
+span,
+.mantine-1cy5umz,
+.mantine-a2kbre,
+.mantine-a2kbre {
+  font-family: "Manrope", sans-serif !important;
 }
 
 .flex-container {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+.mantine-r182e0,
+.mantine-1tqac7r {
+  background-color: transparent !important;
 }

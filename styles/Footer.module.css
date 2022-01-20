@@ -9,6 +9,11 @@
   justify-content: center;
 }
 
+.flexaligncenter {
+  display: flex;
+  align-items: center;
+}
+
 .iconspacing {
   margin-right: 0.1rem;
 }

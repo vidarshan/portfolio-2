@@ -9,7 +9,7 @@ const Footer = () => {
       <Col className={styles.flexjustify} span={12}>
         <Text
           color="gray"
-          className={styles.flexjustifyend}
+          className={styles.flexaligncenter}
           size="xs"
           align="center"
         >
