@@ -37,11 +37,11 @@ span,
 }
 
 .row-spacing {
-  margin: 0.5rem 0 !important;
+  margin: 1rem 0 !important;
 }
 
 .badge-spacing {
-  margin: 0 0.4rem !important;
+  margin: 0.4rem 0.2rem !important;
 }
 
 button {

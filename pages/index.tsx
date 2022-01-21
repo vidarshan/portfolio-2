@@ -14,6 +14,7 @@ import {
   Chip,
   Badge,
   Avatar,
+  Divider,
 } from "@mantine/core";
 import type { NextPage } from "next";
 import { useState } from "react";
@@ -59,9 +60,6 @@ const Home: NextPage = () => {
             md: 1000,
             lg: 1200,
             xl: 1400,
-          },
-          radius: {
-            xs: 0,
           },
         }}
         withGlobalStyles
@@ -232,13 +230,13 @@ const Home: NextPage = () => {
               <Col sx={{ height: "80vh" }} span={12}>
                 <Title order={1}>Projects</Title>
                 <Grid>
-                  <Col span={4}>
+                  <Col span={6}>
                     <Card withBorder radius="xs">
                       <Col span={12}>
                         <Image layout="responsive" src={ss} alt="cover" />
                       </Col>
                       <Col span={12}>
-                        <Text weight={600} size="lg">
+                        <Text weight={600} size="xl">
                           Techstop
                         </Text>
                       </Col>
@@ -248,51 +246,68 @@ const Home: NextPage = () => {
                           color="green"
                           radius="xs"
                           variant="dot"
+                          className="badge-spacing"
                         >
                           React JS
                         </Badge>
                         <Badge
                           size="lg"
-                          className="badge-spacing"
                           color="green"
                           radius="xs"
                           variant="dot"
+                          className="badge-spacing"
+                        >
+                          React JS
+                        </Badge>
+                        <Badge
+                          size="lg"
+                          color="green"
+                          radius="xs"
+                          variant="dot"
+                          className="badge-spacing"
                         >
                           Node JS
                         </Badge>
                         <Badge
                           size="lg"
-                          className="badge-spacing"
                           color="green"
                           radius="xs"
                           variant="dot"
+                          className="badge-spacing"
                         >
                           Express JS
                         </Badge>
                         <Badge
                           size="lg"
-                          className="badge-spacing"
                           color="green"
                           radius="xs"
                           variant="dot"
+                          className="badge-spacing"
                         >
                           Mongo DB
                         </Badge>
                       </Col>
-                      <Col span={12}>
-                        <Text align="justify" weight={400} size="lg">
+                      <Col className="row-spacing" span={12}>
+                        <Divider variant="solid" />
+                        <Text
+                          sx={{ padding: "1rem 0" }}
+                          align="justify"
+                          weight={400}
+                          size="md"
+                        >
                           Lorem, ipsum dolor sit amet consectetur adipisicing
                           elit. Omnis atque deleniti a nisi, nam quae at
                           sapiente excepturi quia labore voluptate, ut commodi
                           minus ipsa error ad, inventore blanditiis optio?
                         </Text>
+                        <Divider variant="dotted" />
                       </Col>
                       <Grid>
                         <Col span={6}>
                           <Button
                             size="xs"
-                            color="gray"
-                            variant="outline"
+                            color="blue"
+                            variant="default"
                             fullWidth
                             leftIcon={<BsGithub />}
                           >
@@ -302,10 +317,10 @@ const Home: NextPage = () => {
                         <Col span={6}>
                           <Button
                             size="xs"
-                            color="gray"
-                            variant="outline"
+                            color="blue"
+                            variant="default"
                             fullWidth
-                            leftIcon={<BsFillEyeFill />}
+                            leftIcon={<BsGithub />}
                           >
                             View Demo
                           </Button>
@@ -313,9 +328,89 @@ const Home: NextPage = () => {
                       </Grid>
                     </Card>
                   </Col>
-                  <Col span={4}>
-                    <Card radius="xs" sx={{ backgroundColor: "red" }}>
-                      dd
+                  <Col span={6}>
+                    <Card withBorder radius="xs">
+                      <Col span={12}>
+                        <Image layout="responsive" src={ss} alt="cover" />
+                      </Col>
+                      <Col span={12}>
+                        <Text weight={600} size="xl">
+                          Techstop
+                        </Text>
+                      </Col>
+                      <Col span={12}>
+                        <Badge
+                          size="lg"
+                          color="green"
+                          radius="xs"
+                          variant="dot"
+                          className="badge-spacing"
+                        >
+                          React JS
+                        </Badge>
+                        <Badge
+                          size="lg"
+                          color="green"
+                          radius="xs"
+                          variant="dot"
+                          className="badge-spacing"
+                        >
+                          Node JS
+                        </Badge>
+                        <Badge
+                          size="lg"
+                          color="green"
+                          radius="xs"
+                          variant="dot"
+                          className="badge-spacing"
+                        >
+                          Express JS
+                        </Badge>
+                        <Badge
+                          size="lg"
+                          color="green"
+                          radius="xs"
+                          variant="dot"
+                          className="badge-spacing"
+                        >
+                          Mongo DB
+                        </Badge>
+                      </Col>
+                      <Col span={12}>
+                        <Text align="justify" weight={400} size="lg">
+                          Lorem, ipsum dolor sit amet consectetur adipisicing
+                          elit. Omnis atque deleniti a nisi, nam quae at
+                          sapiente excepturi quia labore voluptate, ut commodi
+                          minus ipsa error ad, inventore blanditiis
+                          optio?sddsfdsfdfs lorem30
+                        </Text>
+                      </Col>
+                      <Col span={12}>
+                        <Grid>
+                          <Col span={6}>
+                            <Button
+                              size="xs"
+                              color="gray"
+                              variant="outline"
+                              fullWidth
+                              leftIcon={<BsGithub />}
+                            >
+                              View Repo
+                            </Button>
+                          </Col>
+                          <Col span={6}>
+                            <Button
+                              size="xs"
+                              color="gray"
+                              variant="outline"
+                              fullWidth
+                              leftIcon={<BsFillEyeFill />}
+                            >
+                              View Demo
+                            </Button>
+                          </Col>
+                        </Grid>
+                      </Col>
                     </Card>
                   </Col>
                   <Col span={4}>
