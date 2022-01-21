@@ -35,3 +35,15 @@ span,
 .mantine-1tqac7r {
   background-color: transparent !important;
 }
+
+.row-spacing {
+  margin: 0.5rem 0 !important;
+}
+
+.badge-spacing {
+  margin: 0 0.4rem !important;
+}
+
+button {
+  border-radius: 0 !important;
+}

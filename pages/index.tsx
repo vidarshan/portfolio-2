@@ -18,15 +18,19 @@ import {
 import type { NextPage } from "next";
 import { useState } from "react";
 import {
-  BsCloudSunFill,
+  BsArrowRight,
   BsMoonStarsFill,
   BsSunFill,
-  BsGlobe,
+  BsLink,
   BsDashCircleFill,
   BsCheckCircleFill,
+  BsGithub,
+  BsFillEyeFill,
 } from "react-icons/bs";
-import { FaReact } from "react-icons/fa";
+import { SiMongodb } from "react-icons/si";
+import { FaNodeJs, FaReact } from "react-icons/fa";
 import { MdComputer } from "react-icons/md";
+import { FiExternalLink, FiLink } from "react-icons/fi";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
@@ -34,6 +38,7 @@ import { MantineProvider } from "@mantine/core";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import ss from "../images/ss.jpeg";
+import { BiLink } from "react-icons/bi";
 
 const Home: NextPage = () => {
   const [colorScheme, setColorScheme] = useState<ColorScheme>("light");
@@ -54,6 +59,9 @@ const Home: NextPage = () => {
             md: 1000,
             lg: 1200,
             xl: 1400,
+          },
+          radius: {
+            xs: 0,
           },
         }}
         withGlobalStyles
@@ -224,48 +232,96 @@ const Home: NextPage = () => {
               <Col sx={{ height: "80vh" }} span={12}>
                 <Title order={1}>Projects</Title>
                 <Grid>
-                  <Col xs={12} sm={6} md={6} lg={6} xl={6} span={6}>
-                    <Card radius="md">
-                      <Image
-                        // width={500}
-                        // height={500}
-
-                        layout="responsive"
-                        src={ss}
-                        alt="cover"
-                      />
+                  <Col span={4}>
+                    <Card withBorder radius="xs">
+                      <Col span={12}>
+                        <Image layout="responsive" src={ss} alt="cover" />
+                      </Col>
+                      <Col span={12}>
+                        <Text weight={600} size="lg">
+                          Techstop
+                        </Text>
+                      </Col>
+                      <Col span={12}>
+                        <Badge
+                          size="lg"
+                          color="green"
+                          radius="xs"
+                          variant="dot"
+                        >
+                          React JS
+                        </Badge>
+                        <Badge
+                          size="lg"
+                          className="badge-spacing"
+                          color="green"
+                          radius="xs"
+                          variant="dot"
+                        >
+                          Node JS
+                        </Badge>
+                        <Badge
+                          size="lg"
+                          className="badge-spacing"
+                          color="green"
+                          radius="xs"
+                          variant="dot"
+                        >
+                          Express JS
+                        </Badge>
+                        <Badge
+                          size="lg"
+                          className="badge-spacing"
+                          color="green"
+                          radius="xs"
+                          variant="dot"
+                        >
+                          Mongo DB
+                        </Badge>
+                      </Col>
+                      <Col span={12}>
+                        <Text align="justify" weight={400} size="lg">
+                          Lorem, ipsum dolor sit amet consectetur adipisicing
+                          elit. Omnis atque deleniti a nisi, nam quae at
+                          sapiente excepturi quia labore voluptate, ut commodi
+                          minus ipsa error ad, inventore blanditiis optio?
+                        </Text>
+                      </Col>
                       <Grid>
-                        <Col span={12}>
-                          <Text size="xl" weight={600}>
-                            Techstop
-                          </Text>
-
-                          <Text align="justify" size="sm">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Quis dolorum velit placeat consectetur
-                            facilis! Ex porro nulla officiis dolor dicta eaque
-                            illum magnam. Quam odit quia nemo optio saepe, at
-                            quae in sapiente quo quidem repellendus autem beatae
-                            dicta sunt.
-                          </Text>
-                          <Badge
-                            sx={{ paddingLeft: 0 }}
-                            size="lg"
-                            color="teal"
-                            leftSection={
-                              <Avatar radius="sm">
-                                <FaReact />
-                              </Avatar>
-                            }
+                        <Col span={6}>
+                          <Button
+                            size="xs"
+                            color="gray"
+                            variant="outline"
+                            fullWidth
+                            leftIcon={<BsGithub />}
                           >
-                            React JS
-                          </Badge>
+                            View Repo
+                          </Button>
+                        </Col>
+                        <Col span={6}>
+                          <Button
+                            size="xs"
+                            color="gray"
+                            variant="outline"
+                            fullWidth
+                            leftIcon={<BsFillEyeFill />}
+                          >
+                            View Demo
+                          </Button>
                         </Col>
                       </Grid>
                     </Card>
                   </Col>
-                  <Col span={6}>
-                    <Card>ddd</Card>
+                  <Col span={4}>
+                    <Card radius="xs" sx={{ backgroundColor: "red" }}>
+                      dd
+                    </Card>
+                  </Col>
+                  <Col span={4}>
+                    <Card radius="xs" sx={{ backgroundColor: "red" }}>
+                      dd
+                    </Card>
                   </Col>
                 </Grid>
               </Col>
