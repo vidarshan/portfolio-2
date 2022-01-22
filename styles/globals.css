@@ -21,7 +21,8 @@ a {
 span,
 .mantine-1cy5umz,
 .mantine-a2kbre,
-.mantine-a2kbre {
+.mantine-a2kbre,
+div {
   font-family: "Manrope", sans-serif !important;
 }
 
@@ -44,6 +45,11 @@ span,
   margin: 0.4rem 0.2rem !important;
 }
 
-button {
+button,
+.mantine-Card-root {
   border-radius: 0 !important;
+}
+
+.mantine-Timeline-itemTitle {
+  font-weight: 700 !important;
 }

@@ -9,15 +9,19 @@ import {
   ColorSchemeProvider,
   Title,
   Timeline,
+  Affix,
   Card,
-  Chips,
-  Chip,
+  Group,
+  Image,
   Badge,
-  Avatar,
+  Blockquote,
   Divider,
+  Transition,
+  Avatar,
 } from "@mantine/core";
 import type { NextPage } from "next";
 import { useState } from "react";
+import { useWindowScroll } from "@mantine/hooks";
 import {
   BsArrowRight,
   BsMoonStarsFill,
@@ -31,17 +35,19 @@ import {
 import { SiMongodb } from "react-icons/si";
 import { FaNodeJs, FaReact } from "react-icons/fa";
 import { MdComputer } from "react-icons/md";
-import { FiExternalLink, FiLink } from "react-icons/fi";
+import { FiExternalLink, FiLink, FiArrowUp } from "react-icons/fi";
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { MantineProvider } from "@mantine/core";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import ss from "../images/ss.jpeg";
+import profileimg from "../images/myimage.jpeg";
 import { BiLink } from "react-icons/bi";
+import ProjectCard from "../components/ProjectCard";
 
 const Home: NextPage = () => {
+  const [scroll, scrollTo] = useWindowScroll();
   const [colorScheme, setColorScheme] = useState<ColorScheme>("light");
   const toggleColorScheme = (value?: ColorScheme) =>
     setColorScheme(value || (colorScheme === "dark" ? "light" : "dark"));
@@ -61,9 +67,26 @@ const Home: NextPage = () => {
             lg: 1200,
             xl: 1400,
           },
+          radius: {
+            xs: 0,
+          },
         }}
         withGlobalStyles
       >
+        <Affix position={{ bottom: 20, right: 20 }}>
+          <Transition transition="slide-up" mounted={scroll.y > 0}>
+            {(transitionStyles) => (
+              <ActionIcon
+                color="dark"
+                variant="filled"
+                style={transitionStyles}
+                onClick={() => scrollTo({ y: 0 })}
+              >
+                <FiArrowUp />
+              </ActionIcon>
+            )}
+          </Transition>
+        </Affix>
         <Container sx={{ marginTop: "1rem" }} size={5120}>
           <Container size={1200}>
             <Grid>
@@ -140,28 +163,258 @@ const Home: NextPage = () => {
                 }}
                 span={12}
               ></Col>
-              <Col sx={{ height: "80vh" }} span={12}>
+              <Col span={12}>
                 <Title order={1}>About Me</Title>
 
-                <Text>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Quibusdam odit quos, ad mollitia corporis quasi facilis
-                  debitis voluptatum ipsa hic!
-                </Text>
+                <Grid sx={{ marginTop: "2rem" }}>
+                  <Col xs={12} sm={6} md={8} lg={8} xl={7} span={7}>
+                    <Card>
+                      <Grid>
+                        <Col span={12}>
+                          <Group>
+                            <Image
+                              width={80}
+                              height={80}
+                              radius="md"
+                              src={profileimg.src}
+                              alt="avatar"
+                            />
+                            <div>
+                              <Text weight={700}>Vidarshan Adithya</Text>
+                              <Text weight={500} size="sm">
+                                Software Engineer
+                              </Text>
+                              <Text weight={500} size="sm">
+                                Computing Graduate
+                              </Text>
+                            </div>
+                          </Group>
+                        </Col>
+                        <Col span={12}>
+                          <Divider />
+                          <Blockquote cite="- Vidarshan">
+                            {" "}
+                            <Text weight={600}>
+                              "A passionate Software Engineer who likes to see
+                              things being built one line of code at a time.
+                              Well organised and prefers to have incremental
+                              self-development based on the knowledge gained.{" "}
+                              <br /> <br />I have over 1 year of industry
+                              experience, and I am gaining more knowledge
+                              day-by-day, as I am a quick learner who likes to
+                              implement and make use of the knowledge gained in
+                              order to create great things.
+                              <br /> <br />
+                              My goal is to create high quality software
+                              products written with quality code and based on
+                              unique ideas, which will have a positive impact to
+                              the society and to be a better software engineer
+                              among the best software engineers."
+                            </Text>
+                          </Blockquote>{" "}
+                        </Col>
+                      </Grid>
+                    </Card>
+                  </Col>
+                  <Col xs={12} sm={6} md={4} lg={4} xl={5} span={5}>
+                    <Card>
+                      <Text size="xl" weight={700}>
+                        Technical Competencies
+                      </Text>
 
-                <Text>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Quibusdam odit quos, ad mollitia corporis quasi facilis
-                  debitis voluptatum ipsa hic!
-                </Text>
+                      <Grid sx={{ marginTop: ".5rem" }}>
+                        <Col span={12}>
+                          <Text
+                            sx={{ marginTop: "1rem" }}
+                            size="md"
+                            weight={600}
+                          >
+                            Languages
+                          </Text>
+                          <Divider />
+                          <Badge
+                            color="yellow"
+                            variant="dot"
+                            className="badge-spacing"
+                            radius="xs"
+                            size="lg"
+                          >
+                            Javascript
+                          </Badge>
+                          <Badge
+                            variant="dot"
+                            className="badge-spacing"
+                            radius="xs"
+                            size="lg"
+                          >
+                            Typescript
+                          </Badge>
+                          <Badge
+                            color="yellow"
+                            variant="dot"
+                            className="badge-spacing"
+                            radius="xs"
+                            size="lg"
+                          >
+                            Python
+                          </Badge>
+                          <Text
+                            sx={{ marginTop: "1rem" }}
+                            size="md"
+                            weight={600}
+                          >
+                            Frameworks
+                          </Text>
+                          <Divider />
+                          <Badge
+                            variant="dot"
+                            className="badge-spacing"
+                            radius="xs"
+                            size="lg"
+                          >
+                            React JS
+                          </Badge>
+                          <Badge
+                            color="blue"
+                            variant="dot"
+                            className="badge-spacing"
+                            radius="xs"
+                            size="lg"
+                          >
+                            React Native
+                          </Badge>
+                          <Badge
+                            color="gray"
+                            variant="dot"
+                            className="badge-spacing"
+                            radius="xs"
+                            size="lg"
+                          >
+                            Next JS
+                          </Badge>
+                          <Badge
+                            color="green"
+                            variant="dot"
+                            className="badge-spacing"
+                            radius="xs"
+                            size="lg"
+                          >
+                            Node JS
+                          </Badge>
+                          <Badge
+                            color="gray"
+                            variant="dot"
+                            className="badge-spacing"
+                            radius="xs"
+                            size="lg"
+                          >
+                            Express JS
+                          </Badge>
 
-                <Text>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Quibusdam odit quos, ad mollitia corporis quasi facilis
-                  debitis voluptatum ipsa hic!
-                </Text>
+                          <Text
+                            sx={{ marginTop: "1rem" }}
+                            size="md"
+                            weight={600}
+                          >
+                            Other Tools
+                          </Text>
+                          <Divider />
+                          <Badge
+                            color="blue"
+                            variant="dot"
+                            className="badge-spacing"
+                            radius="xs"
+                            size="lg"
+                          >
+                            MySQL
+                          </Badge>
+                          <Badge
+                            variant="dot"
+                            className="badge-spacing"
+                            radius="xs"
+                            size="lg"
+                          >
+                            Postgres
+                          </Badge>
+                          <Badge
+                            color="green"
+                            variant="dot"
+                            className="badge-spacing"
+                            radius="xs"
+                            size="lg"
+                          >
+                            Mongo DB
+                          </Badge>
+                          <Badge
+                            color="indigo"
+                            variant="dot"
+                            className="badge-spacing"
+                            radius="xs"
+                            size="lg"
+                          >
+                            Bootstrap
+                          </Badge>
+                          <Badge
+                            color="pink"
+                            variant="dot"
+                            className="badge-spacing"
+                            radius="xs"
+                            size="lg"
+                          >
+                            Redux
+                          </Badge>
+                          <Badge
+                            color="blue"
+                            variant="dot"
+                            className="badge-spacing"
+                            radius="xs"
+                            size="lg"
+                          >
+                            CSS
+                          </Badge>
+                          <Badge
+                            color="orange"
+                            variant="dot"
+                            className="badge-spacing"
+                            radius="xs"
+                            size="lg"
+                          >
+                            Semantic UI
+                          </Badge>
+                          <Badge
+                            color="blue"
+                            variant="dot"
+                            className="badge-spacing"
+                            radius="xs"
+                            size="lg"
+                          >
+                            Tailwind CSS
+                          </Badge>
+                          <Badge
+                            color="red"
+                            variant="dot"
+                            className="badge-spacing"
+                            radius="xs"
+                            size="lg"
+                          >
+                            Ant Design
+                          </Badge>
+                          <Badge
+                            color="gray"
+                            variant="dot"
+                            className="badge-spacing"
+                            radius="xs"
+                            size="lg"
+                          >
+                            Cypress.io
+                          </Badge>
+                        </Col>
+                      </Grid>
+                    </Card>
+                  </Col>
+                </Grid>
               </Col>
-              <Col sx={{ height: "80vh" }} span={12}>
+              <Col span={12}>
                 <Title order={1}>Work Experience</Title>
                 <div style={{ marginTop: "2rem" }}>
                   <Timeline
@@ -175,7 +428,7 @@ const Home: NextPage = () => {
                       align="right"
                       title="Freelance Web Developer"
                     >
-                      <Text color="dimmed" size="sm">
+                      <Text weight={600} color="dimmed" size="md">
                         Created web based applications for clients desiring
                         solutions for their day-to-day problems that occur in
                         their small/mid scaled businesses.
@@ -226,197 +479,22 @@ const Home: NextPage = () => {
                   </Timeline>
                 </div>
               </Col>
-              <Col span={12}></Col>
-              <Col sx={{ height: "80vh" }} span={12}>
+
+              <Col span={12}>
                 <Title order={1}>Projects</Title>
-                <Grid>
-                  <Col span={6}>
-                    <Card withBorder radius="xs">
-                      <Col span={12}>
-                        <Image layout="responsive" src={ss} alt="cover" />
-                      </Col>
-                      <Col span={12}>
-                        <Text weight={600} size="xl">
-                          Techstop
-                        </Text>
-                      </Col>
-                      <Col span={12}>
-                        <Badge
-                          size="lg"
-                          color="green"
-                          radius="xs"
-                          variant="dot"
-                          className="badge-spacing"
-                        >
-                          React JS
-                        </Badge>
-                        <Badge
-                          size="lg"
-                          color="green"
-                          radius="xs"
-                          variant="dot"
-                          className="badge-spacing"
-                        >
-                          React JS
-                        </Badge>
-                        <Badge
-                          size="lg"
-                          color="green"
-                          radius="xs"
-                          variant="dot"
-                          className="badge-spacing"
-                        >
-                          Node JS
-                        </Badge>
-                        <Badge
-                          size="lg"
-                          color="green"
-                          radius="xs"
-                          variant="dot"
-                          className="badge-spacing"
-                        >
-                          Express JS
-                        </Badge>
-                        <Badge
-                          size="lg"
-                          color="green"
-                          radius="xs"
-                          variant="dot"
-                          className="badge-spacing"
-                        >
-                          Mongo DB
-                        </Badge>
-                      </Col>
-                      <Col className="row-spacing" span={12}>
-                        <Divider variant="solid" />
-                        <Text
-                          sx={{ padding: "1rem 0" }}
-                          align="justify"
-                          weight={400}
-                          size="md"
-                        >
-                          Lorem, ipsum dolor sit amet consectetur adipisicing
-                          elit. Omnis atque deleniti a nisi, nam quae at
-                          sapiente excepturi quia labore voluptate, ut commodi
-                          minus ipsa error ad, inventore blanditiis optio?
-                        </Text>
-                        <Divider variant="dotted" />
-                      </Col>
-                      <Grid>
-                        <Col span={6}>
-                          <Button
-                            size="xs"
-                            color="blue"
-                            variant="default"
-                            fullWidth
-                            leftIcon={<BsGithub />}
-                          >
-                            View Repo
-                          </Button>
-                        </Col>
-                        <Col span={6}>
-                          <Button
-                            size="xs"
-                            color="blue"
-                            variant="default"
-                            fullWidth
-                            leftIcon={<BsGithub />}
-                          >
-                            View Demo
-                          </Button>
-                        </Col>
-                      </Grid>
-                    </Card>
+                <Grid gutter="xl">
+                  <Col span={12}>
+                    <ProjectCard />
                   </Col>
-                  <Col span={6}>
-                    <Card withBorder radius="xs">
-                      <Col span={12}>
-                        <Image layout="responsive" src={ss} alt="cover" />
-                      </Col>
-                      <Col span={12}>
-                        <Text weight={600} size="xl">
-                          Techstop
-                        </Text>
-                      </Col>
-                      <Col span={12}>
-                        <Badge
-                          size="lg"
-                          color="green"
-                          radius="xs"
-                          variant="dot"
-                          className="badge-spacing"
-                        >
-                          React JS
-                        </Badge>
-                        <Badge
-                          size="lg"
-                          color="green"
-                          radius="xs"
-                          variant="dot"
-                          className="badge-spacing"
-                        >
-                          Node JS
-                        </Badge>
-                        <Badge
-                          size="lg"
-                          color="green"
-                          radius="xs"
-                          variant="dot"
-                          className="badge-spacing"
-                        >
-                          Express JS
-                        </Badge>
-                        <Badge
-                          size="lg"
-                          color="green"
-                          radius="xs"
-                          variant="dot"
-                          className="badge-spacing"
-                        >
-                          Mongo DB
-                        </Badge>
-                      </Col>
-                      <Col span={12}>
-                        <Text align="justify" weight={400} size="lg">
-                          Lorem, ipsum dolor sit amet consectetur adipisicing
-                          elit. Omnis atque deleniti a nisi, nam quae at
-                          sapiente excepturi quia labore voluptate, ut commodi
-                          minus ipsa error ad, inventore blanditiis
-                          optio?sddsfdsfdfs lorem30
-                        </Text>
-                      </Col>
-                      <Col span={12}>
-                        <Grid>
-                          <Col span={6}>
-                            <Button
-                              size="xs"
-                              color="gray"
-                              variant="outline"
-                              fullWidth
-                              leftIcon={<BsGithub />}
-                            >
-                              View Repo
-                            </Button>
-                          </Col>
-                          <Col span={6}>
-                            <Button
-                              size="xs"
-                              color="gray"
-                              variant="outline"
-                              fullWidth
-                              leftIcon={<BsFillEyeFill />}
-                            >
-                              View Demo
-                            </Button>
-                          </Col>
-                        </Grid>
-                      </Col>
-                    </Card>
+
+                  <Col span={12}>
+                    <ProjectCard />
                   </Col>
-                  <Col span={4}>
-                    <Card radius="xs" sx={{ backgroundColor: "red" }}>
-                      dd
-                    </Card>
+                  <Col span={12}>
+                    <ProjectCard />
+                  </Col>
+                  <Col span={12}>
+                    <ProjectCard />
                   </Col>
                 </Grid>
               </Col>
