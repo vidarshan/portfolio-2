@@ -23,7 +23,8 @@ span,
 .mantine-a2kbre,
 .mantine-a2kbre,
 .mantine-Spoiler-control,
-.mantine-Anchor-root {
+.mantine-Anchor-root,
+div {
   font-family: "Manrope", sans-serif !important;
 }
 
@@ -47,6 +48,7 @@ span,
 }
 
 button,
+input,
 .mantine-Card-root {
   border-radius: 0 !important;
 }
