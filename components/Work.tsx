@@ -11,7 +11,7 @@ const Work = () => {
           align="right"
           title="Freelance Web Developer"
         >
-          <Text weight={500} color="dimmed" size="md">
+          <Text weight={500} color="dimmed" size="sm">
             Created web based applications for clients desiring solutions for
             their day-to-day problems that occur in their small/mid scaled
             businesses.
@@ -48,7 +48,7 @@ const Work = () => {
           title="Trainee Software Engineer"
           lineVariant="dashed"
         >
-          <Text weight={500} color="dimmed" size="md">
+          <Text weight={500} color="dimmed" size="sm">
             Worked as a frontend software engineer and implemented new
             functionalities to existing projects along with replacing old and
             outdated user interfaces to modern user-friendly user interfaces.
@@ -78,7 +78,7 @@ const Work = () => {
           bullet={<BsCheckCircleFill />}
           title="Associate Software Engineer"
         >
-          <Text weight={500} color="dimmed" size="md">
+          <Text weight={500} color="dimmed" size="sm">
             Worked as a full-stack software engineer, implemented new
             functionalities along with improving existing functionalities in
             special purpose web applications. Gained knowledge on end-to-end

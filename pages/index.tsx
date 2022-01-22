@@ -7,14 +7,12 @@ import {
   ColorScheme,
   ColorSchemeProvider,
   Title,
-  Timeline,
   Affix,
   Transition,
   Divider,
   Card,
   TextInput,
   Button,
-  Anchor,
   Group,
 } from "@mantine/core";
 import type { NextPage } from "next";
@@ -24,7 +22,6 @@ import {
   BsMoonStarsFill,
   BsSunFill,
   BsLinkedin,
-  BsCheckCircleFill,
   BsGithub,
   BsStackOverflow,
   BsTwitter,
@@ -62,6 +59,12 @@ const Home: NextPage = () => {
           },
           radius: {
             xs: 0,
+          },
+          fontSizes: {
+            sm: 15,
+            md: 20,
+            lg: 30,
+            xl: 50,
           },
         }}
         withGlobalStyles
@@ -108,12 +111,16 @@ const Home: NextPage = () => {
                 <Divider
                   size="sm"
                   label="About Me"
-                  labelProps={{ size: "xl", weight: "600" }}
+                  labelProps={{ size: "lg", weight: "600" }}
                 />
                 <About />
               </Col>
               <Col span={12}>
-                <Title order={1}>Work Experience</Title>
+                <Divider
+                  size="sm"
+                  label="Work Experience"
+                  labelProps={{ size: "lg", weight: "600" }}
+                />
                 <Work />
               </Col>
 
@@ -164,30 +171,51 @@ const Home: NextPage = () => {
                       <Col span={12}>
                         <Group>
                           <BsLinkedin />
-                          <Text weight={500}>Linkedin</Text>
+                          <Text size="sm" weight={500}>
+                            Linkedin
+                          </Text>
                         </Group>
                       </Col>
                       <Col span={12}>
                         <Group>
                           <BsGithub />
-                          <Text weight={500}>Github</Text>
+                          <Text size="sm" weight={500}>
+                            Github
+                          </Text>
                         </Group>
                       </Col>
                       <Col span={12}>
                         <Group>
                           <BsStackOverflow />
-                          <Text weight={500}>Stackoverflow</Text>
+                          <Text size="sm" weight={500}>
+                            Stackoverflow
+                          </Text>
                         </Group>
                       </Col>
                       <Col span={12}>
                         <Group>
                           <BsTwitter />
-                          <Text weight={500}>Twitter</Text>
+                          <Text size="sm" weight={500}>
+                            Twitter
+                          </Text>
                         </Group>
                       </Col>
+                      {/* <Col span={12}>
+                        <Group>
+                          <BsTwitter />
+                          <Text size="sm" weight={500}>
+                            Gmail
+                          </Text>
+                        </Group>
+                      </Col> */}
                     </Card>
                   </Col>
                 </Grid>
+                <Text size="xs">Text Size</Text>
+                <Text size="sm">Text Size</Text>{" "}
+                <Text size="md">Text Size</Text>
+                <Text size="lg">Text Size</Text>{" "}
+                <Text size="xl">Text Size</Text>
               </Col>
             </Grid>
             <Footer />
