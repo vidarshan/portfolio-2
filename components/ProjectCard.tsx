@@ -20,7 +20,7 @@ const ProjectCard = () => {
   return (
     <Card withBorder padding="lg">
       <Grid>
-        <Col span={6}>
+        <Col xs={12} sm={12} md={12} lg={5} xl={5} span={6}>
           <Card.Section>
             <Image fit="cover" src={ss.src} alt="Norway" />
           </Card.Section>
@@ -30,6 +30,11 @@ const ProjectCard = () => {
             display: "flex",
             flexDirection: "column",
           }}
+          xs={12}
+          sm={12}
+          md={12}
+          lg={7}
+          xl={7}
           span={6}
         >
           <Text sx={{ marginTop: "1rem" }} size="md" weight={700}>
@@ -84,7 +89,7 @@ const ProjectCard = () => {
             </Badge>
           </Group>
           <Grid>
-            <Col span={6}>
+            <Col xs={12} sm={6} md={6} lg={6} xl={6} span={6}>
               <Button
                 variant="default"
                 color="dark"
@@ -95,7 +100,7 @@ const ProjectCard = () => {
                 View Demo
               </Button>
             </Col>
-            <Col span={6}>
+            <Col xs={12} sm={6} md={6} lg={6} xl={6} span={6}>
               <Button
                 variant="default"
                 color="dark"

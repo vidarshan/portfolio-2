@@ -135,17 +135,17 @@ const Home: NextPage = () => {
                   labelProps={{ size: "lg", weight: "600" }}
                 />
                 <Grid gutter="xl">
-                  <Col span={12}>
+                  <Col xs={12} sm={6} md={6} lg={12} xl={12} span={12}>
                     <ProjectCard />
                   </Col>
 
-                  <Col span={12}>
+                  <Col xs={12} sm={6} md={6} lg={12} xl={12} span={12}>
                     <ProjectCard />
                   </Col>
-                  <Col span={12}>
+                  <Col xs={12} sm={6} md={6} lg={12} xl={12} span={12}>
                     <ProjectCard />
                   </Col>
-                  <Col span={12}>
+                  <Col xs={12} sm={6} md={6} lg={12} xl={12} span={12}>
                     <ProjectCard />
                   </Col>
                 </Grid>
@@ -196,7 +196,6 @@ const Home: NextPage = () => {
                       <Col xs={6} span={6}>
                         <Anchor href="https://mantine.dev/" target="_blank">
                           <Group>
-                            <BsLinkedin />
                             <Text size="sm" weight={500}>
                               {" "}
                               Linkedin
@@ -207,7 +206,6 @@ const Home: NextPage = () => {
                       <Col xs={6} span={6}>
                         <Anchor href="https://mantine.dev/" target="_blank">
                           <Group>
-                            <BsGithub />
                             <Text size="sm" weight={500}>
                               Github
                             </Text>
@@ -217,7 +215,6 @@ const Home: NextPage = () => {
                       <Col span={6}>
                         <Anchor href="https://mantine.dev/" target="_blank">
                           <Group>
-                            <BsStackOverflow />
                             <Text size="sm" weight={500}>
                               Stackoverflow
                             </Text>
@@ -227,7 +224,6 @@ const Home: NextPage = () => {
                       <Col span={6}>
                         <Anchor href="https://mantine.dev/" target="_blank">
                           <Group>
-                            <BsTwitter />
                             <Text size="sm" weight={500}>
                               Twitter
                             </Text>
@@ -239,13 +235,6 @@ const Home: NextPage = () => {
                         <Divider label="Resume" />
                       </Col>
                       <Col span={12}>
-                        {/* <a
-                          href={resume}
-                          download="YourName resume.pdf"
-                          target="_blank"
-                        >
-                          Mantine docs
-                        </a> */}
                         <Button
                           leftIcon={<BsCloudDownload />}
                           variant="default"
