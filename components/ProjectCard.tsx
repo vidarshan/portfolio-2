@@ -29,29 +29,27 @@ const ProjectCard = () => {
           sx={{
             display: "flex",
             flexDirection: "column",
-            alignItems: "center",
           }}
           span={6}
         >
           <Text sx={{ marginTop: "1rem" }} size="xl" weight={700}>
             Norway Ford Adventures
           </Text>
-          <Divider />
-          <Spoiler maxHeight={120} showLabel="Show more" hideLabel="Hide">
-            <Text align="justify" size="md">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim illo
-              sit, velit exercitationem, officia tenetur eum impedit doloremque
-              fugiat dignissimos neque modi asperiores obcaecati, in
-              perferendis? Blanditiis vel minus sunt voluptatum perspiciatis
-              facere deleniti necessitatibus provident earum, delectus
-              accusantium tempora! Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Perspiciatis esse optio provident aliquam
-              pariatur animi cupiditate quisquam magni perferendis architecto
-              laboriosam omnis expedita laudantium mollitia tempora ratione
-              quibusdam, sit numquam!
-            </Text>
-          </Spoiler>
-          <div style={{ marginTop: ".6rem" }}>
+
+          <div style={{ marginTop: "1rem" }}>
+            <Spoiler maxHeight={100} showLabel="more" hideLabel="less">
+              <Text weight={500} align="justify" size="md">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+                illo sit, velit exercitationem, officia tenetur eum impedit
+                doloremque fugiat dignissimos neque modi asperiores obcaecati,
+                in perferendis? Blanditiis vel minus sunt voluptatum
+                perspiciatis facere deleniti necessitatibus provident earum,
+                delectus accusantium tempora! Lorem ipsum dolor sit amet
+                consectetur adipisicing elit.
+              </Text>
+            </Spoiler>
+          </div>
+          <Group style={{ marginTop: ".6rem" }}>
             <Badge
               className="badge-spacing"
               radius="xs"
@@ -84,8 +82,7 @@ const ProjectCard = () => {
             >
               Mongo DB
             </Badge>
-          </div>
-
+          </Group>
           <Grid>
             <Col span={6}>
               <Button

@@ -11,7 +11,7 @@ const Work = () => {
           align="right"
           title="Freelance Web Developer"
         >
-          <Text weight={600} color="dimmed" size="md">
+          <Text weight={500} color="dimmed" size="md">
             Created web based applications for clients desiring solutions for
             their day-to-day problems that occur in their small/mid scaled
             businesses.
@@ -22,17 +22,20 @@ const Work = () => {
               marginBottom: ".5rem",
             }}
           >
-            <Badge variant="dot" radius="xs">
+            <Badge size="lg" variant="dot" radius="xs">
               React JS
             </Badge>
-            <Badge color="green" variant="dot" radius="xs">
+            <Badge size="lg" color="green" variant="dot" radius="xs">
               Node JS
             </Badge>
-            <Badge color="gray" variant="dot" radius="xs">
+            <Badge size="lg" color="gray" variant="dot" radius="xs">
               Express JS
             </Badge>
-            <Badge color="blue" variant="dot" radius="xs">
+            <Badge size="lg" color="blue" variant="dot" radius="xs">
               Postgres
+            </Badge>
+            <Badge size="lg" color="blue" variant="dot" radius="xs">
+              Typescript
             </Badge>
           </Group>
           <Text size="xs" style={{ marginTop: 4 }}>
@@ -45,7 +48,7 @@ const Work = () => {
           title="Trainee Software Engineer"
           lineVariant="dashed"
         >
-          <Text weight={600} color="dimmed" size="md">
+          <Text weight={500} color="dimmed" size="md">
             Worked as a frontend software engineer and implemented new
             functionalities to existing projects along with replacing old and
             outdated user interfaces to modern user-friendly user interfaces.
@@ -56,13 +59,13 @@ const Work = () => {
               marginBottom: ".5rem",
             }}
           >
-            <Badge variant="dot" radius="xs">
+            <Badge size="lg" variant="dot" radius="xs">
               React JS
             </Badge>
-            <Badge color="orange" variant="dot" radius="xs">
+            <Badge size="lg" color="orange" variant="dot" radius="xs">
               Semantic Ui
             </Badge>
-            <Badge color="pink" variant="dot" radius="xs">
+            <Badge size="lg" color="pink" variant="dot" radius="xs">
               SCSS
             </Badge>
           </Group>
@@ -75,7 +78,7 @@ const Work = () => {
           bullet={<BsCheckCircleFill />}
           title="Associate Software Engineer"
         >
-          <Text weight={600} color="dimmed" size="md">
+          <Text weight={500} color="dimmed" size="md">
             Worked as a full-stack software engineer, implemented new
             functionalities along with improving existing functionalities in
             special purpose web applications. Gained knowledge on end-to-end
@@ -87,19 +90,19 @@ const Work = () => {
               marginBottom: ".5rem",
             }}
           >
-            <Badge variant="dot" radius="xs">
+            <Badge size="lg" variant="dot" radius="xs">
               React JS
             </Badge>
-            <Badge color="green" variant="dot" radius="xs">
+            <Badge size="lg" color="green" variant="dot" radius="xs">
               Node JS
             </Badge>
-            <Badge color="gray" variant="dot" radius="xs">
+            <Badge size="lg" color="gray" variant="dot" radius="xs">
               Express JS
             </Badge>
-            <Badge color="gray" variant="dot" radius="xs">
+            <Badge size="lg" color="gray" variant="dot" radius="xs">
               Cypress.io
             </Badge>
-            <Badge color="blue" variant="dot" radius="xs">
+            <Badge size="lg" color="blue" variant="dot" radius="xs">
               MySQL
             </Badge>
           </Group>

@@ -10,6 +10,7 @@ import {
   Timeline,
   Affix,
   Transition,
+  Divider,
 } from "@mantine/core";
 import type { NextPage } from "next";
 import { useState } from "react";
@@ -95,7 +96,7 @@ const Home: NextPage = () => {
               {/* <Header /> */}
 
               <Col span={12}>
-                <Title order={1}>About Me</Title>
+                <Divider label="About Me" labelProps={{ size: "xl" }} />
                 <About />
               </Col>
               <Col span={12}>

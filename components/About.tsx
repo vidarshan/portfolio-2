@@ -27,11 +27,13 @@ const About = () => {
                   alt="avatar"
                 />
                 <div>
-                  <Text weight={700}>Vidarshan Adithya</Text>
-                  <Text weight={500} size="sm">
+                  <Text weight={500} size="xl">
+                    Vidarshan Adithya
+                  </Text>
+                  <Text color="dimmed" weight={500} size="sm">
                     Software Engineer
                   </Text>
-                  <Text weight={500} size="sm">
+                  <Text color="dimmed" weight={500} size="sm">
                     Computing Graduate
                   </Text>
                 </div>
@@ -68,178 +70,84 @@ const About = () => {
 
           <Grid sx={{ marginTop: ".5rem" }}>
             <Col span={12}>
-              <Text sx={{ marginTop: "1rem" }} size="md" weight={600}>
-                Languages
-              </Text>
-              <Divider />
-              <Badge
-                color="yellow"
-                variant="dot"
-                className="badge-spacing"
-                radius="xs"
-                size="lg"
-              >
-                Javascript (ES6+)
-              </Badge>
-              <Badge
-                variant="dot"
-                className="badge-spacing"
-                radius="xs"
-                size="lg"
-              >
-                Typescript
-              </Badge>
-              <Badge
-                color="yellow"
-                variant="dot"
-                className="badge-spacing"
-                radius="xs"
-                size="lg"
-              >
-                Python
-              </Badge>
-              <Text sx={{ marginTop: "1rem" }} size="md" weight={600}>
-                Frameworks
-              </Text>
-              <Divider />
-              <Badge
-                variant="dot"
-                className="badge-spacing"
-                radius="xs"
-                size="lg"
-              >
-                React JS
-              </Badge>
-              <Badge
-                color="blue"
-                variant="dot"
-                className="badge-spacing"
-                radius="xs"
-                size="lg"
-              >
-                React Native
-              </Badge>
-              <Badge
-                color="gray"
-                variant="dot"
-                className="badge-spacing"
-                radius="xs"
-                size="lg"
-              >
-                Next JS
-              </Badge>
-              <Badge
-                color="green"
-                variant="dot"
-                className="badge-spacing"
-                radius="xs"
-                size="lg"
-              >
-                Node JS
-              </Badge>
-              <Badge
-                color="gray"
-                variant="dot"
-                className="badge-spacing"
-                radius="xs"
-                size="lg"
-              >
-                Express JS
-              </Badge>
+              <Divider label="Languages" />
+              <Group sx={{ marginTop: "1rem" }}>
+                <Badge color="yellow" variant="dot" radius="xs" size="lg">
+                  Javascript (ES6+)
+                </Badge>
+                <Badge variant="dot" radius="xs" size="lg">
+                  Typescript
+                </Badge>
+                <Badge color="yellow" variant="dot" radius="xs" size="lg">
+                  Python
+                </Badge>
+              </Group>
+              <div style={{ marginTop: "1rem" }}>
+                <Divider label="Frameworks" />
+                <Group sx={{ marginTop: "1rem" }}>
+                  <Badge variant="dot" radius="xs" size="lg">
+                    React JS
+                  </Badge>
+                  <Badge color="blue" variant="dot" radius="xs" size="lg">
+                    React Native
+                  </Badge>
+                  <Badge color="gray" variant="dot" radius="xs" size="lg">
+                    Next JS
+                  </Badge>
+                  <Badge color="green" variant="dot" radius="xs" size="lg">
+                    Node JS
+                  </Badge>
+                  <Badge color="gray" variant="dot" radius="xs" size="lg">
+                    Express JS
+                  </Badge>
+                </Group>
+              </div>
 
-              <Text sx={{ marginTop: "1rem" }} size="md" weight={600}>
-                Other Tools
-              </Text>
-              <Divider />
-              <Badge
-                color="blue"
-                variant="dot"
-                className="badge-spacing"
-                radius="xs"
-                size="lg"
-              >
-                MySQL
-              </Badge>
-              <Badge
-                variant="dot"
-                className="badge-spacing"
-                radius="xs"
-                size="lg"
-              >
-                Postgres
-              </Badge>
-              <Badge
-                color="green"
-                variant="dot"
-                className="badge-spacing"
-                radius="xs"
-                size="lg"
-              >
-                Mongo DB
-              </Badge>
-              <Badge
-                color="indigo"
-                variant="dot"
-                className="badge-spacing"
-                radius="xs"
-                size="lg"
-              >
-                Bootstrap
-              </Badge>
-              <Badge
-                color="pink"
-                variant="dot"
-                className="badge-spacing"
-                radius="xs"
-                size="lg"
-              >
-                Redux
-              </Badge>
-              <Badge
-                color="pink"
-                variant="dot"
-                className="badge-spacing"
-                radius="xs"
-                size="lg"
-              >
-                SCSS
-              </Badge>
-              <Badge
-                color="orange"
-                variant="dot"
-                className="badge-spacing"
-                radius="xs"
-                size="lg"
-              >
-                Semantic UI
-              </Badge>
-              <Badge
-                color="blue"
-                variant="dot"
-                className="badge-spacing"
-                radius="xs"
-                size="lg"
-              >
-                Tailwind CSS
-              </Badge>
-              <Badge
-                color="red"
-                variant="dot"
-                className="badge-spacing"
-                radius="xs"
-                size="lg"
-              >
-                Ant Design
-              </Badge>
-              <Badge
-                color="gray"
-                variant="dot"
-                className="badge-spacing"
-                radius="xs"
-                size="lg"
-              >
-                Cypress.io
-              </Badge>
+              <div style={{ marginTop: "1rem" }}>
+                <Divider label="Other Tools" />
+
+                <Group sx={{ marginTop: "1rem" }}>
+                  <Badge color="blue" variant="dot" radius="xs" size="lg">
+                    MySQL
+                  </Badge>
+                  <Badge variant="dot" radius="xs" size="lg">
+                    Postgres
+                  </Badge>
+                  <Badge color="green" variant="dot" radius="xs" size="lg">
+                    Mongo DB
+                  </Badge>
+                  <Badge color="indigo" variant="dot" radius="xs" size="lg">
+                    Bootstrap
+                  </Badge>
+                  <Badge color="pink" variant="dot" radius="xs" size="lg">
+                    Redux
+                  </Badge>
+                  <Badge color="pink" variant="dot" radius="xs" size="lg">
+                    SCSS
+                  </Badge>
+                  <Badge color="orange" variant="dot" radius="xs" size="lg">
+                    Semantic UI
+                  </Badge>
+                  <Badge color="blue" variant="dot" radius="xs" size="lg">
+                    Tailwind CSS
+                  </Badge>
+                  <Badge color="red" variant="dot" radius="xs" size="lg">
+                    Ant Design
+                  </Badge>
+                  <Badge color="gray" variant="dot" radius="xs" size="lg">
+                    Cypress.io
+                  </Badge>
+                  <Badge color="red" variant="dot" radius="xs" size="lg">
+                    Redis
+                  </Badge>
+                  <Badge color="red" variant="dot" radius="xs" size="lg">
+                    CI/CD
+                  </Badge>
+                  <Badge color="red" variant="dot" radius="xs" size="lg">
+                    Version Control
+                  </Badge>
+                </Group>
+              </div>
             </Col>
           </Grid>
         </Card>
