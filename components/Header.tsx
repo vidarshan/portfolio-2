@@ -18,7 +18,7 @@ const Header = () => {
         Hello
       </Text>
       <Text size="xl" weight={700}>
-        I'm Vidarshan
+        {`I'm Vidarshan`}
       </Text>
       <Text size="xl" weight={700}>
         A Software Engineer

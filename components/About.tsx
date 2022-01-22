@@ -44,7 +44,7 @@ const About = () => {
               <Blockquote cite="- Vidarshan">
                 {" "}
                 <Text size="sm" weight={500}>
-                  I'm a passionate Software Engineer who likes to see things
+                  {`I'm`} a passionate Software Engineer who likes to see things
                   being built one line of code at a time. Well organised and
                   prefers to have incremental self-development based on the
                   knowledge gained. <br /> <br />I have over 1 year of industry
@@ -55,7 +55,7 @@ const About = () => {
                   My goal is to create high quality software products written
                   with quality code and based on unique ideas, which will have a
                   positive impact to the society while becoming a great software
-                  engineer among the best software engineers."
+                  engineer among the best software engineers.{`"`}
                 </Text>
               </Blockquote>{" "}
             </Col>
