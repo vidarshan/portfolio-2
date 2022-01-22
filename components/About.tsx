@@ -64,9 +64,7 @@ const About = () => {
       </Col>
       <Col xs={12} sm={6} md={4} lg={4} xl={5} span={5}>
         <Card>
-          <Text size="md" weight={700}>
-            Technical Competencies
-          </Text>
+          <Text size="md">Technical Competencies</Text>
 
           <Grid sx={{ marginTop: ".5rem" }}>
             <Col span={12}>

@@ -105,7 +105,7 @@ const Home: NextPage = () => {
                 </ActionIcon>
               </Col>
 
-              {/* <Header /> */}
+              <Header />
 
               <Col span={12}>
                 <Divider
@@ -125,7 +125,11 @@ const Home: NextPage = () => {
               </Col>
 
               <Col span={12}>
-                <Title order={1}>Projects</Title>
+                <Divider
+                  size="sm"
+                  label="Projects"
+                  labelProps={{ size: "lg", weight: "600" }}
+                />
                 <Grid gutter="xl">
                   <Col span={12}>
                     <ProjectCard />

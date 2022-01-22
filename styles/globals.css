@@ -28,6 +28,10 @@ div {
   font-family: "Manrope", sans-serif !important;
 }
 
+.mantine-Spoiler-control {
+  font-size: 16px;
+}
+
 .flex-container {
   display: flex;
   flex-direction: row;
@@ -55,4 +59,8 @@ input,
 
 .mantine-Timeline-itemTitle {
   font-weight: 700 !important;
+}
+
+.mantine-4375jw {
+  overflow-wrap: break-word !important;
 }

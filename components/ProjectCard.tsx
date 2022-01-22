@@ -32,13 +32,13 @@ const ProjectCard = () => {
           }}
           span={6}
         >
-          <Text sx={{ marginTop: "1rem" }} size="xl" weight={700}>
+          <Text sx={{ marginTop: "1rem" }} size="md" weight={700}>
             Norway Ford Adventures
           </Text>
 
           <div style={{ marginTop: "1rem" }}>
             <Spoiler maxHeight={100} showLabel="more" hideLabel="less">
-              <Text weight={500} align="justify" size="md">
+              <Text weight={500} align="justify" size="sm">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
                 illo sit, velit exercitationem, officia tenetur eum impedit
                 doloremque fugiat dignissimos neque modi asperiores obcaecati,

@@ -1,61 +1,29 @@
-import { Col, Text } from "@mantine/core";
+import { Button, Col, Group, Text } from "@mantine/core";
 import React from "react";
 
 const Header = () => {
   return (
-    <Col
+    <Group
+      position="apart"
       sx={{
         display: "flex",
-        justifyContent: "flex-start",
-        alignItems: "center",
+        justifyContent: "center",
+        alignItems: "flex-start",
+        flexDirection: "column",
+        height: "90vh",
+        minWidth: "100%",
       }}
-      span={12}
     >
-      <Col
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "flex-start",
-          height: "90vh",
-        }}
-        span={12}
-      >
-        <Text
-          component="span"
-          align="center"
-          variant="gradient"
-          sx={{ fontSize: "60px" }}
-          gradient={{ from: "indigo", to: "cyan", deg: 45 }}
-          // size="xl"
-          weight={700}
-        >
-          Hello
-        </Text>
-        <Text
-          component="span"
-          align="center"
-          variant="gradient"
-          sx={{ fontSize: "60px" }}
-          gradient={{ from: "indigo", to: "cyan", deg: 45 }}
-          // size="xl"
-          weight={700}
-        >
-          I'm Vidarshan
-        </Text>
-        <Text
-          component="span"
-          align="center"
-          variant="gradient"
-          sx={{ fontSize: "60px" }}
-          gradient={{ from: "indigo", to: "cyan", deg: 45 }}
-          // size="xl"
-          weight={700}
-        >
-          A Software Engineer
-        </Text>
-      </Col>
-    </Col>
+      <Text size="xl" weight={700}>
+        Hello
+      </Text>
+      <Text size="xl" weight={700}>
+        I'm Vidarshan
+      </Text>
+      <Text size="xl" weight={700}>
+        A Software Engineer
+      </Text>
+    </Group>
   );
 };
 
