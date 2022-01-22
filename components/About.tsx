@@ -69,13 +69,13 @@ const About = () => {
             Technical Competencies
           </Text>
 
-          <Grid sx={{ marginTop: ".5rem" }}>
+          <Grid className="item-spacing-half">
             <Col span={12}>
               <Divider
                 labelProps={{ size: "sm", weight: 700 }}
                 label="Languages"
               />
-              <Group sx={{ marginTop: "1rem" }}>
+              <Group className="item-spacing-1">
                 {technologies.map((tech) => {
                   if (tech.type === "language") {
                     return (
@@ -97,7 +97,7 @@ const About = () => {
                   labelProps={{ size: "sm", weight: 700 }}
                   label="Frameworks"
                 />
-                <Group sx={{ marginTop: "1rem" }}>
+                <Group className="item-spacing-1">
                   {technologies.map((tech) => {
                     if (tech.type === "framework") {
                       return (
@@ -122,7 +122,7 @@ const About = () => {
                   label="Other Tools"
                 />
 
-                <Group sx={{ marginTop: "1rem" }}>
+                <Group className="item-spacing-1">
                   {technologies.map((tech) => {
                     if (tech.type === "other") {
                       return (

@@ -119,7 +119,7 @@ const Home: NextPage = () => {
                 />
                 <About />
               </Col>
-              <Col sx={{ marginTop: "5rem", marginBottom: "5rem" }} span={12}>
+              <Col className="section-spacing" span={12}>
                 <Divider
                   size="sm"
                   label="Work Experience"
