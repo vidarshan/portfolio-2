@@ -4,42 +4,45 @@ import { BsCheckCircleFill, BsDashCircleFill } from "react-icons/bs";
 
 const Work = () => {
   return (
-    <Card style={{ marginTop: "2rem" }}>
+    <Card className="content-spacing">
       <Timeline color="blue" active={2} bulletSize={24} lineWidth={3}>
         <Timeline.Item
           bullet={<BsDashCircleFill />}
           align="right"
-          title="Freelance Web Developer"
+          title="Freelance Web Developer "
         >
+          <Text
+            className="row-bottom-top-spacing-half"
+            weight={500}
+            color="blue"
+            size="sm"
+          >
+            Excalibur Systems, Sri Lanka
+          </Text>
           <Text weight={500} color="dimmed" size="sm">
             Created web based applications for clients desiring solutions for
             their day-to-day problems that occur in their small/mid scaled
             businesses.
           </Text>
-          <Group
-            sx={{
-              marginTop: ".5rem",
-              marginBottom: ".5rem",
-            }}
-          >
-            <Badge size="lg" variant="dot" radius="xs">
+          <Group className="row-bottom-top-spacing">
+            <Badge size="md" variant="dot" radius="xs">
               React JS
             </Badge>
-            <Badge size="lg" color="green" variant="dot" radius="xs">
+            <Badge size="md" color="green" variant="dot" radius="xs">
               Node JS
             </Badge>
-            <Badge size="lg" color="gray" variant="dot" radius="xs">
+            <Badge size="md" color="gray" variant="dot" radius="xs">
               Express JS
             </Badge>
-            <Badge size="lg" color="blue" variant="dot" radius="xs">
+            <Badge size="md" color="blue" variant="dot" radius="xs">
               Postgres
             </Badge>
-            <Badge size="lg" color="blue" variant="dot" radius="xs">
+            <Badge size="md" color="blue" variant="dot" radius="xs">
               Typescript
             </Badge>
           </Group>
-          <Text size="xs" style={{ marginTop: 4 }}>
-            04-2021 &#8212;&#8212; 09-2021
+          <Text className="row-bottom-top-spacing" size="xs">
+            04-2021 &#8212; 09-2021
           </Text>
         </Timeline.Item>
         <Timeline.Item
@@ -48,28 +51,31 @@ const Work = () => {
           title="Trainee Software Engineer"
           lineVariant="dashed"
         >
+          <Text
+            className="row-bottom-top-spacing-half"
+            weight={500}
+            color="blue"
+            size="sm"
+          >
+            Beta Launch, Sri Lanka
+          </Text>
           <Text weight={500} color="dimmed" size="sm">
             Worked as a frontend software engineer and implemented new
             functionalities to existing projects along with replacing old and
             outdated user interfaces to modern user-friendly user interfaces.
           </Text>
-          <Group
-            sx={{
-              marginTop: ".5rem",
-              marginBottom: ".5rem",
-            }}
-          >
-            <Badge size="lg" variant="dot" radius="xs">
+          <Group className="row-bottom-top-spacing">
+            <Badge size="md" variant="dot" radius="xs">
               React JS
             </Badge>
-            <Badge size="lg" color="orange" variant="dot" radius="xs">
+            <Badge size="md" color="orange" variant="dot" radius="xs">
               Semantic Ui
             </Badge>
-            <Badge size="lg" color="pink" variant="dot" radius="xs">
+            <Badge size="md" color="pink" variant="dot" radius="xs">
               SCSS
             </Badge>
           </Group>
-          <Text size="xs" style={{ marginTop: 4 }}>
+          <Text className="row-bottom-top-spacing" size="xs">
             04-2021 &#8212;&#8212; 09-2021
           </Text>
         </Timeline.Item>
@@ -78,35 +84,38 @@ const Work = () => {
           bullet={<BsCheckCircleFill />}
           title="Associate Software Engineer"
         >
+          <Text
+            className="row-bottom-top-spacing-half"
+            weight={500}
+            color="blue"
+            size="sm"
+          >
+            Beta Launch, Sri Lanka
+          </Text>
           <Text weight={500} color="dimmed" size="sm">
             Worked as a full-stack software engineer, implemented new
             functionalities along with improving existing functionalities in
             special purpose web applications. Gained knowledge on end-to-end
             testing frameworks for web applications.
           </Text>
-          <Group
-            sx={{
-              marginTop: ".5rem",
-              marginBottom: ".5rem",
-            }}
-          >
-            <Badge size="lg" variant="dot" radius="xs">
+          <Group className="row-bottom-top-spacing">
+            <Badge size="md" variant="dot" radius="xs">
               React JS
             </Badge>
-            <Badge size="lg" color="green" variant="dot" radius="xs">
+            <Badge size="md" color="green" variant="dot" radius="xs">
               Node JS
             </Badge>
-            <Badge size="lg" color="gray" variant="dot" radius="xs">
+            <Badge size="md" color="gray" variant="dot" radius="xs">
               Express JS
             </Badge>
-            <Badge size="lg" color="gray" variant="dot" radius="xs">
+            <Badge size="md" color="gray" variant="dot" radius="xs">
               Cypress.io
             </Badge>
-            <Badge size="lg" color="blue" variant="dot" radius="xs">
+            <Badge size="md" color="blue" variant="dot" radius="xs">
               MySQL
             </Badge>
           </Group>
-          <Text size="xs" style={{ marginTop: 4 }}>
+          <Text className="row-bottom-top-spacing" size="xs">
             09-2021 &#8212;&#8212; Present
           </Text>
         </Timeline.Item>

@@ -70,6 +70,16 @@ input,
   margin-bottom: 5rem !important;
 }
 
+.row-bottom-top-spacing {
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.row-bottom-top-spacing-half {
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
 .content-spacing {
   margin-top: 2rem !important;
 }
