@@ -111,7 +111,7 @@ const Home: NextPage = () => {
 
               <Header />
 
-              <Col sx={{ marginTop: "5rem", marginBottom: "5rem" }} span={12}>
+              <Col className="section-spacing" span={12}>
                 <Divider
                   size="sm"
                   label="About Me"
@@ -167,7 +167,10 @@ const Home: NextPage = () => {
                   <Col xs={12} sm={8} md={8} lg={8} xl={8} span={9}>
                     <Card>
                       <Col span={12}>
-                        <Divider label="Send me a message" />
+                        <Divider
+                          labelProps={{ size: "sm", weight: 700 }}
+                          label="Send me a message"
+                        />
                       </Col>
                       <Col span={12}>
                         <TextInput label="Your email" required />
@@ -190,7 +193,10 @@ const Home: NextPage = () => {
                   <Col xs={12} sm={4} md={4} lg={4} xl={4} span={3}>
                     <Card>
                       <Col span={6}>
-                        <Divider label="My socials" />
+                        <Divider
+                          labelProps={{ size: "sm", weight: 700 }}
+                          label="My socials"
+                        />
                       </Col>
 
                       <Col xs={6} span={6}>
@@ -232,7 +238,10 @@ const Home: NextPage = () => {
                       </Col>
 
                       <Col span={12}>
-                        <Divider label="Resume" />
+                        <Divider
+                          labelProps={{ size: "sm", weight: 700 }}
+                          label="Resume"
+                        />
                       </Col>
                       <Col span={12}>
                         <Button

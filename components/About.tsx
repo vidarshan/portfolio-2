@@ -13,7 +13,7 @@ import profileimg from "../images/myimage.jpeg";
 
 const About = () => {
   return (
-    <Grid sx={{ marginTop: "2rem" }}>
+    <Grid className="content-spacing">
       <Col xs={12} sm={6} md={8} lg={8} xl={7} span={7}>
         <Card>
           <Grid>
@@ -64,11 +64,16 @@ const About = () => {
       </Col>
       <Col xs={12} sm={6} md={4} lg={4} xl={5} span={5}>
         <Card>
-          <Text size="md">Technical Competencies</Text>
+          <Text weight={500} size="sm">
+            Technical Competencies
+          </Text>
 
           <Grid sx={{ marginTop: ".5rem" }}>
             <Col span={12}>
-              <Divider label="Languages" />
+              <Divider
+                labelProps={{ size: "sm", weight: 700 }}
+                label="Languages"
+              />
               <Group sx={{ marginTop: "1rem" }}>
                 <Badge color="yellow" variant="dot" radius="xs" size="lg">
                   Javascript (ES6+)
@@ -80,8 +85,11 @@ const About = () => {
                   Python
                 </Badge>
               </Group>
-              <div style={{ marginTop: "1rem" }}>
-                <Divider label="Frameworks" />
+              <div className="item-spacing-1">
+                <Divider
+                  labelProps={{ size: "sm", weight: 700 }}
+                  label="Frameworks"
+                />
                 <Group sx={{ marginTop: "1rem" }}>
                   <Badge variant="dot" radius="xs" size="lg">
                     React JS
@@ -101,8 +109,11 @@ const About = () => {
                 </Group>
               </div>
 
-              <div style={{ marginTop: "1rem" }}>
-                <Divider label="Other Tools" />
+              <div className="item-spacing-1">
+                <Divider
+                  labelProps={{ size: "sm", weight: 700 }}
+                  label="Other Tools"
+                />
 
                 <Group sx={{ marginTop: "1rem" }}>
                   <Badge color="blue" variant="dot" radius="xs" size="lg">

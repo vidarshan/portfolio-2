@@ -42,52 +42,56 @@ const ProjectCard = () => {
           </Text>
 
           <div style={{ marginTop: "1rem" }}>
-            <Spoiler maxHeight={100} showLabel="more" hideLabel="less">
-              <Text weight={500} align="justify" size="sm">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-                illo sit, velit exercitationem, officia tenetur eum impedit
-                doloremque fugiat dignissimos neque modi asperiores obcaecati,
-                in perferendis? Blanditiis vel minus sunt voluptatum
-                perspiciatis facere deleniti necessitatibus provident earum,
-                delectus accusantium tempora! Lorem ipsum dolor sit amet
-                consectetur adipisicing elit.
-              </Text>
-            </Spoiler>
+            <Text weight={500} align="justify" size="sm">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim illo
+              sit, velit exercitationem, officia tenetur eum impedit doloremque
+              fugiat dignissimos neque modi asperiores obcaecati, in
+              perferendis? Blanditiis vel minus sunt voluptatum perspiciatis
+              facere deleniti necessitatibus provident earum, delectus
+              accusantium tempora! Lorem ipsum dolor sit amet consectetur
+              adipisicing elit.
+            </Text>
           </div>
-          <Group style={{ marginTop: ".6rem" }}>
-            <Badge
-              className="badge-spacing"
-              radius="xs"
-              size="lg"
-              variant="dot"
-            >
-              React JS
-            </Badge>
-            <Badge
-              className="badge-spacing"
-              radius="xs"
-              size="lg"
-              variant="dot"
-            >
-              Node JS
-            </Badge>
-            <Badge
-              className="badge-spacing"
-              radius="xs"
-              size="lg"
-              variant="dot"
-            >
-              Express JS
-            </Badge>
-            <Badge
-              className="badge-spacing"
-              radius="xs"
-              size="lg"
-              variant="dot"
-            >
-              Mongo DB
-            </Badge>
-          </Group>
+          <div style={{ marginTop: "1rem" }}>
+            <Divider
+              labelProps={{ size: "sm", weight: 500 }}
+              label="Tech Stack"
+            />
+            <Group style={{ marginTop: ".6rem" }}>
+              <Badge
+                className="badge-spacing"
+                radius="xs"
+                size="lg"
+                variant="dot"
+              >
+                React JS
+              </Badge>
+              <Badge
+                className="badge-spacing"
+                radius="xs"
+                size="lg"
+                variant="dot"
+              >
+                Node JS
+              </Badge>
+              <Badge
+                className="badge-spacing"
+                radius="xs"
+                size="lg"
+                variant="dot"
+              >
+                Express JS
+              </Badge>
+              <Badge
+                className="badge-spacing"
+                radius="xs"
+                size="lg"
+                variant="dot"
+              >
+                Mongo DB
+              </Badge>
+            </Group>
+          </div>
           <Grid>
             <Col xs={12} sm={6} md={6} lg={6} xl={6} span={6}>
               <Button

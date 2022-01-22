@@ -64,3 +64,16 @@ input,
 .mantine-4375jw {
   overflow-wrap: break-word !important;
 }
+
+.section-spacing {
+  margin-top: 5rem !important;
+  margin-bottom: 5rem !important;
+}
+
+.content-spacing {
+  margin-top: 2rem !important;
+}
+
+.item-spacing-1 {
+  margin-top: 1rem !important;
+}
