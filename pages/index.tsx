@@ -3,42 +3,25 @@ import {
   Grid,
   Col,
   ActionIcon,
-  Text,
   ColorScheme,
   ColorSchemeProvider,
-  Title,
   Affix,
   Transition,
   Divider,
-  Card,
-  TextInput,
-  Button,
-  Group,
-  Alert,
-  Anchor,
 } from "@mantine/core";
 import type { NextPage } from "next";
 import { useState } from "react";
 import { useWindowScroll } from "@mantine/hooks";
-import {
-  BsMoonStarsFill,
-  BsSunFill,
-  BsLinkedin,
-  BsGithub,
-  BsStackOverflow,
-  BsTwitter,
-  BsCloudDownload,
-} from "react-icons/bs";
+import { BsMoonStarsFill, BsSunFill } from "react-icons/bs";
 import { FiArrowUp } from "react-icons/fi";
 import { MantineProvider } from "@mantine/core";
+
 import Footer from "../components/Footer";
-import { RiSendPlaneFill } from "react-icons/ri";
 import ProjectCard from "../components/ProjectCard";
 import Header from "../components/Header";
 import About from "../components/About";
 import Work from "../components/Work";
-
-import Link from "next/link";
+import ReachOut from "../components/ReachOut";
 
 const Home: NextPage = () => {
   const [scroll, scrollTo] = useWindowScroll();
@@ -128,13 +111,13 @@ const Home: NextPage = () => {
                 <Work />
               </Col>
 
-              <Col span={12}>
+              <Col className="section-spacing" span={12}>
                 <Divider
                   size="sm"
                   label="Projects"
                   labelProps={{ size: "lg", weight: "600" }}
                 />
-                <Grid gutter="xl">
+                <Grid className="content-spacing" gutter="xl">
                   <Col xs={12} sm={6} md={6} lg={12} xl={12} span={12}>
                     <ProjectCard />
                   </Col>
@@ -156,106 +139,7 @@ const Home: NextPage = () => {
                   label="Reach Out"
                   labelProps={{ size: "lg", weight: "600" }}
                 />
-                <Grid gutter="xl" sx={{ marginTop: "2rem" }}>
-                  <Col span={12}>
-                    <Alert title="Good News!" color="green" radius="xs">
-                      I am currently searching for new opportunities. I will be
-                      open for job offers and other project related offers.
-                      Contact me for more info.
-                    </Alert>
-                  </Col>
-                  <Col xs={12} sm={8} md={8} lg={8} xl={8} span={9}>
-                    <Card>
-                      <Col span={12}>
-                        <Divider
-                          labelProps={{ size: "sm", weight: 700 }}
-                          label="Send me a message"
-                        />
-                      </Col>
-                      <Col span={12}>
-                        <TextInput label="Your email" required />
-                      </Col>
-                      <Col span={12}>
-                        <TextInput label="Message" />
-                      </Col>
-                      <Col sx={{ marginTop: "1rem" }} span={12}>
-                        <Button
-                          leftIcon={<RiSendPlaneFill />}
-                          variant="default"
-                          color="dark"
-                          fullWidth
-                        >
-                          Send Message
-                        </Button>
-                      </Col>
-                    </Card>
-                  </Col>
-                  <Col xs={12} sm={4} md={4} lg={4} xl={4} span={3}>
-                    <Card>
-                      <Col span={6}>
-                        <Divider
-                          labelProps={{ size: "sm", weight: 700 }}
-                          label="My socials"
-                        />
-                      </Col>
-
-                      <Col xs={6} span={6}>
-                        <Anchor href="https://mantine.dev/" target="_blank">
-                          <Group>
-                            <Text size="sm" weight={500}>
-                              {" "}
-                              Linkedin
-                            </Text>
-                          </Group>
-                        </Anchor>
-                      </Col>
-                      <Col xs={6} span={6}>
-                        <Anchor href="https://mantine.dev/" target="_blank">
-                          <Group>
-                            <Text size="sm" weight={500}>
-                              Github
-                            </Text>
-                          </Group>
-                        </Anchor>
-                      </Col>
-                      <Col span={6}>
-                        <Anchor href="https://mantine.dev/" target="_blank">
-                          <Group>
-                            <Text size="sm" weight={500}>
-                              Stackoverflow
-                            </Text>
-                          </Group>
-                        </Anchor>
-                      </Col>
-                      <Col span={6}>
-                        <Anchor href="https://mantine.dev/" target="_blank">
-                          <Group>
-                            <Text size="sm" weight={500}>
-                              Twitter
-                            </Text>
-                          </Group>
-                        </Anchor>
-                      </Col>
-
-                      <Col span={12}>
-                        <Divider
-                          labelProps={{ size: "sm", weight: 700 }}
-                          label="Resume"
-                        />
-                      </Col>
-                      <Col span={12}>
-                        <Button
-                          leftIcon={<BsCloudDownload />}
-                          variant="default"
-                          color="dark"
-                          fullWidth
-                        >
-                          Download my Resume
-                        </Button>
-                      </Col>
-                    </Card>
-                  </Col>
-                </Grid>
+                <ReachOut />
               </Col>
             </Grid>
             <Footer />
