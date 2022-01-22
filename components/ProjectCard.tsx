@@ -33,7 +33,7 @@ const ProjectCard = () => {
           }}
           span={6}
         >
-          <Text sx={{ marginTop: "1rem" }} size="xl" weight={500}>
+          <Text sx={{ marginTop: "1rem" }} size="xl" weight={700}>
             Norway Ford Adventures
           </Text>
           <Divider />
