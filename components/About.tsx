@@ -9,6 +9,7 @@ import {
   Image,
   Text,
 } from "@mantine/core";
+import { technologies } from "../data/technicalcompetencies";
 import profileimg from "../images/myimage.jpeg";
 
 const About = () => {
@@ -43,7 +44,7 @@ const About = () => {
               <Divider />
               <Blockquote cite="- Vidarshan">
                 {" "}
-                <Text size="sm" weight={500}>
+                <Text size="sm" weight={600}>
                   {`I'm`} a passionate Software Engineer who likes to see things
                   being built one line of code at a time. Well organised and
                   prefers to have incremental self-development based on the
@@ -75,15 +76,21 @@ const About = () => {
                 label="Languages"
               />
               <Group sx={{ marginTop: "1rem" }}>
-                <Badge color="yellow" variant="dot" radius="xs" size="lg">
-                  Javascript (ES6+)
-                </Badge>
-                <Badge variant="dot" radius="xs" size="lg">
-                  Typescript
-                </Badge>
-                <Badge color="yellow" variant="dot" radius="xs" size="lg">
-                  Python
-                </Badge>
+                {technologies.map((tech) => {
+                  if (tech.type === "language") {
+                    return (
+                      <Badge
+                        key={tech.id}
+                        color={tech.color}
+                        variant="dot"
+                        radius="xs"
+                        size="lg"
+                      >
+                        {tech.name}
+                      </Badge>
+                    );
+                  }
+                })}
               </Group>
               <div className="item-spacing-1">
                 <Divider
@@ -91,21 +98,21 @@ const About = () => {
                   label="Frameworks"
                 />
                 <Group sx={{ marginTop: "1rem" }}>
-                  <Badge variant="dot" radius="xs" size="lg">
-                    React JS
-                  </Badge>
-                  <Badge color="blue" variant="dot" radius="xs" size="lg">
-                    React Native
-                  </Badge>
-                  <Badge color="gray" variant="dot" radius="xs" size="lg">
-                    Next JS
-                  </Badge>
-                  <Badge color="green" variant="dot" radius="xs" size="lg">
-                    Node JS
-                  </Badge>
-                  <Badge color="gray" variant="dot" radius="xs" size="lg">
-                    Express JS
-                  </Badge>
+                  {technologies.map((tech) => {
+                    if (tech.type === "framework") {
+                      return (
+                        <Badge
+                          key={tech.id}
+                          color={tech.color}
+                          variant="dot"
+                          radius="xs"
+                          size="lg"
+                        >
+                          {tech.name}
+                        </Badge>
+                      );
+                    }
+                  })}
                 </Group>
               </div>
 
@@ -116,48 +123,21 @@ const About = () => {
                 />
 
                 <Group sx={{ marginTop: "1rem" }}>
-                  <Badge color="blue" variant="dot" radius="xs" size="lg">
-                    MySQL
-                  </Badge>
-                  <Badge variant="dot" radius="xs" size="lg">
-                    Postgres
-                  </Badge>
-                  <Badge color="green" variant="dot" radius="xs" size="lg">
-                    Mongo DB
-                  </Badge>
-                  <Badge color="indigo" variant="dot" radius="xs" size="lg">
-                    Bootstrap
-                  </Badge>
-                  <Badge color="pink" variant="dot" radius="xs" size="lg">
-                    Redux
-                  </Badge>
-                  <Badge color="pink" variant="dot" radius="xs" size="lg">
-                    SCSS
-                  </Badge>
-                  <Badge color="orange" variant="dot" radius="xs" size="lg">
-                    Semantic UI
-                  </Badge>
-                  <Badge color="blue" variant="dot" radius="xs" size="lg">
-                    Tailwind CSS
-                  </Badge>
-                  <Badge color="red" variant="dot" radius="xs" size="lg">
-                    Ant Design
-                  </Badge>
-                  <Badge color="gray" variant="dot" radius="xs" size="lg">
-                    Cypress.io
-                  </Badge>
-                  <Badge color="red" variant="dot" radius="xs" size="lg">
-                    Redis
-                  </Badge>
-                  <Badge color="red" variant="dot" radius="xs" size="lg">
-                    CI/CD
-                  </Badge>
-                  <Badge color="red" variant="dot" radius="xs" size="lg">
-                    Version Control
-                  </Badge>
-                  <Badge color="purple" variant="dot" radius="xs" size="lg">
-                    Strapi
-                  </Badge>
+                  {technologies.map((tech) => {
+                    if (tech.type === "other") {
+                      return (
+                        <Badge
+                          key={tech.id}
+                          color={tech.color}
+                          variant="dot"
+                          radius="xs"
+                          size="lg"
+                        >
+                          {tech.name}
+                        </Badge>
+                      );
+                    }
+                  })}
                 </Group>
               </div>
             </Col>
