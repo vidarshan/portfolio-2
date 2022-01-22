@@ -43,18 +43,18 @@ const About = () => {
               <Divider />
               <Blockquote cite="- Vidarshan">
                 {" "}
-                <Text weight={600}>
-                  "A passionate Software Engineer who likes to see things being
-                  built one line of code at a time. Well organised and prefers
-                  to have incremental self-development based on the knowledge
-                  gained. <br /> <br />I have over 1 year of industry
+                <Text weight={500}>
+                  I'm a passionate Software Engineer who likes to see things
+                  being built one line of code at a time. Well organised and
+                  prefers to have incremental self-development based on the
+                  knowledge gained. <br /> <br />I have over 1 year of industry
                   experience, and I am gaining more knowledge day-by-day, as I
                   am a quick learner who likes to implement and make use of the
                   knowledge gained in order to create great things.
                   <br /> <br />
                   My goal is to create high quality software products written
                   with quality code and based on unique ideas, which will have a
-                  positive impact to the society and to be a better software
+                  positive impact to the society while becoming a great software
                   engineer among the best software engineers."
                 </Text>
               </Blockquote>{" "}

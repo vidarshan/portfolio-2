@@ -96,7 +96,11 @@ const Home: NextPage = () => {
               {/* <Header /> */}
 
               <Col span={12}>
-                <Divider label="About Me" labelProps={{ size: "xl" }} />
+                <Divider
+                  size="sm"
+                  label="About Me"
+                  labelProps={{ size: "xl", weight: "600" }}
+                />
                 <About />
               </Col>
               <Col span={12}>
