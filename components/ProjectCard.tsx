@@ -10,11 +10,13 @@ import {
   Group,
   Container,
   Spoiler,
+  MediaQuery,
 } from "@mantine/core";
 import React from "react";
 import ss from "../images/ss.jpeg";
-
+import { FaGithub, FaGlobeAfrica } from "react-icons/fa";
 import { BsEyeFill, BsGithub } from "react-icons/bs";
+import { AiFillGithub, AiOutlineLink } from "react-icons/ai";
 
 const ProjectCard = () => {
   return (
@@ -37,9 +39,16 @@ const ProjectCard = () => {
           xl={7}
           span={6}
         >
-          <Text sx={{ marginTop: "1rem" }} size="md" weight={700}>
-            Norway Ford Adventures
-          </Text>
+          <Group position="apart" className="item-spacing-1">
+            <Text size="md" weight={700}>
+              Norway Ford Adventures
+            </Text>
+
+            <div>
+              <FaGlobeAfrica className="demo-icon" />
+              <FaGithub />
+            </div>
+          </Group>
 
           <div style={{ marginTop: "1rem" }}>
             <Text weight={500} align="justify" size="sm">
@@ -54,7 +63,7 @@ const ProjectCard = () => {
           </div>
           <div style={{ marginTop: "1rem" }}>
             <Divider
-              labelProps={{ size: "sm", weight: 500 }}
+              labelProps={{ size: "xs", weight: 500 }}
               label="Tech Stack"
             />
             <Group style={{ marginTop: ".6rem" }}>
@@ -92,30 +101,6 @@ const ProjectCard = () => {
               </Badge>
             </Group>
           </div>
-          <Grid>
-            <Col xs={12} sm={6} md={6} lg={6} xl={6} span={6}>
-              <Button
-                variant="default"
-                color="dark"
-                fullWidth
-                style={{ marginTop: 14 }}
-                leftIcon={<BsEyeFill />}
-              >
-                View Demo
-              </Button>
-            </Col>
-            <Col xs={12} sm={6} md={6} lg={6} xl={6} span={6}>
-              <Button
-                variant="default"
-                color="dark"
-                fullWidth
-                style={{ marginTop: 14 }}
-                leftIcon={<BsGithub />}
-              >
-                View Repository
-              </Button>
-            </Col>
-          </Grid>
         </Col>
       </Grid>
     </Card>

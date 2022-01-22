@@ -61,7 +61,8 @@ input,
   font-weight: 700 !important;
 }
 
-.mantine-4375jw {
+.mantine-4375jw,
+.line-break-responsive {
   overflow-wrap: break-word !important;
 }
 
@@ -90,4 +91,14 @@ input,
 
 .item-spacing-1 {
   margin-top: 1rem !important;
+}
+
+.demo-icon {
+  margin: 0 10px;
+}
+
+@media screen and (max-width: 410px) {
+  .demo-icon {
+    margin-left: 0;
+  }
 }
