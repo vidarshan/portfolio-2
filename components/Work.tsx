@@ -1,10 +1,10 @@
 import React from "react";
-import { Text, Timeline, Col, Grid, Badge, Group } from "@mantine/core";
+import { Text, Timeline, Col, Card, Badge, Group } from "@mantine/core";
 import { BsCheckCircleFill, BsDashCircleFill } from "react-icons/bs";
 
 const Work = () => {
   return (
-    <div style={{ marginTop: "2rem" }}>
+    <Card style={{ marginTop: "2rem" }}>
       <Timeline color="blue" active={2} bulletSize={24} lineWidth={3}>
         <Timeline.Item
           bullet={<BsDashCircleFill />}
@@ -111,7 +111,7 @@ const Work = () => {
           </Text>
         </Timeline.Item>
       </Timeline>
-    </div>
+    </Card>
   );
 };
 

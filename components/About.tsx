@@ -144,6 +144,9 @@ const About = () => {
                   <Badge color="red" variant="dot" radius="xs" size="lg">
                     Version Control
                   </Badge>
+                  <Badge color="purple" variant="dot" radius="xs" size="lg">
+                    Strapi
+                  </Badge>
                 </Group>
               </div>
             </Col>

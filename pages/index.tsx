@@ -14,6 +14,8 @@ import {
   TextInput,
   Button,
   Group,
+  Alert,
+  Anchor,
 } from "@mantine/core";
 import type { NextPage } from "next";
 import { useState } from "react";
@@ -25,15 +27,17 @@ import {
   BsGithub,
   BsStackOverflow,
   BsTwitter,
+  BsCloudDownload,
 } from "react-icons/bs";
 import { FiArrowUp } from "react-icons/fi";
 import { MantineProvider } from "@mantine/core";
 import Footer from "../components/Footer";
-
+import { RiSendPlaneFill } from "react-icons/ri";
 import ProjectCard from "../components/ProjectCard";
 import Header from "../components/Header";
 import About from "../components/About";
 import Work from "../components/Work";
+
 import Link from "next/link";
 
 const Home: NextPage = () => {
@@ -107,7 +111,7 @@ const Home: NextPage = () => {
 
               <Header />
 
-              <Col span={12}>
+              <Col sx={{ marginTop: "5rem", marginBottom: "5rem" }} span={12}>
                 <Divider
                   size="sm"
                   label="About Me"
@@ -115,7 +119,7 @@ const Home: NextPage = () => {
                 />
                 <About />
               </Col>
-              <Col span={12}>
+              <Col sx={{ marginTop: "5rem", marginBottom: "5rem" }} span={12}>
                 <Divider
                   size="sm"
                   label="Work Experience"
@@ -146,10 +150,21 @@ const Home: NextPage = () => {
                   </Col>
                 </Grid>
               </Col>
-              <Col sx={{ height: "80vh" }} span={12}>
-                <Divider label="Reach Out" />
-                <Grid>
-                  <Col span={9}>
+              <Col span={12}>
+                <Divider
+                  size="sm"
+                  label="Reach Out"
+                  labelProps={{ size: "lg", weight: "600" }}
+                />
+                <Grid gutter="xl" sx={{ marginTop: "2rem" }}>
+                  <Col span={12}>
+                    <Alert title="Good News!" color="green" radius="xs">
+                      I am currently searching for new opportunities. I will be
+                      open for job offers and other project related offers.
+                      Contact me for more info.
+                    </Alert>
+                  </Col>
+                  <Col xs={12} sm={8} md={8} lg={8} xl={8} span={9}>
                     <Card>
                       <Col span={12}>
                         <Divider label="Send me a message" />
@@ -161,65 +176,88 @@ const Home: NextPage = () => {
                         <TextInput label="Message" />
                       </Col>
                       <Col sx={{ marginTop: "1rem" }} span={12}>
-                        <Button variant="filled" color="dark" fullWidth>
+                        <Button
+                          leftIcon={<RiSendPlaneFill />}
+                          variant="default"
+                          color="dark"
+                          fullWidth
+                        >
                           Send Message
                         </Button>
                       </Col>
                     </Card>
                   </Col>
-                  <Col span={3}>
+                  <Col xs={12} sm={4} md={4} lg={4} xl={4} span={3}>
                     <Card>
-                      <Col span={12}>
+                      <Col span={6}>
                         <Divider label="My socials" />
                       </Col>
+
+                      <Col xs={6} span={6}>
+                        <Anchor href="https://mantine.dev/" target="_blank">
+                          <Group>
+                            <BsLinkedin />
+                            <Text size="sm" weight={500}>
+                              {" "}
+                              Linkedin
+                            </Text>
+                          </Group>
+                        </Anchor>
+                      </Col>
+                      <Col xs={6} span={6}>
+                        <Anchor href="https://mantine.dev/" target="_blank">
+                          <Group>
+                            <BsGithub />
+                            <Text size="sm" weight={500}>
+                              Github
+                            </Text>
+                          </Group>
+                        </Anchor>
+                      </Col>
+                      <Col span={6}>
+                        <Anchor href="https://mantine.dev/" target="_blank">
+                          <Group>
+                            <BsStackOverflow />
+                            <Text size="sm" weight={500}>
+                              Stackoverflow
+                            </Text>
+                          </Group>
+                        </Anchor>
+                      </Col>
+                      <Col span={6}>
+                        <Anchor href="https://mantine.dev/" target="_blank">
+                          <Group>
+                            <BsTwitter />
+                            <Text size="sm" weight={500}>
+                              Twitter
+                            </Text>
+                          </Group>
+                        </Anchor>
+                      </Col>
+
                       <Col span={12}>
-                        <Group>
-                          <BsLinkedin />
-                          <Text size="sm" weight={500}>
-                            Linkedin
-                          </Text>
-                        </Group>
+                        <Divider label="Resume" />
                       </Col>
                       <Col span={12}>
-                        <Group>
-                          <BsGithub />
-                          <Text size="sm" weight={500}>
-                            Github
-                          </Text>
-                        </Group>
+                        {/* <a
+                          href={resume}
+                          download="YourName resume.pdf"
+                          target="_blank"
+                        >
+                          Mantine docs
+                        </a> */}
+                        <Button
+                          leftIcon={<BsCloudDownload />}
+                          variant="default"
+                          color="dark"
+                          fullWidth
+                        >
+                          Download my Resume
+                        </Button>
                       </Col>
-                      <Col span={12}>
-                        <Group>
-                          <BsStackOverflow />
-                          <Text size="sm" weight={500}>
-                            Stackoverflow
-                          </Text>
-                        </Group>
-                      </Col>
-                      <Col span={12}>
-                        <Group>
-                          <BsTwitter />
-                          <Text size="sm" weight={500}>
-                            Twitter
-                          </Text>
-                        </Group>
-                      </Col>
-                      {/* <Col span={12}>
-                        <Group>
-                          <BsTwitter />
-                          <Text size="sm" weight={500}>
-                            Gmail
-                          </Text>
-                        </Group>
-                      </Col> */}
                     </Card>
                   </Col>
                 </Grid>
-                <Text size="xs">Text Size</Text>
-                <Text size="sm">Text Size</Text>{" "}
-                <Text size="md">Text Size</Text>
-                <Text size="lg">Text Size</Text>{" "}
-                <Text size="xl">Text Size</Text>
               </Col>
             </Grid>
             <Footer />
