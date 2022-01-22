@@ -92,7 +92,7 @@ const Home: NextPage = () => {
                 </ActionIcon>
               </Col>
 
-              <Header />
+              {/* <Header /> */}
 
               <Col span={12}>
                 <Title order={1}>About Me</Title>

@@ -9,6 +9,7 @@ import {
   Image,
   Group,
   Container,
+  Spoiler,
 } from "@mantine/core";
 import React from "react";
 import ss from "../images/ss.jpeg";
@@ -36,14 +37,20 @@ const ProjectCard = () => {
             Norway Ford Adventures
           </Text>
           <Divider />
-          <Text align="justify" sx={{ marginTop: "1rem" }} size="md">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim illo
-            sit, velit exercitationem, officia tenetur eum impedit doloremque
-            fugiat dignissimos neque modi asperiores obcaecati, in perferendis?
-            Blanditiis vel minus sunt voluptatum perspiciatis facere deleniti
-            necessitatibus provident earum, delectus accusantium tempora!
-          </Text>
-
+          <Spoiler maxHeight={120} showLabel="Show more" hideLabel="Hide">
+            <Text align="justify" size="md">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim illo
+              sit, velit exercitationem, officia tenetur eum impedit doloremque
+              fugiat dignissimos neque modi asperiores obcaecati, in
+              perferendis? Blanditiis vel minus sunt voluptatum perspiciatis
+              facere deleniti necessitatibus provident earum, delectus
+              accusantium tempora! Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Perspiciatis esse optio provident aliquam
+              pariatur animi cupiditate quisquam magni perferendis architecto
+              laboriosam omnis expedita laudantium mollitia tempora ratione
+              quibusdam, sit numquam!
+            </Text>
+          </Spoiler>
           <div style={{ marginTop: ".6rem" }}>
             <Badge
               className="badge-spacing"

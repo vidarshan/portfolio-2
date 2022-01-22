@@ -79,7 +79,7 @@ const About = () => {
                 radius="xs"
                 size="lg"
               >
-                Javascript
+                Javascript (ES6+)
               </Badge>
               <Badge
                 variant="dot"
@@ -196,13 +196,13 @@ const About = () => {
                 Redux
               </Badge>
               <Badge
-                color="blue"
+                color="pink"
                 variant="dot"
                 className="badge-spacing"
                 radius="xs"
                 size="lg"
               >
-                CSS
+                SCSS
               </Badge>
               <Badge
                 color="orange"
