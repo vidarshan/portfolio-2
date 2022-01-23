@@ -15,7 +15,7 @@ import { RiSendPlaneFill } from "react-icons/ri";
 import { BsCloudDownload } from "react-icons/bs";
 const ReachOut = () => {
   return (
-    <Grid gutter="xl" sx={{ marginTop: "2rem" }}>
+    <Grid gutter="xl" className="content-spacing">
       <Col span={12}>
         <Alert title="Good News!" color="green" radius="xs">
           I am currently searching for new opportunities. I will be open for job
@@ -50,64 +50,61 @@ const ReachOut = () => {
       </Col>
       <Col xs={12} sm={4} md={4} lg={4} xl={4} span={3}>
         <Card>
-          <Col span={6}>
-            <Divider
-              labelProps={{ size: "sm", weight: 700 }}
-              label="My socials"
-            />
-          </Col>
-
-          <Col xs={6} span={6}>
-            <Anchor href="https://mantine.dev/" target="_blank">
-              <Group>
-                <Text size="sm" weight={500}>
-                  {" "}
-                  Linkedin
-                </Text>
-              </Group>
-            </Anchor>
-          </Col>
-          <Col xs={6} span={6}>
-            <Anchor href="https://mantine.dev/" target="_blank">
-              <Group>
-                <Text size="sm" weight={500}>
-                  Github
-                </Text>
-              </Group>
-            </Anchor>
-          </Col>
-          <Col span={6}>
-            <Anchor href="https://mantine.dev/" target="_blank">
-              <Group>
-                <Text size="sm" weight={500}>
-                  Stackoverflow
-                </Text>
-              </Group>
-            </Anchor>
-          </Col>
-          <Col span={6}>
-            <Anchor href="https://mantine.dev/" target="_blank">
-              <Group>
-                <Text size="sm" weight={500}>
-                  Twitter
-                </Text>
-              </Group>
-            </Anchor>
-          </Col>
-
-          <Col span={12}>
-            <Divider labelProps={{ size: "sm", weight: 700 }} label="Resume" />
-          </Col>
-          <Col span={12}>
-            <Button
-              leftIcon={<BsCloudDownload />}
-              variant="default"
-              color="dark"
-              fullWidth
-            >
-              Download my Resume
-            </Button>
-          </Col>
+          <Grid>
+            <Col span={12}>
+              <Divider
+                labelProps={{ size: "sm", weight: 700 }}
+                label="My socials"
+              />
+            </Col>
+            <Col xs={6} span={6}>
+              <Anchor href="https://mantine.dev/" target="_blank">
+                <Group>
+                  <Text size="sm" weight={500}>
+                    {" "}
+                    Linkedin
+                  </Text>
+                </Group>
+              </Anchor>
+            </Col>
+            <Col xs={6} span={6}>
+              <Anchor href="https://mantine.dev/" target="_blank">
+                <Group>
+                  <Text size="sm" weight={500}>
+                    Github
+                  </Text>
+                </Group>
+              </Anchor>
+            </Col>
+            <Col span={6}>
+              <Anchor href="https://mantine.dev/" target="_blank">
+                <Group>
+                  <Text size="sm" weight={500}>
+                    Stackoverflow
+                  </Text>
+                </Group>
+              </Anchor>
+            </Col>
+            <Col span={6}>
+              <Anchor href="https://mantine.dev/" target="_blank">
+                <Group>
+                  <Text size="sm" weight={500}>
+                    Twitter
+                  </Text>
+                </Group>
+              </Anchor>
+            </Col>
+            <Col span={12}>
+              <Button
+                leftIcon={<BsCloudDownload />}
+                variant="default"
+                color="dark"
+                fullWidth
+              >
+                Download my Resume
+              </Button>
+            </Col>
+          </Grid>
         </Card>
       </Col>
     </Grid>

@@ -8,13 +8,15 @@ import {
   Affix,
   Transition,
   Divider,
+  Button,
 } from "@mantine/core";
+import Head from "next/head";
 import type { NextPage } from "next";
 import { useState } from "react";
-import { useWindowScroll } from "@mantine/hooks";
 import { BsMoonStarsFill, BsSunFill } from "react-icons/bs";
 import { FiArrowUp } from "react-icons/fi";
 import { MantineProvider } from "@mantine/core";
+import { getGithubContributions } from "github-contributions-counter";
 
 import Footer from "../components/Footer";
 import ProjectCard from "../components/ProjectCard";
@@ -22,10 +24,11 @@ import Header from "../components/Header";
 import About from "../components/About";
 import Work from "../components/Work";
 import ReachOut from "../components/ReachOut";
+import { useWindowScroll } from "@mantine/hooks";
 
-const Home: NextPage = () => {
-  const [scroll, scrollTo] = useWindowScroll();
+const Home: NextPage = (allprops: any) => {
   const [colorScheme, setColorScheme] = useState<ColorScheme>("light");
+  const [scroll, scrollTo] = useWindowScroll();
   const toggleColorScheme = (value?: ColorScheme) =>
     setColorScheme(value || (colorScheme === "dark" ? "light" : "dark"));
 
@@ -56,42 +59,46 @@ const Home: NextPage = () => {
         }}
         withGlobalStyles
       >
-        <Affix position={{ bottom: 20, right: 20 }}>
-          <Transition transition="slide-up" mounted={scroll.y > 0}>
-            {(transitionStyles) => (
-              <ActionIcon
-                color="dark"
-                variant="filled"
-                style={transitionStyles}
-                onClick={() => scrollTo({ y: 0 })}
-              >
-                <FiArrowUp />
-              </ActionIcon>
-            )}
-          </Transition>
-        </Affix>
+        <Head>
+          <title>Vidarshan</title>
+          <meta name="Vidarshans" content="Vidarshan's portfolio website" />
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
         <Container sx={{ marginTop: "1rem" }} size={5120}>
+          <Col
+            sx={{
+              display: "flex",
+              justifyContent: "flex-end",
+            }}
+            span={12}
+          >
+            <ActionIcon
+              color="yellow"
+              variant="outline"
+              radius="xl"
+              size="lg"
+              onClick={() => toggleColorScheme()}
+              title="Toggle color scheme"
+            >
+              {colorScheme === "dark" ? <BsMoonStarsFill /> : <BsSunFill />}
+            </ActionIcon>
+          </Col>
+          <Affix position={{ bottom: 20, right: 20 }}>
+            <Transition transition="slide-up" mounted={scroll.y > 0}>
+              {(transitionStyles) => (
+                <ActionIcon
+                  style={transitionStyles}
+                  onClick={() => scrollTo({ y: 0 })}
+                  color="dark"
+                  variant="filled"
+                >
+                  <FiArrowUp />
+                </ActionIcon>
+              )}
+            </Transition>
+          </Affix>
           <Container size={1200}>
             <Grid>
-              <Col
-                sx={{
-                  display: "flex",
-                  justifyContent: "flex-end",
-                }}
-                span={12}
-              >
-                <ActionIcon
-                  color="yellow"
-                  variant="outline"
-                  radius="xl"
-                  size="lg"
-                  onClick={() => toggleColorScheme()}
-                  title="Toggle color scheme"
-                >
-                  {colorScheme === "dark" ? <BsMoonStarsFill /> : <BsSunFill />}
-                </ActionIcon>
-              </Col>
-
               <Header />
 
               <Col className="section-spacing" span={12}>
@@ -133,7 +140,7 @@ const Home: NextPage = () => {
                   </Col>
                 </Grid>
               </Col>
-              <Col span={12}>
+              <Col className="section-spacing" span={12}>
                 <Divider
                   size="sm"
                   label="Reach Out"
@@ -142,12 +149,60 @@ const Home: NextPage = () => {
                 <ReachOut />
               </Col>
             </Grid>
-            <Footer />
+            <Footer allprops={allprops} />
           </Container>
         </Container>
       </MantineProvider>
     </ColorSchemeProvider>
   );
 };
+
+export async function getStaticProps() {
+  const {
+    STACKOVERFLOW_USER,
+    STACKOVERFLOW_API_KEY,
+    GITHUB_USERNAME,
+    GITHUB_PAT,
+  } = process.env;
+
+  try {
+    const stackoverflowresponse = await fetch(
+      `https://api.stackexchange.com/2.2/users/${STACKOVERFLOW_USER}?&key=${STACKOVERFLOW_API_KEY}&site=stackoverflow`
+    );
+    const stackoverflow = await stackoverflowresponse.json();
+
+    const githubresponse = await fetch(
+      `https://api.github.com/users/${GITHUB_USERNAME}/starred`
+    );
+
+    const githubcontributionsresponse = await getGithubContributions({
+      username: GITHUB_USERNAME as string,
+      token: GITHUB_PAT as string,
+    });
+
+    const githubstars = await githubresponse.json();
+    const githubstarscount = { star_count: githubstars.length };
+    const githubcontributionscount = {
+      contributions_count: githubcontributionsresponse.data,
+    };
+
+    let allprops = {
+      ...stackoverflow,
+      ...githubstarscount,
+      ...githubcontributionscount,
+    };
+
+    return {
+      props: { allprops },
+      revalidate: 1,
+    };
+  } catch (error) {
+    console.log(error);
+    return {
+      props: { allprops: {} },
+      revalidate: 1,
+    };
+  }
+}
 
 export default Home;
