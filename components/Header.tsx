@@ -18,14 +18,14 @@ const Header = () => {
         minWidth: "100%",
       }}
     >
-      <Text size="xl" weight={700}>
+      <Text className="header-text" size="xl" weight={700}>
         Hello
       </Text>
-      <Text size="xl" weight={700}>
+      <Text className="header-text" size="xl" weight={700}>
         {`I'm Vidarshan`}
       </Text>
       <Group>
-        <Text size="xl" weight={700}>
+        <Text className="header-text" size="xl" weight={700}>
           A Software Engineer
         </Text>
         <Image height={40} width={40} src={technologist.src} alt="Norway" />

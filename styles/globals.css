@@ -108,6 +108,18 @@ input,
   }
 }
 
+@media screen and (max-width: 590px) {
+  .header-text {
+    font-size: 34px !important;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .header-text {
+    font-size: 20px !important;
+  }
+}
+
 .word-spacing-small {
   margin-left: 0.5rem;
 }
