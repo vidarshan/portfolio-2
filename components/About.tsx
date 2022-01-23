@@ -16,7 +16,7 @@ const About = () => {
   return (
     <Grid className="content-spacing">
       <Col xs={12} sm={6} md={8} lg={8} xl={7} span={7}>
-        <Card>
+        <Card withBorder>
           <Grid>
             <Col span={12}>
               <Group>
@@ -64,7 +64,7 @@ const About = () => {
         </Card>
       </Col>
       <Col xs={12} sm={6} md={4} lg={4} xl={5} span={5}>
-        <Card>
+        <Card withBorder>
           <Text weight={500} size="sm">
             Technical Competencies
           </Text>
