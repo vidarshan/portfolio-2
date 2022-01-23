@@ -29,6 +29,9 @@ const ReachOut = () => {
     validationRules: {
       email: (value) => /^\S+@\S+$/.test(value),
     },
+    errorMessages: {
+      email: "Email is not valid",
+    },
   });
 
   const sendEmail = async (values: any) => {
@@ -93,6 +96,7 @@ const ReachOut = () => {
                 {...form.getInputProps("message")}
                 placeholder="Message"
                 label="Your Message"
+                required
               />
             </Col>
             <Col sx={{ marginTop: "1rem" }} span={12}>

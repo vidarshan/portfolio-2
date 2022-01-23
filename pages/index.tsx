@@ -24,13 +24,22 @@ import Header from "../components/Header";
 import About from "../components/About";
 import Work from "../components/Work";
 import ReachOut from "../components/ReachOut";
-import { useWindowScroll } from "@mantine/hooks";
+import {
+  useWindowScroll,
+  useLocalStorageValue,
+  useHotkeys,
+} from "@mantine/hooks";
 
 const Home: NextPage = (allprops: any) => {
-  const [colorScheme, setColorScheme] = useState<ColorScheme>("light");
+  const [colorScheme, setColorScheme] = useLocalStorageValue<ColorScheme>({
+    key: "mantine-color-scheme",
+    defaultValue: "light",
+  });
   const [scroll, scrollTo] = useWindowScroll();
-  const toggleColorScheme = (value?: ColorScheme) =>
+  const toggleColorScheme = (value?: ColorScheme) => {
     setColorScheme(value || (colorScheme === "dark" ? "light" : "dark"));
+  };
+  useHotkeys([["mod+J", () => toggleColorScheme()]]);
 
   return (
     <ColorSchemeProvider
