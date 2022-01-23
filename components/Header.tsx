@@ -28,7 +28,13 @@ const Header = () => {
         <Text className="header-text" size="xl" weight={700}>
           A Software Engineer
         </Text>
-        <Image height={40} width={40} src={technologist.src} alt="Norway" />
+        <Image
+          className="header-img"
+          height={40}
+          width={40}
+          src={technologist.src}
+          alt="Norway"
+        />
       </Group>
       {os === "macos" || os === "windows" || os === "linux" ? (
         <div style={{ display: "flex", alignItems: "center" }}>
