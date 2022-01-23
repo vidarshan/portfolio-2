@@ -17,7 +17,7 @@ import { BsMoonStarsFill, BsSunFill } from "react-icons/bs";
 import { FiArrowUp } from "react-icons/fi";
 import { MantineProvider } from "@mantine/core";
 import { getGithubContributions } from "github-contributions-counter";
-
+import { NotificationsProvider } from "@mantine/notifications";
 import Footer from "../components/Footer";
 import ProjectCard from "../components/ProjectCard";
 import Header from "../components/Header";
@@ -59,99 +59,101 @@ const Home: NextPage = (allprops: any) => {
         }}
         withGlobalStyles
       >
-        <Head>
-          <title>Vidarshan</title>
-          <meta name="Vidarshans" content="Vidarshan's portfolio website" />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-        <Container sx={{ marginTop: "1rem" }} size={5120}>
-          <Col
-            sx={{
-              display: "flex",
-              justifyContent: "flex-end",
-            }}
-            span={12}
-          >
-            <ActionIcon
-              color="yellow"
-              variant="outline"
-              radius="xl"
-              size="lg"
-              onClick={() => toggleColorScheme()}
-              title="Toggle color scheme"
+        <NotificationsProvider position="top-right">
+          <Head>
+            <title>Vidarshan</title>
+            <meta name="Vidarshans" content="Vidarshan's portfolio website" />
+            <link rel="icon" href="/favicon.ico" />
+          </Head>
+          <Container sx={{ marginTop: "1rem" }} size={5120}>
+            <Col
+              sx={{
+                display: "flex",
+                justifyContent: "flex-end",
+              }}
+              span={12}
             >
-              {colorScheme === "dark" ? <BsMoonStarsFill /> : <BsSunFill />}
-            </ActionIcon>
-          </Col>
-          <Affix position={{ bottom: 20, right: 20 }}>
-            <Transition transition="slide-up" mounted={scroll.y > 0}>
-              {(transitionStyles) => (
-                <ActionIcon
-                  style={transitionStyles}
-                  onClick={() => scrollTo({ y: 0 })}
-                  color="dark"
-                  variant="filled"
-                >
-                  <FiArrowUp />
-                </ActionIcon>
-              )}
-            </Transition>
-          </Affix>
-          <Container size={1200}>
-            <Grid>
-              <Header />
+              <ActionIcon
+                color="yellow"
+                variant="outline"
+                radius="xl"
+                size="lg"
+                onClick={() => toggleColorScheme()}
+                title="Toggle color scheme"
+              >
+                {colorScheme === "dark" ? <BsMoonStarsFill /> : <BsSunFill />}
+              </ActionIcon>
+            </Col>
+            <Affix position={{ bottom: 20, right: 20 }}>
+              <Transition transition="slide-up" mounted={scroll.y > 0}>
+                {(transitionStyles) => (
+                  <ActionIcon
+                    style={transitionStyles}
+                    onClick={() => scrollTo({ y: 0 })}
+                    color="dark"
+                    variant="filled"
+                  >
+                    <FiArrowUp />
+                  </ActionIcon>
+                )}
+              </Transition>
+            </Affix>
+            <Container size={1200}>
+              <Grid>
+                <Header />
 
-              <Col className="section-spacing" span={12}>
-                <Divider
-                  size="sm"
-                  label="About Me"
-                  labelProps={{ size: "lg", weight: "600" }}
-                />
-                <About />
-              </Col>
-              <Col className="section-spacing" span={12}>
-                <Divider
-                  size="sm"
-                  label="Work Experience"
-                  labelProps={{ size: "lg", weight: "600" }}
-                />
-                <Work />
-              </Col>
+                <Col className="section-spacing" span={12}>
+                  <Divider
+                    size="sm"
+                    label="About Me"
+                    labelProps={{ size: "lg", weight: "600" }}
+                  />
+                  <About />
+                </Col>
+                <Col className="section-spacing" span={12}>
+                  <Divider
+                    size="sm"
+                    label="Work Experience"
+                    labelProps={{ size: "lg", weight: "600" }}
+                  />
+                  <Work />
+                </Col>
 
-              <Col className="section-spacing" span={12}>
-                <Divider
-                  size="sm"
-                  label="Projects"
-                  labelProps={{ size: "lg", weight: "600" }}
-                />
-                <Grid className="content-spacing" gutter="xl">
-                  <Col xs={12} sm={6} md={6} lg={12} xl={12} span={12}>
-                    <ProjectCard />
-                  </Col>
+                <Col className="section-spacing" span={12}>
+                  <Divider
+                    size="sm"
+                    label="Projects"
+                    labelProps={{ size: "lg", weight: "600" }}
+                  />
+                  <Grid className="content-spacing" gutter="xl">
+                    <Col xs={12} sm={6} md={6} lg={12} xl={12} span={12}>
+                      <ProjectCard />
+                    </Col>
 
-                  <Col xs={12} sm={6} md={6} lg={12} xl={12} span={12}>
-                    <ProjectCard />
-                  </Col>
-                  <Col xs={12} sm={6} md={6} lg={12} xl={12} span={12}>
-                    <ProjectCard />
-                  </Col>
-                  <Col xs={12} sm={6} md={6} lg={12} xl={12} span={12}>
-                    <ProjectCard />
-                  </Col>
-                </Grid>
-              </Col>
-              <Col className="section-spacing" span={12}>
-                <Divider
-                  size="sm"
-                  label="Reach Out"
-                  labelProps={{ size: "lg", weight: "600" }}
-                />
-                <ReachOut />
-              </Col>
-            </Grid>
-            <Footer allprops={allprops} />
+                    <Col xs={12} sm={6} md={6} lg={12} xl={12} span={12}>
+                      <ProjectCard />
+                    </Col>
+                    <Col xs={12} sm={6} md={6} lg={12} xl={12} span={12}>
+                      <ProjectCard />
+                    </Col>
+                    <Col xs={12} sm={6} md={6} lg={12} xl={12} span={12}>
+                      <ProjectCard />
+                    </Col>
+                  </Grid>
+                </Col>
+                <Col className="section-spacing" span={12}>
+                  <Divider
+                    size="sm"
+                    label="Reach Out"
+                    labelProps={{ size: "lg", weight: "600" }}
+                  />
+                  <ReachOut />
+                </Col>
+              </Grid>
+              <Footer allprops={allprops} />
+            </Container>
           </Container>
-        </Container>
+        </NotificationsProvider>
       </MantineProvider>
     </ColorSchemeProvider>
   );
@@ -197,7 +199,6 @@ export async function getStaticProps() {
       revalidate: 1,
     };
   } catch (error) {
-    console.log(error);
     return {
       props: { allprops: {} },
       revalidate: 1,

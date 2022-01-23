@@ -8,12 +8,61 @@ import {
   Grid,
   Group,
   Text,
+  Textarea,
   TextInput,
 } from "@mantine/core";
 import React from "react";
 import { RiSendPlaneFill } from "react-icons/ri";
-import { BsCloudDownload } from "react-icons/bs";
+import { BsCloudDownload, BsCheckCircle, BsXCircle } from "react-icons/bs";
+import { useNotifications } from "@mantine/notifications";
+import { useForm } from "@mantine/hooks";
+import emailjs from "emailjs-com";
 const ReachOut = () => {
+  const notifications = useNotifications();
+
+  const form = useForm({
+    initialValues: {
+      email: "",
+      message: "",
+    },
+
+    validationRules: {
+      email: (value) => /^\S+@\S+$/.test(value),
+    },
+  });
+
+  const sendEmail = async (values: any) => {
+    const { email, message } = values;
+
+    var formInfo = {
+      email,
+      message,
+    };
+    const emailres = await emailjs.send(
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE as string,
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE as string,
+      formInfo as any,
+      process.env.NEXT_PUBLIC_EMAILJS_USER as string
+    );
+
+    if (emailres && emailres.status === 200) {
+      notifications.showNotification({
+        title: "Success!",
+        message: "Message Sent!",
+        color: "green",
+        icon: <BsCheckCircle />,
+      });
+    } else {
+      notifications.showNotification({
+        title: "Oh no!",
+        message: "Message not sent!",
+        color: "red",
+        icon: <BsXCircle />,
+      });
+    }
+    form.reset();
+  };
+
   return (
     <Grid gutter="xl" className="content-spacing">
       <Col span={12}>
@@ -23,33 +72,45 @@ const ReachOut = () => {
         </Alert>
       </Col>
       <Col xs={12} sm={8} md={8} lg={8} xl={8} span={9}>
-        <Card>
+        <Card withBorder>
           <Col span={12}>
             <Divider
               labelProps={{ size: "sm", weight: 700 }}
               label="Send me a message"
             />
           </Col>
-          <Col span={12}>
-            <TextInput label="Your email" required />
-          </Col>
-          <Col span={12}>
-            <TextInput label="Message" />
-          </Col>
-          <Col sx={{ marginTop: "1rem" }} span={12}>
-            <Button
-              leftIcon={<RiSendPlaneFill />}
-              variant="default"
-              color="dark"
-              fullWidth
-            >
-              Send Message
-            </Button>
-          </Col>
+          <form onSubmit={form.onSubmit((values) => sendEmail(values))}>
+            <Col span={12}>
+              <TextInput
+                {...form.getInputProps("email")}
+                placeholder="Email"
+                label="Your email"
+                required
+              />
+            </Col>
+            <Col span={12}>
+              <Textarea
+                {...form.getInputProps("message")}
+                placeholder="Message"
+                label="Your Message"
+              />
+            </Col>
+            <Col sx={{ marginTop: "1rem" }} span={12}>
+              <Button
+                type="submit"
+                leftIcon={<RiSendPlaneFill />}
+                variant="default"
+                color="dark"
+                fullWidth
+              >
+                Send Message
+              </Button>
+            </Col>
+          </form>
         </Card>
       </Col>
       <Col xs={12} sm={4} md={4} lg={4} xl={4} span={3}>
-        <Card>
+        <Card withBorder>
           <Grid>
             <Col span={12}>
               <Divider
@@ -96,6 +157,14 @@ const ReachOut = () => {
             </Col>
             <Col span={12}>
               <Button
+                onClick={() =>
+                  notifications.showNotification({
+                    title: "Success",
+                    message: "Message Sent!",
+                    color: "red",
+                    icon: <BsCheckCircle />,
+                  })
+                }
                 leftIcon={<BsCloudDownload />}
                 variant="default"
                 color="dark"
