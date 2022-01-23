@@ -8,12 +8,12 @@ import {
   Text,
   Image,
   Group,
-  Container,
+  Tooltip,
   Spoiler,
   MediaQuery,
 } from "@mantine/core";
 import React from "react";
-import ss from "../images/ss.jpeg";
+import ss from "../images/findmystay.png";
 import { FaGithub, FaGlobeAfrica } from "react-icons/fa";
 import { BsEyeFill, BsGithub } from "react-icons/bs";
 import { AiFillGithub, AiOutlineLink } from "react-icons/ai";
@@ -45,8 +45,24 @@ const ProjectCard = () => {
             </Text>
 
             <div>
-              <FaGlobeAfrica className="demo-icon" />
-              <FaGithub />
+              <Tooltip
+                transitionTimingFunction="ease"
+                label="View Demo"
+                position="top"
+                radius="xs"
+                withArrow
+              >
+                <FaGlobeAfrica className="demo-icon" />
+              </Tooltip>
+              <Tooltip
+                transitionTimingFunction="ease"
+                label="View Repo"
+                position="bottom"
+                radius="xs"
+                withArrow
+              >
+                <FaGithub />
+              </Tooltip>
             </div>
           </Group>
 

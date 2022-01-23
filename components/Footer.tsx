@@ -20,6 +20,7 @@ const Footer = (allprops: any) => {
             className={styles.flexaligncenter}
             size="xs"
             align="center"
+            weight={700}
           >
             <BiGitBranch className={styles.iconspacing} />{" "}
             {get(
