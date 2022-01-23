@@ -1,4 +1,5 @@
 import {
+  ActionIcon,
   Alert,
   Anchor,
   Button,
@@ -13,7 +14,15 @@ import {
 } from "@mantine/core";
 import React from "react";
 import { RiSendPlaneFill } from "react-icons/ri";
-import { BsCloudDownload, BsCheckCircle, BsXCircle } from "react-icons/bs";
+import {
+  BsCloudDownload,
+  BsCheckCircle,
+  BsXCircle,
+  BsLinkedin,
+  BsGithub,
+  BsStackOverflow,
+  BsTwitter,
+} from "react-icons/bs";
 import { useNotifications } from "@mantine/notifications";
 import { useForm } from "@mantine/hooks";
 import emailjs from "emailjs-com";
@@ -122,7 +131,40 @@ const ReachOut = () => {
                 label="My socials"
               />
             </Col>
-            <Col xs={6} span={6}>
+            <Col span={12}>
+              <Group>
+                <Anchor
+                  href="https://www.linkedin.com/in/vidarshan-rathnayake/"
+                  target="_blank"
+                >
+                  <ActionIcon variant="default" color="dark" size="md">
+                    <BsLinkedin style={{ width: 18, height: 18 }} />
+                  </ActionIcon>
+                </Anchor>
+                <Anchor
+                  href="https://github.com/vidarshanadithya"
+                  target="_blank"
+                >
+                  <ActionIcon variant="default" color="dark" size="md">
+                    <BsGithub style={{ width: 18, height: 18 }} />
+                  </ActionIcon>
+                </Anchor>
+                <Anchor
+                  href="https://stackoverflow.com/users/15415996/vidarshan-adithya"
+                  target="_blank"
+                >
+                  <ActionIcon variant="default" color="dark" size="md">
+                    <BsStackOverflow style={{ width: 18, height: 18 }} />
+                  </ActionIcon>
+                </Anchor>
+                <Anchor href="https://twitter.com/VidarshanR" target="_blank">
+                  <ActionIcon variant="default" color="dark" size="md">
+                    <BsTwitter style={{ width: 18, height: 18 }} />
+                  </ActionIcon>
+                </Anchor>
+              </Group>
+            </Col>
+            {/* <Col xs={6} span={6}>
               <Anchor href="https://mantine.dev/" target="_blank">
                 <Group>
                   <Text size="sm" weight={500}>
@@ -158,6 +200,12 @@ const ReachOut = () => {
                   </Text>
                 </Group>
               </Anchor>
+            </Col> */}
+            <Col span={12}>
+              <Divider
+                labelProps={{ size: "sm", weight: 700 }}
+                label="My Resume"
+              />
             </Col>
             <Col span={12}>
               <Button

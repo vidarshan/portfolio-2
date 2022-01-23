@@ -97,8 +97,17 @@ input,
   margin: 0 10px;
 }
 
+.mantine-Tooltip-body {
+  font-size: 12px !important;
+  font-weight: 600 !important;
+}
+
 @media screen and (max-width: 410px) {
   .demo-icon {
     margin-left: 0;
   }
+}
+
+.word-spacing-small {
+  margin-left: 0.5rem;
 }
