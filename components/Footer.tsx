@@ -1,4 +1,4 @@
-import { Col, Grid, Text, Tooltip } from "@mantine/core";
+import { Anchor, Col, Grid, Text, Tooltip } from "@mantine/core";
 import { BiGitBranch, BiStar, BiUpArrowAlt } from "react-icons/bi";
 import { GoPrimitiveDot } from "react-icons/go";
 import styles from "../styles/Footer.module.css";
@@ -63,6 +63,11 @@ const Footer = (allprops: any) => {
         <Text size="xs" align="center">
           &copy; Created by Vidarshan using Next.js
         </Text>
+        <Anchor href="https://mantine.dev/" target="_blank">
+          <Text size="xs" align="center">
+            View Repo
+          </Text>
+        </Anchor>
       </Col>
     </Grid>
   );

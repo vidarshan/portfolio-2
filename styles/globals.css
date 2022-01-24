@@ -123,3 +123,7 @@ input,
 .word-spacing-small {
   margin-left: 0.5rem;
 }
+
+.mantine-Anchor-root {
+  color: inherit;
+}

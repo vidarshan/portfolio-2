@@ -142,8 +142,6 @@ const Home: NextPage = (allprops: any) => {
                   />
                   <Grid className="content-spacing" gutter="xl">
                     {projects.map((project, key) => {
-                      console.log("project: ", project.name);
-                      console.log("projects: ", projects);
                       return (
                         <Col
                           key={key}

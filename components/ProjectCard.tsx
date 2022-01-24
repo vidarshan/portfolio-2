@@ -43,7 +43,7 @@ const ProjectCard: React.FC<PropsWithChildren<IProjectCard>> = ({
       <Grid>
         <Col xs={12} sm={12} md={12} lg={5} xl={5} span={6}>
           <Card.Section>
-            <Image fit="cover" src={"/techstop.png"} alt="Norway" />
+            <Image fit="cover" src={image} alt="project image" />
           </Card.Section>
         </Col>
         <Col
@@ -89,7 +89,7 @@ const ProjectCard: React.FC<PropsWithChildren<IProjectCard>> = ({
           </Group>
 
           <div style={{ marginTop: "1rem" }}>
-            <Text weight={500} align="justify" size="sm">
+            <Text weight={600} align="justify" size="sm">
               {description}
             </Text>
           </div>
