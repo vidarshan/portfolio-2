@@ -8,7 +8,6 @@ import {
   Divider,
   Grid,
   Group,
-  Text,
   Textarea,
   TextInput,
 } from "@mantine/core";
@@ -26,6 +25,7 @@ import {
 import { useNotifications } from "@mantine/notifications";
 import { useForm } from "@mantine/hooks";
 import emailjs from "emailjs-com";
+
 const ReachOut = () => {
   const notifications = useNotifications();
 
@@ -37,9 +37,11 @@ const ReachOut = () => {
 
     validationRules: {
       email: (value) => /^\S+@\S+$/.test(value),
+      message: (value) => value.trim().length >= 5,
     },
     errorMessages: {
       email: "Email is not valid",
+      message: "Message is not valid",
     },
   });
 
@@ -171,22 +173,19 @@ const ReachOut = () => {
               />
             </Col>
             <Col span={12}>
-              <Button
-                onClick={() =>
-                  notifications.showNotification({
-                    title: "Success",
-                    message: "Message Sent!",
-                    color: "red",
-                    icon: <BsCheckCircle />,
-                  })
-                }
-                leftIcon={<BsCloudDownload />}
-                variant="default"
-                color="dark"
-                fullWidth
+              <Anchor
+                href="https://drive.google.com/file/d/1YNfN5QmVT6X2DxKyacZ_WMqW-yqVsEty/view?usp=sharing"
+                target="_blank"
               >
-                Download my Resume
-              </Button>
+                <Button
+                  leftIcon={<BsCloudDownload />}
+                  variant="default"
+                  color="dark"
+                  fullWidth
+                >
+                  Download my Resume
+                </Button>
+              </Anchor>
             </Col>
           </Grid>
         </Card>

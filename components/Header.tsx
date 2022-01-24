@@ -1,4 +1,4 @@
-import { Button, Col, Group, Text, Image, Kbd } from "@mantine/core";
+import { Group, Text, Image, Kbd } from "@mantine/core";
 import technologist from "../images/technologist.png";
 import wave from "../images/wave.png";
 import React from "react";

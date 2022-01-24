@@ -8,12 +8,9 @@ import {
   Affix,
   Transition,
   Divider,
-  Button,
-  Tooltip,
 } from "@mantine/core";
 import Head from "next/head";
 import type { NextPage } from "next";
-import { useState } from "react";
 import { BsMoonStarsFill, BsSunFill } from "react-icons/bs";
 import { FiArrowUp } from "react-icons/fi";
 import { MantineProvider } from "@mantine/core";

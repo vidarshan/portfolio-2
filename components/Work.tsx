@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, Timeline, Col, Card, Badge, Group } from "@mantine/core";
+import { Text, Timeline, Card, Badge, Group } from "@mantine/core";
 import { BsCheckCircle, BsDashCircle } from "react-icons/bs";
 
 const Work = () => {

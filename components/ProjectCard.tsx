@@ -1,6 +1,5 @@
 import {
   Badge,
-  Button,
   Card,
   Col,
   Divider,
@@ -9,14 +8,9 @@ import {
   Image,
   Group,
   Tooltip,
-  Spoiler,
-  MediaQuery,
   Anchor,
 } from "@mantine/core";
-import ss from "../images/findmystay.png";
 import { FaGithub, FaGlobeAfrica } from "react-icons/fa";
-import { BsEyeFill, BsGithub } from "react-icons/bs";
-import { AiFillGithub, AiOutlineLink } from "react-icons/ai";
 import { PropsWithChildren } from "react";
 
 interface IProjectCard {
@@ -64,7 +58,9 @@ const ProjectCard: React.FC<PropsWithChildren<IProjectCard>> = ({
             </Text>
             <div>
               {repo === "no-repo" && demo === "no-demo" ? (
-                <Badge variant="outline">Coming Soon</Badge>
+                <Badge radius="xs" variant="outline">
+                  Upcoming
+                </Badge>
               ) : (
                 <>
                   {demo !== "no-demo" && (
