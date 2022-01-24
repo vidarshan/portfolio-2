@@ -25,6 +25,7 @@ import Header from "../components/Header";
 import About from "../components/About";
 import Work from "../components/Work";
 import ReachOut from "../components/ReachOut";
+import { projects } from "../data/projects";
 import {
   useWindowScroll,
   useLocalStorageValue,
@@ -85,13 +86,17 @@ const Home: NextPage = (allprops: any) => {
             >
               <ActionIcon
                 color="yellow"
-                variant="outline"
+                size="xl"
                 radius="xl"
-                size="lg"
+                variant="outline"
                 onClick={() => toggleColorScheme()}
                 title="Toggle color scheme"
               >
-                {colorScheme === "dark" ? <BsMoonStarsFill /> : <BsSunFill />}
+                {colorScheme === "dark" ? (
+                  <BsMoonStarsFill />
+                ) : (
+                  <BsSunFill size="20" />
+                )}
               </ActionIcon>
             </Col>
             <Affix position={{ bottom: 20, right: 20 }}>
@@ -136,19 +141,31 @@ const Home: NextPage = (allprops: any) => {
                     labelProps={{ size: "lg", weight: "600" }}
                   />
                   <Grid className="content-spacing" gutter="xl">
-                    <Col xs={12} sm={6} md={6} lg={12} xl={12} span={12}>
-                      <ProjectCard />
-                    </Col>
-
-                    <Col xs={12} sm={6} md={6} lg={12} xl={12} span={12}>
-                      <ProjectCard />
-                    </Col>
-                    <Col xs={12} sm={6} md={6} lg={12} xl={12} span={12}>
-                      <ProjectCard />
-                    </Col>
-                    <Col xs={12} sm={6} md={6} lg={12} xl={12} span={12}>
-                      <ProjectCard />
-                    </Col>
+                    {projects.map((project, key) => {
+                      console.log("project: ", project.name);
+                      console.log("projects: ", projects);
+                      return (
+                        <Col
+                          key={key}
+                          xs={12}
+                          sm={6}
+                          md={6}
+                          lg={12}
+                          xl={12}
+                          span={12}
+                        >
+                          <ProjectCard
+                            id={project.id}
+                            name={project.name}
+                            description={project.description}
+                            image={project.image}
+                            repo={project.repo}
+                            demo={project.demo}
+                            technologies={project.technologies}
+                          />
+                        </Col>
+                      );
+                    })}
                   </Grid>
                 </Col>
                 <Col className="section-spacing" span={12}>

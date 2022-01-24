@@ -164,43 +164,6 @@ const ReachOut = () => {
                 </Anchor>
               </Group>
             </Col>
-            {/* <Col xs={6} span={6}>
-              <Anchor href="https://mantine.dev/" target="_blank">
-                <Group>
-                  <Text size="sm" weight={500}>
-                    {" "}
-                    Linkedin
-                  </Text>
-                </Group>
-              </Anchor>
-            </Col>
-            <Col xs={6} span={6}>
-              <Anchor href="https://mantine.dev/" target="_blank">
-                <Group>
-                  <Text size="sm" weight={500}>
-                    Github
-                  </Text>
-                </Group>
-              </Anchor>
-            </Col>
-            <Col span={6}>
-              <Anchor href="https://mantine.dev/" target="_blank">
-                <Group>
-                  <Text size="sm" weight={500}>
-                    Stackoverflow
-                  </Text>
-                </Group>
-              </Anchor>
-            </Col>
-            <Col span={6}>
-              <Anchor href="https://mantine.dev/" target="_blank">
-                <Group>
-                  <Text size="sm" weight={500}>
-                    Twitter
-                  </Text>
-                </Group>
-              </Anchor>
-            </Col> */}
             <Col span={12}>
               <Divider
                 labelProps={{ size: "sm", weight: 700 }}

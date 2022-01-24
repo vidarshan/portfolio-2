@@ -11,20 +11,39 @@ import {
   Tooltip,
   Spoiler,
   MediaQuery,
+  Anchor,
 } from "@mantine/core";
-import React from "react";
 import ss from "../images/findmystay.png";
 import { FaGithub, FaGlobeAfrica } from "react-icons/fa";
 import { BsEyeFill, BsGithub } from "react-icons/bs";
 import { AiFillGithub, AiOutlineLink } from "react-icons/ai";
+import { PropsWithChildren } from "react";
 
-const ProjectCard = () => {
+interface IProjectCard {
+  id: number;
+  name: string;
+  description: string;
+  image: string;
+  repo: string;
+  demo: string;
+  technologies: Array<any>;
+}
+
+const ProjectCard: React.FC<PropsWithChildren<IProjectCard>> = ({
+  id,
+  name,
+  description,
+  image,
+  repo,
+  demo,
+  technologies,
+}) => {
   return (
     <Card withBorder padding="lg">
       <Grid>
         <Col xs={12} sm={12} md={12} lg={5} xl={5} span={6}>
           <Card.Section>
-            <Image fit="cover" src={ss.src} alt="Norway" />
+            <Image fit="cover" src={"/techstop.png"} alt="Norway" />
           </Card.Section>
         </Col>
         <Col
@@ -41,9 +60,8 @@ const ProjectCard = () => {
         >
           <Group position="apart" className="item-spacing-1">
             <Text size="md" weight={700}>
-              Norway Ford Adventures
+              {name}
             </Text>
-
             <div>
               <Tooltip
                 transitionTimingFunction="ease"
@@ -52,7 +70,9 @@ const ProjectCard = () => {
                 radius="xs"
                 withArrow
               >
-                <FaGlobeAfrica className="demo-icon" />
+                <Anchor href="https://mantine.dev/" target="_blank">
+                  <FaGlobeAfrica className="demo-icon" />
+                </Anchor>
               </Tooltip>
               <Tooltip
                 transitionTimingFunction="ease"
@@ -61,20 +81,16 @@ const ProjectCard = () => {
                 radius="xs"
                 withArrow
               >
-                <FaGithub />
+                <Anchor href="https://mantine.dev/" target="_blank">
+                  <FaGithub />
+                </Anchor>
               </Tooltip>
             </div>
           </Group>
 
           <div style={{ marginTop: "1rem" }}>
             <Text weight={500} align="justify" size="sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim illo
-              sit, velit exercitationem, officia tenetur eum impedit doloremque
-              fugiat dignissimos neque modi asperiores obcaecati, in
-              perferendis? Blanditiis vel minus sunt voluptatum perspiciatis
-              facere deleniti necessitatibus provident earum, delectus
-              accusantium tempora! Lorem ipsum dolor sit amet consectetur
-              adipisicing elit.
+              {description}
             </Text>
           </div>
           <div style={{ marginTop: "1rem" }}>
@@ -83,38 +99,20 @@ const ProjectCard = () => {
               label="Tech Stack"
             />
             <Group style={{ marginTop: ".6rem" }}>
-              <Badge
-                className="badge-spacing"
-                radius="xs"
-                size="lg"
-                variant="dot"
-              >
-                React JS
-              </Badge>
-              <Badge
-                className="badge-spacing"
-                radius="xs"
-                size="lg"
-                variant="dot"
-              >
-                Node JS
-              </Badge>
-              <Badge
-                className="badge-spacing"
-                radius="xs"
-                size="lg"
-                variant="dot"
-              >
-                Express JS
-              </Badge>
-              <Badge
-                className="badge-spacing"
-                radius="xs"
-                size="lg"
-                variant="dot"
-              >
-                Mongo DB
-              </Badge>
+              {technologies.map((technology: any, key: number) => {
+                return (
+                  <Badge
+                    key={key}
+                    className="badge-spacing"
+                    radius="xs"
+                    size="md"
+                    variant="dot"
+                    color={technology.color}
+                  >
+                    {technology.name}
+                  </Badge>
+                );
+              })}
             </Group>
           </div>
         </Col>

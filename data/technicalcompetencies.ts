@@ -78,6 +78,12 @@ export const technologies = [
     type: "other",
   },
   {
+    id: 23,
+    name: "Material Design",
+    color: "pink",
+    type: "other",
+  },
+  {
     id: 14,
     name: "SCSS",
     color: "pink",

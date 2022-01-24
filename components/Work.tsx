@@ -42,7 +42,7 @@ const Work = () => {
             </Badge>
           </Group>
           <Text className="row-bottom-top-spacing" size="xs">
-            04-2021 &#8212; 09-2021
+            12-2020 &#8212; 04-2021
           </Text>
         </Timeline.Item>
         <Timeline.Item
@@ -76,7 +76,7 @@ const Work = () => {
             </Badge>
           </Group>
           <Text className="row-bottom-top-spacing" size="xs">
-            04-2021 &#8212;&#8212; 09-2021
+            04-2021 &#8212; 09-2021
           </Text>
         </Timeline.Item>
 
@@ -116,7 +116,7 @@ const Work = () => {
             </Badge>
           </Group>
           <Text className="row-bottom-top-spacing" size="xs">
-            09-2021 &#8212;&#8212; Present
+            09-2021 &#8212; Present
           </Text>
         </Timeline.Item>
       </Timeline>
