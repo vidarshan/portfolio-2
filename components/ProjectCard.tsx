@@ -63,28 +63,39 @@ const ProjectCard: React.FC<PropsWithChildren<IProjectCard>> = ({
               {name}
             </Text>
             <div>
-              <Tooltip
-                transitionTimingFunction="ease"
-                label="View Demo"
-                position="top"
-                radius="xs"
-                withArrow
-              >
-                <Anchor href="https://mantine.dev/" target="_blank">
-                  <FaGlobeAfrica className="demo-icon" />
-                </Anchor>
-              </Tooltip>
-              <Tooltip
-                transitionTimingFunction="ease"
-                label="View Repo"
-                position="bottom"
-                radius="xs"
-                withArrow
-              >
-                <Anchor href="https://mantine.dev/" target="_blank">
-                  <FaGithub />
-                </Anchor>
-              </Tooltip>
+              {repo === "no-repo" && demo === "no-demo" ? (
+                <Badge variant="outline">Coming Soon</Badge>
+              ) : (
+                <>
+                  {demo !== "no-demo" && (
+                    <Tooltip
+                      transitionTimingFunction="ease"
+                      label="View Demo"
+                      position="top"
+                      radius="xs"
+                      withArrow
+                    >
+                      <Anchor href="https://mantine.dev/" target="_blank">
+                        <FaGlobeAfrica className="demo-icon" />
+                      </Anchor>
+                    </Tooltip>
+                  )}
+
+                  {repo !== "no-repo" && (
+                    <Tooltip
+                      transitionTimingFunction="ease"
+                      label="View Repo"
+                      position="bottom"
+                      radius="xs"
+                      withArrow
+                    >
+                      <Anchor href="https://mantine.dev/" target="_blank">
+                        <FaGithub />
+                      </Anchor>
+                    </Tooltip>
+                  )}
+                </>
+              )}
             </div>
           </Group>
 

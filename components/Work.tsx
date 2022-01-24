@@ -1,13 +1,13 @@
 import React from "react";
 import { Text, Timeline, Col, Card, Badge, Group } from "@mantine/core";
-import { BsCheckCircleFill, BsDashCircleFill } from "react-icons/bs";
+import { BsCheckCircle, BsDashCircle } from "react-icons/bs";
 
 const Work = () => {
   return (
     <Card className="content-spacing">
       <Timeline color="blue" active={2} bulletSize={24} lineWidth={3}>
         <Timeline.Item
-          bullet={<BsDashCircleFill />}
+          bullet={<BsDashCircle />}
           align="right"
           title="Freelance Web Developer "
         >
@@ -46,7 +46,7 @@ const Work = () => {
           </Text>
         </Timeline.Item>
         <Timeline.Item
-          bullet={<BsDashCircleFill />}
+          bullet={<BsDashCircle />}
           align="left"
           title="Trainee Software Engineer"
           lineVariant="dashed"
@@ -81,7 +81,7 @@ const Work = () => {
         </Timeline.Item>
 
         <Timeline.Item
-          bullet={<BsCheckCircleFill />}
+          bullet={<BsCheckCircle />}
           title="Associate Software Engineer"
         >
           <Text
