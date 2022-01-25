@@ -34,10 +34,10 @@ const About = () => {
                   <Text weight={500} size="sm">
                     Software Engineer
                   </Text>
-                  <Text color="dimmed" weight={500} size="xs">
+                  <Text color="dimmed" weight={700} size="xs">
                     Computing Graduate
                   </Text>
-                  <Text color="dimmed" weight={500} size="xs">
+                  <Text color="dimmed" weight={700} size="xs">
                     Colombo, Sri Lanka
                   </Text>
                 </div>
