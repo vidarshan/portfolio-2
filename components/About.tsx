@@ -28,14 +28,17 @@ const About = () => {
                   alt="avatar"
                 />
                 <div>
-                  <Text weight={500} size="md">
+                  <Text weight={600} size="md">
                     Vidarshan Adithya
                   </Text>
-                  <Text color="dimmed" weight={500} size="sm">
+                  <Text weight={500} size="sm">
                     Software Engineer
                   </Text>
-                  <Text color="dimmed" weight={500} size="sm">
+                  <Text color="dimmed" weight={500} size="xs">
                     Computing Graduate
+                  </Text>
+                  <Text color="dimmed" weight={500} size="xs">
+                    Colombo, Sri Lanka
                   </Text>
                 </div>
               </Group>
@@ -55,8 +58,8 @@ const About = () => {
                   <br /> <br />
                   My goal is to create high quality software products written
                   with quality code and based on unique ideas, which will have a
-                  positive impact to the society while becoming a great software
-                  engineer among the best software engineers.{`"`}
+                  positive impact to the society, while becoming a great
+                  software engineer among the best software engineers.{`"`}
                 </Text>
               </Blockquote>{" "}
             </Col>

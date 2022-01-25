@@ -71,7 +71,7 @@ const ProjectCard: React.FC<PropsWithChildren<IProjectCard>> = ({
                       radius="xs"
                       withArrow
                     >
-                      <Anchor href="https://mantine.dev/" target="_blank">
+                      <Anchor href={demo} target="_blank">
                         <FaGlobeAfrica className="demo-icon" />
                       </Anchor>
                     </Tooltip>
@@ -85,7 +85,7 @@ const ProjectCard: React.FC<PropsWithChildren<IProjectCard>> = ({
                       radius="xs"
                       withArrow
                     >
-                      <Anchor href="https://mantine.dev/" target="_blank">
+                      <Anchor href={repo} target="_blank">
                         <FaGithub />
                       </Anchor>
                     </Tooltip>
