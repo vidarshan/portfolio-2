@@ -2,7 +2,7 @@ import { Group, Text, Image, Kbd } from "@mantine/core";
 import technologist from "../images/technologist.png";
 import wave from "../images/wave.png";
 import React from "react";
-import { BsCommand, BsWindows } from "react-icons/bs";
+import { BsCommand } from "react-icons/bs";
 import { useOs } from "@mantine/hooks";
 
 const Header = () => {
@@ -48,7 +48,7 @@ const Header = () => {
       </Group>
       {os === "macos" || os === "windows" || os === "linux" ? (
         <div style={{ display: "flex", alignItems: "center" }}>
-          <Kbd>{os === "macos" ? <BsCommand /> : <BsWindows />}</Kbd>
+          <Kbd>{os === "macos" ? <BsCommand /> : "Ctrl"}</Kbd>
           <span style={{ margin: "0 5px" }}>+</span>
           <Kbd>j</Kbd>
           <Text className="word-spacing-small" weight={600} size="xs">
