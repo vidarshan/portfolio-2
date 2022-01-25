@@ -71,6 +71,9 @@ const Home: NextPage = (allprops: any) => {
           <Head>
             <title>Vidarshan</title>
             <meta name="Vidarshans" content="Vidarshan's portfolio website" />
+            <meta name="keywords" content="Vidarshan" />
+            <meta name="keywords" content="Portfolio website" />
+            <meta name="keywords" content="Developer portfolio" />
             <link rel="icon" href="/favicon.ico" />
           </Head>
           <Container sx={{ marginTop: "1rem" }} size={5120}>
