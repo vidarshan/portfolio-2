@@ -1,34 +1,54 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+<h1 align="center">👨🏻‍💻 Portfolio v2</h1>
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+<h3 align="center">
+  https://vidarshan.dev/
+</h3>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<h4 align="center">
+Version 2 of my portfolio website with all of my developer related activities and information.
+</h4>
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+<div align="center">
+<img  src="https://therealsujitk-vercel-badge.vercel.app/?app=vercel.com/vidarshanadithya/" />
+</div>
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## 🎛️ Tech Stack
+- Typescript
+- Next JS
+- Mantine
+- Vercel
 
-## Learn More
+## 👷‍♂️ Setup Project
 
-To learn more about Next.js, take a look at the following resources:
+- Step 1 - Clone repository
+    
+- Step 2 : Install packages with `npm`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+       npm install
+       
+- Step 3 : Create a file named `env.local` in the root level. Add the following `env` variables, and replace with your values.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+       STACKOVERFLOW_USER=<your-stackoverflow-user-id>
+       STACKOVERFLOW_API_KEY=<your-stackoverflow-api-key>
+       GITHUB_USERNAME=<your-github-username>
+       GITHUB_PAT=<your-github-personal-access-token>
+       NEXT_PUBLIC_EMAILJS_SERVICE=<your-emailjs-service-key>
+       NEXT_PUBLIC_EMAILJS_TEMPLATE=<your-emailjs-template-key>
+       NEXT_PUBLIC_EMAILJS_USER=<your-emailjs-user-id>
+       
+       
+- Step 4 : Run command
+  
+        npm run dev
+        
+## 🗒️ Note
+- The stackoverflow keys and the github keys are needed for the integrated stackoverflow/github stats section on the footer of the website. If these keys cannot be provided consider commenting out the `<Footer/>` and the related API calls in the `pages/index.tsx` to avoid errors.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 🔗 References
+- [Get Github Personal Access tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+- [Get Stackoverflow API keys](https://api.stackexchange.com/)
+- [Get EmailJS credentials](https://www.emailjs.com/docs/tutorial/overview/)
