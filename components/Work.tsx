@@ -13,13 +13,13 @@ const Work = () => {
         >
           <Text
             className="row-bottom-top-spacing-half"
-            weight={500}
+            weight={600}
             color="blue"
             size="sm"
           >
             Excalibur Systems, Sri Lanka
           </Text>
-          <Text weight={500} color="dimmed" size="sm">
+          <Text weight={700} color="dimmed" size="sm">
             Created web based applications for clients desiring solutions for
             their day-to-day problems that occur in their small/mid scaled
             businesses.
@@ -41,7 +41,7 @@ const Work = () => {
               Typescript
             </Badge>
           </Group>
-          <Text className="row-bottom-top-spacing" size="xs">
+          <Text weight={500} className="row-bottom-top-spacing" size="xs">
             12-2020 &#8212; 04-2021
           </Text>
         </Timeline.Item>
@@ -53,13 +53,13 @@ const Work = () => {
         >
           <Text
             className="row-bottom-top-spacing-half"
-            weight={500}
+            weight={600}
             color="blue"
             size="sm"
           >
             Beta Launch, Sri Lanka
           </Text>
-          <Text weight={500} color="dimmed" size="sm">
+          <Text weight={700} color="dimmed" size="sm">
             Worked as a frontend software engineer and implemented new
             functionalities to existing projects along with replacing old and
             outdated user interfaces to modern user-friendly user interfaces.
@@ -75,7 +75,7 @@ const Work = () => {
               SCSS
             </Badge>
           </Group>
-          <Text className="row-bottom-top-spacing" size="xs">
+          <Text weight={500} className="row-bottom-top-spacing" size="xs">
             04-2021 &#8212; 09-2021
           </Text>
         </Timeline.Item>
@@ -86,13 +86,13 @@ const Work = () => {
         >
           <Text
             className="row-bottom-top-spacing-half"
-            weight={500}
+            weight={600}
             color="blue"
             size="sm"
           >
             Beta Launch, Sri Lanka
           </Text>
-          <Text weight={500} color="dimmed" size="sm">
+          <Text weight={700} color="dimmed" size="sm">
             Worked as a full-stack software engineer, implemented new
             functionalities along with improving existing functionalities in
             special purpose web applications. Gained knowledge on end-to-end
@@ -115,7 +115,7 @@ const Work = () => {
               MySQL
             </Badge>
           </Group>
-          <Text className="row-bottom-top-spacing" size="xs">
+          <Text weight={500} className="row-bottom-top-spacing" size="xs">
             09-2021 &#8212; Present
           </Text>
         </Timeline.Item>
