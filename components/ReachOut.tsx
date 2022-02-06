@@ -10,6 +10,7 @@ import {
   Group,
   Textarea,
   TextInput,
+  Tooltip,
 } from "@mantine/core";
 import React from "react";
 import { RiSendPlaneFill } from "react-icons/ri";
@@ -21,7 +22,9 @@ import {
   BsGithub,
   BsStackOverflow,
   BsTwitter,
+  BsMailbox,
 } from "react-icons/bs";
+import { SiGmail } from "react-icons/si";
 import { useNotifications } from "@mantine/notifications";
 import { useForm } from "@mantine/hooks";
 import emailjs from "emailjs-com";
@@ -80,7 +83,7 @@ const ReachOut = () => {
   return (
     <Grid gutter="xl" className="content-spacing">
       <Col span={12}>
-        <Alert title="Good News!" color="green" radius="xs">
+        <Alert title="Hi!" color="green" radius="xs">
           I am currently searching for new opportunities. I will be open for job
           offers and other project related offers. Contact me for more info.
         </Alert>
@@ -130,40 +133,85 @@ const ReachOut = () => {
             <Col span={12}>
               <Divider
                 labelProps={{ size: "sm", weight: 700 }}
-                label="My socials"
+                label="Other accounts"
               />
             </Col>
             <Col span={12}>
               <Group>
-                <Anchor
-                  href="https://www.linkedin.com/in/vidarshan-rathnayake/"
-                  target="_blank"
+                <Tooltip
+                  transitionTimingFunction="ease"
+                  label="Gmail"
+                  position="bottom"
+                  radius="xs"
+                  withArrow
                 >
-                  <ActionIcon variant="default" color="dark" size="md">
-                    <BsLinkedin style={{ width: 18, height: 18 }} />
-                  </ActionIcon>
-                </Anchor>
-                <Anchor
-                  href="https://github.com/vidarshanadithya"
-                  target="_blank"
+                  <Anchor href="mailto:vidarshanadithya3@gmail.com">
+                    <ActionIcon variant="default" color="dark" size="md">
+                      <SiGmail style={{ width: 18, height: 18 }} />
+                    </ActionIcon>
+                  </Anchor>
+                </Tooltip>
+                <Tooltip
+                  transitionTimingFunction="ease"
+                  label="Linkedin"
+                  position="bottom"
+                  radius="xs"
+                  withArrow
                 >
-                  <ActionIcon variant="default" color="dark" size="md">
-                    <BsGithub style={{ width: 18, height: 18 }} />
-                  </ActionIcon>
-                </Anchor>
-                <Anchor
-                  href="https://stackoverflow.com/users/15415996/vidarshan-adithya"
-                  target="_blank"
+                  <Anchor
+                    href="https://www.linkedin.com/in/vidarshan-rathnayake/"
+                    target="_blank"
+                  >
+                    <ActionIcon variant="default" color="dark" size="md">
+                      <BsLinkedin style={{ width: 18, height: 18 }} />
+                    </ActionIcon>
+                  </Anchor>
+                </Tooltip>
+                <Tooltip
+                  transitionTimingFunction="ease"
+                  label="Github"
+                  position="bottom"
+                  radius="xs"
+                  withArrow
                 >
-                  <ActionIcon variant="default" color="dark" size="md">
-                    <BsStackOverflow style={{ width: 18, height: 18 }} />
-                  </ActionIcon>
-                </Anchor>
-                <Anchor href="https://twitter.com/VidarshanR" target="_blank">
-                  <ActionIcon variant="default" color="dark" size="md">
-                    <BsTwitter style={{ width: 18, height: 18 }} />
-                  </ActionIcon>
-                </Anchor>
+                  <Anchor
+                    href="https://github.com/vidarshanadithya"
+                    target="_blank"
+                  >
+                    <ActionIcon variant="default" color="dark" size="md">
+                      <BsGithub style={{ width: 18, height: 18 }} />
+                    </ActionIcon>
+                  </Anchor>
+                </Tooltip>
+                <Tooltip
+                  transitionTimingFunction="ease"
+                  label="Stackoverflow"
+                  position="bottom"
+                  radius="xs"
+                  withArrow
+                >
+                  <Anchor
+                    href="https://stackoverflow.com/users/15415996/vidarshan-adithya"
+                    target="_blank"
+                  >
+                    <ActionIcon variant="default" color="dark" size="md">
+                      <BsStackOverflow style={{ width: 18, height: 18 }} />
+                    </ActionIcon>
+                  </Anchor>
+                </Tooltip>
+                <Tooltip
+                  transitionTimingFunction="ease"
+                  label="Twitter"
+                  position="bottom"
+                  radius="xs"
+                  withArrow
+                >
+                  <Anchor href="https://twitter.com/VidarshanR" target="_blank">
+                    <ActionIcon variant="default" color="dark" size="md">
+                      <BsTwitter style={{ width: 18, height: 18 }} />
+                    </ActionIcon>
+                  </Anchor>
+                </Tooltip>
               </Group>
             </Col>
             <Col span={12}>

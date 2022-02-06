@@ -127,3 +127,7 @@ input,
 .mantine-Anchor-root {
   color: inherit;
 }
+
+.mantine-Alert-body {
+  font-weight: 500 !important;
+}
