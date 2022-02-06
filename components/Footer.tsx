@@ -60,14 +60,14 @@ const Footer = (allprops: any) => {
         </Tooltip>
       </Col>
       <Col span={12}>
-        <Text size="xs" align="center">
+        <Text weight={600} size="xs" align="center">
           &copy; Created by Vidarshan using Next.js
         </Text>
         <Anchor
           href="https://github.com/vidarshanadithya/portfolio-v2"
           target="_blank"
         >
-          <Text size="xs" align="center">
+          <Text color="blue" weight={600} size="xs" align="center">
             View Repo
           </Text>
         </Anchor>
