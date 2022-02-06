@@ -23,7 +23,7 @@ const About = () => {
                 <Image
                   width={80}
                   height={80}
-                  radius="md"
+                  radius="sm"
                   src={profileimg.src}
                   alt="avatar"
                 />
