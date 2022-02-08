@@ -1,5 +1,5 @@
 
-<h1 align="center">👨🏻‍💻 Portfolio v2</h1>
+<h1 align="center">👨🏻‍💻 Portfolio 2</h1>
 
 
 <h3 align="center">
