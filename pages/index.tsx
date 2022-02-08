@@ -69,7 +69,7 @@ const Home: NextPage = (allprops: any) => {
       >
         <NotificationsProvider position="top-right">
           <Head>
-            <title>Vidarshan's Portfolio</title>
+            <title> {`Vidarshan's Portfolio`}</title>
             <meta name="Vidarshans" content="Vidarshan's portfolio website" />
             <meta name="keywords" content="Vidarshan" />
             <meta name="keywords" content="Portfolio website" />
