@@ -46,7 +46,7 @@ Version 2 of my portfolio website with all of my developer related activities an
         npm run dev
         
 ## 🔄 Reuse
-- Free to reuse with proper references to this repo or my Github profile.
+- Free to reuse with proper references to this repo or my Github profile. Consider starring this repo atleast.
         
 ## 💿 Content
 - Replace content in the `data/projects.ts` and `data/technicalcompetencies.ts` files with your own content. Put the images related to this content in the `public/images` folder.
