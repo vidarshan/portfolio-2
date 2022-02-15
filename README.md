@@ -45,11 +45,17 @@ Version 2 of my portfolio website with all of my developer related activities an
   
         npm run dev
         
+## 🔄 Reuse
+- Free to reuse with proper references to this repo or my Github profile.
+        
 ## 💿 Content
 - Replace content in the `data/projects.ts` and `data/technicalcompetencies.ts` files with your own content. Put the images related to this content in the `public/images` folder.
         
 ## 🗒️ Note
 - The stackoverflow keys and the github keys are needed for the integrated stackoverflow/github stats section on the footer of the website. If these keys cannot be provided consider commenting out the `<Footer/>` and the related API calls in the `pages/index.tsx` to avoid errors.
+
+## 💬 Inquiries
+- Email me to vidarshanadithya3@gmail.com to contact me directly.
 
 ## 🔗 References
 - [Get Github Personal Access tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
