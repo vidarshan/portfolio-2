@@ -30,7 +30,7 @@ const Footer = (allprops: any) => {
             ).toLocaleString()}
             <span className={styles.spacer}></span>
             <BiStar className={styles.iconspacing} />{" "}
-            {get(allprops, "allprops.allprops.star_count", "10")}
+            {get(allprops, "allprops.allprops.star_count", "10")} &#8212;
             <BiUpArrowAlt className={styles.iconspacing} />{" "}
             {get(allprops, "allprops.allprops.items[0].reputation", "310")}
             <span className={styles.spacer}></span>
