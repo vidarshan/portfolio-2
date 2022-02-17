@@ -83,7 +83,7 @@ const ReachOut = () => {
   return (
     <Grid gutter="xl" className="content-spacing">
       <Col span={12}>
-        <Alert title="Hi!" color="green" radius="xs">
+        <Alert title="Note" color="gray" radius="xs">
           I am currently searching for new opportunities. I will be open for job
           offers and other project related offers. Contact me for more info.
         </Alert>
