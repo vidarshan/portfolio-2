@@ -27,7 +27,7 @@ const Footer = (allprops: any) => {
               allprops,
               "allprops.allprops.contributions_count.data.user.contributionsCollection.contributionCalendar.totalContributions",
               "1934"
-            )}
+            ).toLocaleString()}
             <span className={styles.spacer}></span>
             <BiStar className={styles.iconspacing} />{" "}
             {get(allprops, "allprops.allprops.star_count", "10")}
