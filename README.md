@@ -14,10 +14,11 @@ Version 2 of my portfolio website with all of my developer related activities an
 <img src="https://therealsujitk-vercel-badge.vercel.app/?app=vercel.com/vidarshanadithya/" />
 </div>
 
+
 <br/>
 
 <div align="center">
-<img width='710' height='450' src="https://user-images.githubusercontent.com/48169745/154645417-f10a76f4-2787-4b90-9a53-ad3ff1206f72.png" />
+<img width='710' height='450' src="https://user-images.githubusercontent.com/48169745/154646740-42292fad-059c-4469-8cbf-29d79ca4045e.png" />
 </div>
 
 
