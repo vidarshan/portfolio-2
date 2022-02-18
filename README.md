@@ -1,6 +1,8 @@
 
 <h1 align="center">👨🏻‍💻 Portfolio 2</h1>
 
+<img  src="https://user-images.githubusercontent.com/48169745/154619556-f96e7b9f-6918-4c47-950f-de12d57b30cd.png" />
+
 
 <h3 align="center">
   https://vidarshan.dev/
@@ -12,7 +14,7 @@ Version 2 of my portfolio website with all of my developer related activities an
 
 
 <div align="center">
-<img  src="https://therealsujitk-vercel-badge.vercel.app/?app=vercel.com/vidarshanadithya/" />
+<img src="https://therealsujitk-vercel-badge.vercel.app/?app=vercel.com/vidarshanadithya/" />
 </div>
 
 ## 🎛️ Tech Stack
