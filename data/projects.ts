@@ -42,12 +42,12 @@ export const projects = [
   },
   {
     id: 2,
-    name: "Carmax ERP",
+    name: "Github Search",
     description:
-      "An Enterprise Resource Planning application for a car service center, which is used to manage their day-to-day workflow, such as managing service operations, maintaining employee records, inventory control and tracking cash inflows and outflows.",
-    image: "/images/carmax.png",
-    repo: "no-repo",
-    demo: "https://silly-villani-ee1088.netlify.app/",
+      "A simple application made with the use of Github REST API, which will allow the users to search for a github user, view their own repos and starred repos. Additionally, the users are able to see the profile information on the selected user very easily.",
+    image: "../images/githuber.png",
+    repo: "https://github.com/vidarshanadithya/github-search",
+    demo: "https://github-search-five-ecru.vercel.app/",
     technologies: [
       {
         id: 1,
@@ -61,18 +61,8 @@ export const projects = [
       },
       {
         id: 3,
-        name: "Node JS",
+        name: "Github API",
         color: "green",
-      },
-      {
-        id: 4,
-        name: "Express JS",
-        color: "gray",
-      },
-      {
-        id: 5,
-        name: "Postgres",
-        color: "blue",
       },
     ],
   },
@@ -109,12 +99,12 @@ export const projects = [
   },
   {
     id: 4,
-    name: "Github Searcher",
+    name: "Carmax ERP",
     description:
-      "A simple application made with the use of Github REST API, which will allow the users to search for a github user, view their own repos and starred repos. Additionally, the users are able to see the profile information on the selected user very easily.",
-    image: "../images/githuber.png",
-    repo: "https://github.com/vidarshanadithya/github-search",
-    demo: "https://quirky-heisenberg-ef69be.netlify.app/",
+      "An Enterprise Resource Planning application for a car service center, which is used to manage their day-to-day workflow, such as managing service operations, maintaining employee records, inventory control and tracking cash inflows and outflows.",
+    image: "/images/carmax.png",
+    repo: "no-repo",
+    demo: "https://silly-villani-ee1088.netlify.app/",
     technologies: [
       {
         id: 1,
@@ -123,13 +113,23 @@ export const projects = [
       },
       {
         id: 2,
-        name: "Ant Design",
-        color: "red",
+        name: "Mantine",
+        color: "blue",
       },
       {
         id: 3,
-        name: "SCSS",
-        color: "pink",
+        name: "Node JS",
+        color: "green",
+      },
+      {
+        id: 4,
+        name: "Express JS",
+        color: "gray",
+      },
+      {
+        id: 5,
+        name: "Postgres",
+        color: "blue",
       },
     ],
   },
