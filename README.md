@@ -11,7 +11,7 @@ Version 2 of my portfolio website with all of my developer related activities an
 
 
 <div align="center">
-<img src="https://therealsujitk-vercel-badge.vercel.app/?app=vercel.com/vidarshanadithya/" />
+<img src="https://therealsujitk-vercel-badge.vercel.app/?app=portfolio-v2" />
 </div>
 
 
