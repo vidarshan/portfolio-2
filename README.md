@@ -62,7 +62,7 @@ Version 2 of my portfolio website with all of my developer related activities an
 - The stackoverflow keys and the github keys are needed for the integrated stackoverflow/github stats section on the footer of the website. If these keys cannot be provided consider commenting out the `<Footer/>` and the related API calls in the `pages/index.tsx` to avoid errors.
 
 ## 💬 Inquiries
-- Email me to vidarshanadithya3@gmail.com to contact me directly.
+- Email me via vidarshanadithya3@gmail.com to contact me directly.
 
 ## 🔗 References
 - [Get Github Personal Access tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
