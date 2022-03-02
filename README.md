@@ -30,9 +30,9 @@ Version 2 of my portfolio website with all of my developer related activities an
 
 ## 👷‍♂️ Setup Project
 
-- Step 1 - Clone repository
+- Step 1 - Clone repository.
     
-- Step 2 : Install packages with `npm`
+- Step 2 : Install packages with `npm`.
 
        npm install
        
