@@ -47,7 +47,7 @@ export const projects = [
       "A simple application made with the use of Github REST API, which will allow the users to search for a github user, view their own repos and starred repos. Additionally, the users are able to see the profile information on the selected user very easily.",
     image: "../images/githuber.png",
     repo: "https://github.com/vidarshanadithya/github-search",
-    demo: "https://github-search-five-ecru.vercel.app/",
+    demo: "https://github-search-3.vercel.app/",
     technologies: [
       {
         id: 1,
