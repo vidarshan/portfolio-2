@@ -48,10 +48,10 @@ const About = () => {
               <Blockquote cite="- Vidarshan">
                 {" "}
                 <Text size="sm" weight={600}>
-                  {`I'm`} a passionate Software Engineer who likes to see things
+                  {`I'm`} a Software Engineer who likes to see things
                   being built one line of code at a time. Well organised and
                   prefers to have incremental self-development based on the
-                  knowledge gained. <br /> <br />I have over 1 year of industry
+                  knowledge gained. <br /> <br />I have nearly 2 years of industry
                   experience, and I am gaining more knowledge day-by-day, as I
                   am a quick learner who likes to implement and make use of the
                   knowledge gained in order to create great things.
