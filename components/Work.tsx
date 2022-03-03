@@ -8,12 +8,12 @@ const Work = () => {
       <Timeline
         color="gray"
         active={2}
-        bulletSize={24}
-        lineWidth={3}
+        bulletSize={14}
+        lineWidth={1}
         radius="xs"
       >
         <Timeline.Item
-          bullet={<BsDash />}
+          // bullet={<BsDash />}
           align="right"
           title="Freelance Web Developer "
         >
