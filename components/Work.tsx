@@ -13,7 +13,7 @@ const Work = () => {
         radius="xs"
       >
         <Timeline.Item
-          // bullet={<BsDash />}
+          bullet={<BsDash />}
           align="right"
           title="Freelance Web Developer "
         >
