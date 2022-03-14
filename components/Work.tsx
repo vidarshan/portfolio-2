@@ -4,12 +4,12 @@ import { BsCheckCircle, BsDash, BsDashCircle, BsDashLg } from "react-icons/bs";
 
 const Work = () => {
   return (
-    <Card className="content-spacing" withBorder radius='xs'>
+    <Card className="content-spacing" withBorder radius="xs">
       <Timeline
         color="gray"
         active={2}
         bulletSize={14}
-        lineWidth={1}
+        lineWidth={3}
         radius="xs"
       >
         <Timeline.Item

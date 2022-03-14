@@ -99,6 +99,27 @@ export const projects = [
   },
   {
     id: 4,
+    name: "Open Weather",
+    description:
+      "Find the weather around you with this application powered by the Open Weather API. Uses a Geolocation API to find the weather according to your desired location.",
+    image: "/images/openweather.png",
+    repo: "https://github.com/vidarshanadithya/open-weather-app",
+    demo: "https://open-weather-app-po3lggjpt-vidarshanadithya.vercel.app/",
+    technologies: [
+      {
+        id: 1,
+        name: "React JS",
+        color: "blue",
+      },
+      {
+        id: 2,
+        name: "Mantine",
+        color: "blue",
+      },
+    ],
+  },
+  {
+    id: 5,
     name: "Carmax ERP",
     description:
       "An Enterprise Resource Planning application for a car service center, which is used to manage their day-to-day workflow, such as managing service operations, maintaining employee records, inventory control and tracking cash inflows and outflows.",
@@ -134,7 +155,7 @@ export const projects = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     name: "Portfolio V1",
     description:
       "The very first version of my portfolio website made with no UI frameworks. Served the primary purpose of showing my information. Almost every element was implemented with SCSS. Deprecated in favour of the portfolio website you are currently viewing, as this has much better performance and responsiveness.",
