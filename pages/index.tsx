@@ -11,7 +11,7 @@ import {
 } from "@mantine/core";
 import Head from "next/head";
 import type { NextPage } from "next";
-import { BsFillMoonFill, BsMoonStarsFill, BsSunFill } from "react-icons/bs";
+import { BsFillMoonFill, BsFillSunFill } from "react-icons/bs";
 import { FiArrowUp } from "react-icons/fi";
 import { MantineProvider } from "@mantine/core";
 import { getGithubContributions } from "github-contributions-counter";
@@ -98,9 +98,9 @@ const Home: NextPage = (allprops: any) => {
                 title="Toggle color scheme"
               >
                 {colorScheme === "dark" ? (
-                  <BsFillMoonFill  size={24} />
+                  <BsFillMoonFill size={20} />
                 ) : (
-                  <BsSunFill size={24}/>
+                  <BsFillSunFill size={20} />
                 )}
               </ActionIcon>
             </Col>

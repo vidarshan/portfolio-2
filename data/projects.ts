@@ -108,11 +108,16 @@ export const projects = [
     technologies: [
       {
         id: 1,
-        name: "React JS",
+        name: "Typescript",
         color: "blue",
       },
       {
         id: 2,
+        name: "React JS",
+        color: "blue",
+      },
+      {
+        id: 3,
         name: "Mantine",
         color: "blue",
       },
