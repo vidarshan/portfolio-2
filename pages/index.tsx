@@ -75,6 +75,13 @@ const Home: NextPage = (allprops: any) => {
             <meta name="keywords" content="Portfolio website" />
             <meta name="keywords" content="Developer portfolio" />
             <meta name="description" content="Vidarshan's portfolio website" />
+            <meta property="og:title" content="Vidarshan's Portolio" />
+            <meta property="og:type" content="article" />
+            <meta property="og:url" content="https://www.vidarshan.dev/" />
+            <meta
+              property="og:image"
+              content="https://user-images.githubusercontent.com/48169745/154646740-42292fad-059c-4469-8cbf-29d79ca4045e.png"
+            />
             <meta
               name="google-site-verification"
               content="NHMus7q0RtvYHc1jbed_gCKPRYuNlMxHkh1vFYJafrA"
