@@ -1,7 +1,7 @@
 import { Anchor, Col, Grid, Group, Text, Tooltip } from "@mantine/core";
 import { BiGitBranch, BiStar, BiUpArrowAlt } from "react-icons/bi";
 import { GoPrimitiveDot } from "react-icons/go";
-import styles from "../styles/Footer.module.css";
+import styles from "../styles/Footer.module.scss";
 
 const get = require("lodash.get");
 const Footer = (allprops: any) => {
