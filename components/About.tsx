@@ -15,7 +15,7 @@ import profileimg from "../images/myimage.jpeg";
 const About = () => {
   return (
     <Grid className="content-spacing">
-      <Col xs={12} sm={6} md={8} lg={8} xl={7} span={7}>
+      <Col xs={12} sm={6} md={6} lg={7} xl={7} span={7}>
         <Card withBorder>
           <Grid>
             <Col span={12}>
@@ -48,10 +48,10 @@ const About = () => {
               <Blockquote cite="- Vidarshan">
                 {" "}
                 <Text size="sm" weight={600}>
-                  {`I'm`} a Software Engineer who likes to see things
-                  being built one line of code at a time. Well organised and
-                  prefers to have incremental self-development based on the
-                  knowledge gained. <br /> <br />I have nearly 2 years of industry
+                  {`I'm`} a Software Engineer who likes to see things being
+                  built one line of code at a time. Well organised and prefers
+                  to have incremental self-development based on the knowledge
+                  gained. <br /> <br />I have nearly 2 years of industry
                   experience, and I am gaining more knowledge day-by-day, as I
                   am a quick learner who likes to implement and make use of the
                   knowledge gained in order to create great things.
@@ -66,7 +66,7 @@ const About = () => {
           </Grid>
         </Card>
       </Col>
-      <Col xs={12} sm={6} md={4} lg={4} xl={5} span={5}>
+      <Col xs={12} sm={6} md={6} lg={5} xl={5} span={5}>
         <Card withBorder>
           <Text weight={500} size="sm">
             Technical Competencies

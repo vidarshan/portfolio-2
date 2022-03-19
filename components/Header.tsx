@@ -24,7 +24,7 @@ const Header = () => {
           Hello
         </Text>
         <Image
-          className="header-img"
+          className="header-img wave"
           height={40}
           width={40}
           src={wave.src}
