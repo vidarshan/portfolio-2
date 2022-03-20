@@ -10,7 +10,7 @@ import {
   Text,
 } from "@mantine/core";
 import { technologies } from "../data/technicalcompetencies";
-import profileimg from "../images/myimage.jpeg";
+import profileimg from "../images/myimage.webp";
 
 const About = () => {
   return (

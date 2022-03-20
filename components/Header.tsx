@@ -1,6 +1,6 @@
 import { Group, Text, Image, Kbd } from "@mantine/core";
-import technologist from "../images/technologist.png";
-import wave from "../images/wave.png";
+import technologist from "../images/technologist.webp";
+import wave from "../images/wave.webp";
 import React from "react";
 import { BsCommand } from "react-icons/bs";
 import { useOs } from "@mantine/hooks";
