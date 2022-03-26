@@ -42,6 +42,42 @@ export const projects = [
   },
   {
     id: 2,
+    name: "Open Weather",
+    description:
+      "Find the weather around you with this application powered by the Open Weather API. Uses a Geolocation API to find the weather according to your desired location or allows you to get the weather around your current location. Excellent presentation of weather divided into current weather, hourly forecast and daily forecast categories.",
+    image: "/images/openweather.webp",
+    repo: "https://github.com/vidarshanadithya/open-weather-app",
+    demo: "https://open-weather-app-po3lggjpt-vidarshanadithya.vercel.app/",
+    technologies: [
+      {
+        id: 1,
+        name: "Typescript",
+        color: "blue",
+      },
+      {
+        id: 2,
+        name: "React JS",
+        color: "blue",
+      },
+      {
+        id: 3,
+        name: "Mantine",
+        color: "blue",
+      },
+      {
+        id: 4,
+        name: "Open Weather API",
+        color: "green",
+      },
+      {
+        id: 5,
+        name: "Geocoding API",
+        color: "yellow",
+      },
+    ],
+  },
+  {
+    id: 3,
     name: "Github Search",
     description:
       "A simple application made with the use of Github REST API, which will allow the users to search for a github user, view their own repos and starred repos. Additionally, the users are able to see the profile information on the selected user very easily.",
@@ -66,8 +102,9 @@ export const projects = [
       },
     ],
   },
+
   {
-    id: 3,
+    id: 4,
     name: "Findmystay",
     description:
       "A mock website to find hotels in california. The users can view hotels, the rates of the hotels, images of the hotels, the facilities in the hotels and the ratings given to the hotels. Almost a static website made for convenience of the travellers.",
@@ -97,32 +134,7 @@ export const projects = [
       },
     ],
   },
-  {
-    id: 4,
-    name: "Open Weather",
-    description:
-      "Find the weather around you with this application powered by the Open Weather API. Uses a Geolocation API to find the weather according to your desired location.",
-    image: "/images/openweather.webp",
-    repo: "https://github.com/vidarshanadithya/open-weather-app",
-    demo: "https://open-weather-app-po3lggjpt-vidarshanadithya.vercel.app/",
-    technologies: [
-      {
-        id: 1,
-        name: "Typescript",
-        color: "blue",
-      },
-      {
-        id: 2,
-        name: "React JS",
-        color: "blue",
-      },
-      {
-        id: 3,
-        name: "Mantine",
-        color: "blue",
-      },
-    ],
-  },
+
   {
     id: 5,
     name: "Carmax ERP",
