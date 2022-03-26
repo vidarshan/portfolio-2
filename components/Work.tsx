@@ -7,7 +7,7 @@ const Work = () => {
     <Card className="content-spacing" withBorder radius="xs">
       <Timeline
         color="gray"
-        active={2}
+        active={3}
         bulletSize={14}
         lineWidth={3}
         radius="xs"
@@ -55,7 +55,6 @@ const Work = () => {
           bullet={<BsDash />}
           align="left"
           title="Trainee Software Engineer"
-          lineVariant="dashed"
         >
           <Text
             className="row-bottom-top-spacing-half"
@@ -86,7 +85,11 @@ const Work = () => {
           </Text>
         </Timeline.Item>
 
-        <Timeline.Item bullet={<BsDash />} title="Associate Software Engineer">
+        <Timeline.Item
+          bullet={<BsDash />}
+          title="Associate Software Engineer"
+          lineVariant="dashed"
+        >
           <Text
             className="row-bottom-top-spacing-half"
             weight={600}
@@ -119,7 +122,39 @@ const Work = () => {
             </Badge>
           </Group>
           <Text weight={500} className="row-bottom-top-spacing" size="xs">
-            09-2021 &#8212; 03-2021
+            09-2021 &#8212; 03-2022
+          </Text>
+        </Timeline.Item>
+        <Timeline.Item bullet={<BsDash />} title="Associate Software Engineer">
+          <Text
+            className="row-bottom-top-spacing-half"
+            weight={600}
+            color="blue"
+            size="sm"
+          >
+            Dev4s
+          </Text>
+          <Text weight={700} color="dimmed" size="sm">
+            Working as a full-stack software developer for applications based on
+            MERN stack. Heavy on frontend, implementing User Interfaces based on
+            low-level prototypes to the production.
+          </Text>
+          <Group className="row-bottom-top-spacing">
+            <Badge size="md" variant="dot" radius="xs">
+              React JS
+            </Badge>
+            <Badge size="md" color="green" variant="dot" radius="xs">
+              Node JS
+            </Badge>
+            <Badge size="md" color="gray" variant="dot" radius="xs">
+              Express JS
+            </Badge>
+            <Badge size="md" color="yellow" variant="dot" radius="xs">
+              Firebase
+            </Badge>
+          </Group>
+          <Text weight={500} className="row-bottom-top-spacing" size="xs">
+            03-2022 &#8212; Present
           </Text>
         </Timeline.Item>
       </Timeline>
