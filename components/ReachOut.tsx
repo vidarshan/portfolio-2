@@ -85,8 +85,8 @@ const ReachOut = () => {
     <Grid gutter="xl" className="content-spacing">
       <Col span={12}>
         <Alert icon={<BiSad />} title="Hmm..." color="red" radius="xs">
-          I'm not available for any offers at this moment, but feel free to
-          reach to me if you have something interesting.
+          {`I'm not available for any offers at this moment, but feel free to
+          reach to me if you have something interesting.`}
         </Alert>
       </Col>
       <Col xs={12} sm={8} md={8} lg={8} xl={8} span={9}>
