@@ -11,7 +11,6 @@ import {
 } from "@mantine/core";
 import Head from "next/head";
 import type { NextPage } from "next";
-import { BsFillMoonFill, BsFillSunFill } from "react-icons/bs";
 import { FiArrowUp } from "react-icons/fi";
 import { MantineProvider } from "@mantine/core";
 import { getGithubContributions } from "github-contributions-counter";
