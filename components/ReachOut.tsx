@@ -28,6 +28,7 @@ import { SiGmail } from "react-icons/si";
 import { useNotifications } from "@mantine/notifications";
 import { useForm } from "@mantine/hooks";
 import emailjs from "emailjs-com";
+import { BiSad } from "react-icons/bi";
 
 const ReachOut = () => {
   const notifications = useNotifications();
@@ -83,9 +84,9 @@ const ReachOut = () => {
   return (
     <Grid gutter="xl" className="content-spacing">
       <Col span={12}>
-        <Alert title="Note" color="gray" radius="xs">
-          I am currently searching for new opportunities. I will be open for job
-          offers and other project related offers. Contact me for more info.
+        <Alert icon={<BiSad />} title="Hmm..." color="red" radius="xs">
+          I'm not available for any offers at this moment, but feel free to
+          reach to me if you have something interesting.
         </Alert>
       </Col>
       <Col xs={12} sm={8} md={8} lg={8} xl={8} span={9}>
@@ -222,7 +223,7 @@ const ReachOut = () => {
             </Col>
             <Col span={12}>
               <Anchor
-                href="https://drive.google.com/file/d/16FBBGIQSABhijS-wSInqpAJyZf_BWLu6/view?usp=sharing"
+                href="https://drive.google.com/file/d/1tMXI9REgu2wbN5duMX3p97M9HkFRV5w_/view?usp=sharing"
                 target="_blank"
               >
                 <Button

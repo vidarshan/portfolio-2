@@ -28,6 +28,7 @@ import {
   useLocalStorageValue,
   useHotkeys,
 } from "@mantine/hooks";
+import { BiMoon, BiSun } from "react-icons/bi";
 
 const Home: NextPage = (allprops: any) => {
   const [colorScheme, setColorScheme] = useLocalStorageValue<ColorScheme>({
@@ -105,9 +106,9 @@ const Home: NextPage = (allprops: any) => {
                 title="Toggle color scheme"
               >
                 {colorScheme === "dark" ? (
-                  <BsFillMoonFill size={20} />
+                  <BiMoon size={20} />
                 ) : (
-                  <BsFillSunFill size={20} />
+                  <BiSun size={20} />
                 )}
               </ActionIcon>
             </Col>
