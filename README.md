@@ -18,7 +18,8 @@ Version 2 of my portfolio website with all of my developer related activities an
 <br/>
 
 <div align="center">
-<img width='710' height='450' src="https://user-images.githubusercontent.com/48169745/154646740-42292fad-059c-4469-8cbf-29d79ca4045e.png" />
+  
+<img src="https://user-images.githubusercontent.com/48169745/162748995-1fc0a078-86eb-49dd-a105-4aa802d9bd26.png" />
 </div>
 
 
