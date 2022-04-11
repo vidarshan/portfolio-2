@@ -80,7 +80,7 @@ const Home: NextPage = (allprops: any) => {
             <meta property="og:url" content="https://www.vidarshan.dev/" />
             <meta
               property="og:image"
-              content="https://user-images.githubusercontent.com/48169745/154646740-42292fad-059c-4469-8cbf-29d79ca4045e.png"
+              content="https://user-images.githubusercontent.com/48169745/162748995-1fc0a078-86eb-49dd-a105-4aa802d9bd26.png"
             />
             <meta
               name="google-site-verification"
