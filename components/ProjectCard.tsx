@@ -58,9 +58,16 @@ const ProjectCard: React.FC<PropsWithChildren<IProjectCard>> = ({
           span={6}
         >
           <Group position="apart" className="item-spacing-1">
-            <Text size="md" weight={700}>
-              {name}
-            </Text>
+            <Group position="left" direction="row">
+              <Text size="md" weight={700}>
+                {name}
+              </Text>
+              {id === 1 && (
+                <Badge radius="xs" variant="filled" color="yellow">
+                  Top
+                </Badge>
+              )}
+            </Group>
             <div>
               {repo === "no-repo" && demo === "no-demo" ? (
                 <Badge radius="xs" variant="outline">
