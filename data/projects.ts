@@ -47,7 +47,7 @@ export const projects = [
       "Find the weather around you with this application powered by the Open Weather API. Uses a Geolocation API to find the weather according to your desired location or allows you to get the weather around your current location. Excellent presentation of weather divided into current weather, hourly forecast and daily forecast categories.",
     image: "/images/openweather.webp",
     repo: "https://github.com/vidarshanadithya/open-weather-app",
-    demo: "https://open-weather-app-po3lggjpt-vidarshanadithya.vercel.app/",
+    demo: "https://beautiful-mandazi-1399bc.netlify.app/",
     technologies: [
       {
         id: 1,
@@ -78,6 +78,42 @@ export const projects = [
   },
   {
     id: 3,
+    name: "Task Tracker",
+    description:
+      "As a software engineer, I've always had problems when managing my tasks. I 've always wondered if I can find an application where I can track my work which is to be done using Github (See whether I need to review PRs), Jira (To see my tickets) and random things which I should do every day. I did not find a solution for this problem, so I decided to solve it myself!",
+    image: "/images/task-tracker.webp",
+    repo: "https://github.com/vidarshanadithya/task-tracker",
+    demo: "https://soft-pony-acf08d.netlify.app/",
+    technologies: [
+      {
+        id: 1,
+        name: "Typescript",
+        color: "blue",
+      },
+      {
+        id: 2,
+        name: "React JS",
+        color: "blue",
+      },
+      {
+        id: 3,
+        name: "Node JS",
+        color: "green",
+      },
+      {
+        id: 4,
+        name: "Mantine",
+        color: "blue",
+      },
+      {
+        id: 5,
+        name: "Mongo DB",
+        color: "green",
+      },
+    ],
+  },
+  {
+    id: 4,
     name: "Github Search",
     description:
       "A simple application made with the use of Github REST API, which will allow the users to search for a github user, view their own repos and starred repos. Additionally, the users are able to see the profile information on the selected user very easily.",
@@ -104,7 +140,7 @@ export const projects = [
   },
 
   {
-    id: 4,
+    id: 5,
     name: "Findmystay",
     description:
       "A mock website to find hotels in california. The users can view hotels, the rates of the hotels, images of the hotels, the facilities in the hotels and the ratings given to the hotels. Almost a static website made for convenience of the travellers.",
@@ -136,7 +172,7 @@ export const projects = [
   },
 
   {
-    id: 5,
+    id: 6,
     name: "Carmax ERP",
     description:
       "An Enterprise Resource Planning application for a car service center, which is used to manage their day-to-day workflow, such as managing service operations, maintaining employee records, inventory control and tracking cash inflows and outflows.",
@@ -172,7 +208,7 @@ export const projects = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     name: "Portfolio V1",
     description:
       "The very first version of my portfolio website made with no UI frameworks. Served the primary purpose of showing my information. Almost every element was implemented with SCSS. Deprecated in favour of the portfolio website you are currently viewing, as this has much better performance and responsiveness.",
