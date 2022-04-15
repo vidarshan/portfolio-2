@@ -77,42 +77,6 @@ export const projects = [
     ],
   },
   {
-    id: 3,
-    name: "Task Tracker",
-    description:
-      "As a software engineer, I've always had problems when managing my tasks. I 've always wondered if I can find an application where I can track my work which is to be done using Github (See whether I need to review PRs), Jira (To see my tickets) and random things which I should do every day. I did not find a solution for this problem, so I decided to solve it myself!",
-    image: "/images/task-tracker.webp",
-    repo: "https://github.com/vidarshanadithya/task-tracker",
-    demo: "https://soft-pony-acf08d.netlify.app/",
-    technologies: [
-      {
-        id: 1,
-        name: "Typescript",
-        color: "blue",
-      },
-      {
-        id: 2,
-        name: "React JS",
-        color: "blue",
-      },
-      {
-        id: 3,
-        name: "Node JS",
-        color: "green",
-      },
-      {
-        id: 4,
-        name: "Mantine",
-        color: "blue",
-      },
-      {
-        id: 5,
-        name: "Mongo DB",
-        color: "green",
-      },
-    ],
-  },
-  {
     id: 4,
     name: "Github Search",
     description:
