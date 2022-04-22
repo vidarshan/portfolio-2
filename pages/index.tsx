@@ -8,6 +8,9 @@ import {
   Affix,
   Transition,
   Divider,
+  Button,
+  ThemeIcon,
+  Group,
 } from "@mantine/core";
 import Head from "next/head";
 import type { NextPage } from "next";
@@ -27,18 +30,65 @@ import {
   useLocalStorageValue,
   useHotkeys,
 } from "@mantine/hooks";
-import { BiMoon, BiSun } from "react-icons/bi";
+import {
+  BiBriefcaseAlt2,
+  BiCategoryAlt,
+  BiHomeAlt,
+  BiMailSend,
+  BiMoon,
+  BiSmile,
+  BiSun,
+  BiUser,
+} from "react-icons/bi";
+import { useEffect, useRef } from "react";
 
 const Home: NextPage = (allprops: any) => {
   const [colorScheme, setColorScheme] = useLocalStorageValue<ColorScheme>({
     key: "mantine-color-scheme",
     defaultValue: "light",
   });
+
+  const scrollPositions: Array<any> = [];
   const [scroll, scrollTo] = useWindowScroll();
   const toggleColorScheme = (value?: ColorScheme) => {
     setColorScheme(value || (colorScheme === "dark" ? "light" : "dark"));
   };
+
   useHotkeys([["mod+J", () => toggleColorScheme()]]);
+
+  useEffect(() => {
+    const aboutSectionElementPosition =
+      document.getElementById("aboutSection")?.offsetTop;
+
+    const workSectionElementPosition =
+      document.getElementById("workSection")?.offsetTop;
+
+    const projectsSectionElementPosition =
+      document.getElementById("projectsSection")?.offsetTop;
+
+    const reachOutSectionElementPosition =
+      document.getElementById("reachOutSection")?.offsetTop;
+
+    scrollPositions.push({ section: "home", position: 0 });
+    scrollPositions.push({
+      section: "about",
+      position: aboutSectionElementPosition,
+    });
+    scrollPositions.push({
+      section: "work",
+      position: workSectionElementPosition,
+    });
+    scrollPositions.push({
+      section: "projects",
+      position: projectsSectionElementPosition,
+    });
+    scrollPositions.push({
+      section: "reachOut",
+      position: reachOutSectionElementPosition,
+    });
+
+    console.log(scrollPositions);
+  }, [scrollPositions]);
 
   return (
     <ColorSchemeProvider
@@ -96,20 +146,47 @@ const Home: NextPage = (allprops: any) => {
               }}
               span={12}
             >
-              <ActionIcon
-                color="yellow"
-                size="xl"
-                radius="xl"
-                variant="transparent"
-                onClick={() => toggleColorScheme()}
-                title="Toggle color scheme"
-              >
-                {colorScheme === "dark" ? (
-                  <BiMoon size={20} />
-                ) : (
-                  <BiSun size={20} />
-                )}
-              </ActionIcon>
+              <Group>
+                <ActionIcon
+                  onClick={() => scrollTo({ y: scrollPositions[0].position })}
+                >
+                  <BiHomeAlt size={20} />
+                </ActionIcon>
+                <ActionIcon
+                  onClick={() => scrollTo({ y: scrollPositions[1].position })}
+                >
+                  <BiSmile size={20} />
+                </ActionIcon>
+                <ActionIcon
+                  onClick={() => scrollTo({ y: scrollPositions[2].position })}
+                >
+                  <BiBriefcaseAlt2 size={20} />
+                </ActionIcon>
+                <ActionIcon
+                  onClick={() => scrollTo({ y: scrollPositions[3].position })}
+                >
+                  <BiCategoryAlt size={20} />
+                </ActionIcon>
+                <ActionIcon
+                  onClick={() => scrollTo({ y: scrollPositions[4].position })}
+                >
+                  <BiMailSend size={20} />
+                </ActionIcon>
+                <ActionIcon
+                  color="yellow"
+                  size="xl"
+                  radius="xl"
+                  variant="transparent"
+                  onClick={() => toggleColorScheme()}
+                  title="Toggle color scheme"
+                >
+                  {colorScheme === "dark" ? (
+                    <BiMoon size={20} />
+                  ) : (
+                    <BiSun size={20} />
+                  )}
+                </ActionIcon>
+              </Group>
             </Col>
             <Affix position={{ bottom: 20, right: 20 }}>
               <Transition transition="slide-up" mounted={scroll.y > 0}>
@@ -133,6 +210,7 @@ const Home: NextPage = (allprops: any) => {
                   <Divider
                     size="sm"
                     label="About Me"
+                    id="aboutSection"
                     labelProps={{ size: "lg", weight: "600" }}
                   />
                   <About />
@@ -141,6 +219,7 @@ const Home: NextPage = (allprops: any) => {
                   <Divider
                     size="sm"
                     label="Work Experience"
+                    id="workSection"
                     labelProps={{ size: "lg", weight: "600" }}
                   />
                   <Work />
@@ -150,6 +229,7 @@ const Home: NextPage = (allprops: any) => {
                   <Divider
                     size="sm"
                     label="Projects"
+                    id="projectsSection"
                     labelProps={{ size: "lg", weight: "600" }}
                   />
                   <Grid className="content-spacing" gutter="xl">
@@ -182,6 +262,7 @@ const Home: NextPage = (allprops: any) => {
                   <Divider
                     size="sm"
                     label="Reach Out"
+                    id="reachOutSection"
                     labelProps={{ size: "lg", weight: "600" }}
                   />
                   <ReachOut />
