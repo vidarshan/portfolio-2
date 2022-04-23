@@ -218,7 +218,6 @@ const Home: NextPage = (allprops: any) => {
                 <Box id="aboutSection">
                   <Col className="section-spacing" span={12}>
                     <Divider
-                      sx={{ marginTop: "140px" }}
                       size="sm"
                       label="About Me"
                       labelProps={{ size: "lg", weight: "600" }}
