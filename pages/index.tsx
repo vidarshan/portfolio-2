@@ -8,11 +8,8 @@ import {
   Affix,
   Transition,
   Divider,
-  Button,
-  ThemeIcon,
   Group,
-  Tooltip,
-  Space,
+  Box,
 } from "@mantine/core";
 import Head from "next/head";
 import type { NextPage } from "next";
@@ -40,9 +37,8 @@ import {
   BiMoon,
   BiSmile,
   BiSun,
-  BiUser,
 } from "react-icons/bi";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 
 const Home: NextPage = (allprops: any) => {
   const [colorScheme, setColorScheme] = useLocalStorageValue<ColorScheme>({
@@ -219,69 +215,71 @@ const Home: NextPage = (allprops: any) => {
             <Container size={1200}>
               <Grid mt={50}>
                 <Header />
-
-                <Col className="section-spacing" span={12}>
-                  <Divider
-                    sx={{ marginTop: "140px" }}
-                    size="sm"
-                    label="About Me"
-                    id="aboutSection"
-                    labelProps={{ size: "lg", weight: "600" }}
-                  />
-                  <About />
-                </Col>
-                <Col className="section-spacing" span={12}>
-                  <Divider
-                    size="sm"
-                    label="Work Experience"
-                    id="workSection"
-                    labelProps={{ size: "lg", weight: "600" }}
-                  />
-                  <Work />
-                </Col>
-
-                <Col className="section-spacing" span={12}>
-                  <Divider
-                    size="sm"
-                    label="Projects"
-                    id="projectsSection"
-                    labelProps={{ size: "lg", weight: "600" }}
-                  />
-                  <Grid className="content-spacing" gutter="xl">
-                    {projects.map((project, key) => {
-                      return (
-                        <Col
-                          key={key}
-                          xs={12}
-                          sm={6}
-                          md={6}
-                          lg={12}
-                          xl={12}
-                          span={12}
-                        >
-                          <ProjectCard
-                            id={project.id}
-                            name={project.name}
-                            description={project.description}
-                            image={project.image}
-                            repo={project.repo}
-                            demo={project.demo}
-                            technologies={project.technologies}
-                          />
-                        </Col>
-                      );
-                    })}
-                  </Grid>
-                </Col>
-                <Col className="section-spacing" span={12}>
-                  <Divider
-                    size="sm"
-                    label="Reach Out"
-                    id="reachOutSection"
-                    labelProps={{ size: "lg", weight: "600" }}
-                  />
-                  <ReachOut />
-                </Col>
+                <Box id="aboutSection">
+                  <Col className="section-spacing" span={12}>
+                    <Divider
+                      sx={{ marginTop: "140px" }}
+                      size="sm"
+                      label="About Me"
+                      labelProps={{ size: "lg", weight: "600" }}
+                    />
+                    <About />
+                  </Col>
+                </Box>
+                <Box id="workSection">
+                  <Col className="section-spacing" span={12}>
+                    <Divider
+                      size="sm"
+                      label="Work Experience"
+                      labelProps={{ size: "lg", weight: "600" }}
+                    />
+                    <Work />
+                  </Col>
+                </Box>
+                <Box id="projectsSection">
+                  <Col className="section-spacing" span={12}>
+                    <Divider
+                      size="sm"
+                      label="Projects"
+                      labelProps={{ size: "lg", weight: "600" }}
+                    />
+                    <Grid className="content-spacing" gutter="xl">
+                      {projects.map((project, key) => {
+                        return (
+                          <Col
+                            key={key}
+                            xs={12}
+                            sm={6}
+                            md={6}
+                            lg={12}
+                            xl={12}
+                            span={12}
+                          >
+                            <ProjectCard
+                              id={project.id}
+                              name={project.name}
+                              description={project.description}
+                              image={project.image}
+                              repo={project.repo}
+                              demo={project.demo}
+                              technologies={project.technologies}
+                            />
+                          </Col>
+                        );
+                      })}
+                    </Grid>
+                  </Col>
+                </Box>
+                <Box id="reachOutSection">
+                  <Col className="section-spacing" span={12}>
+                    <Divider
+                      size="sm"
+                      label="Reach Out"
+                      labelProps={{ size: "lg", weight: "600" }}
+                    />
+                    <ReachOut />
+                  </Col>
+                </Box>
               </Grid>
               <Footer allprops={allprops} />
             </Container>
