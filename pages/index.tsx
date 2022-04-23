@@ -8,6 +8,8 @@ import {
   Affix,
   Transition,
   Divider,
+  Group,
+  Box,
 } from "@mantine/core";
 import Head from "next/head";
 import type { NextPage } from "next";
@@ -27,18 +29,62 @@ import {
   useLocalStorageValue,
   useHotkeys,
 } from "@mantine/hooks";
-import { BiMoon, BiSun } from "react-icons/bi";
+import {
+  BiBriefcaseAlt2,
+  BiCategoryAlt,
+  BiHomeAlt,
+  BiMailSend,
+  BiMoon,
+  BiSmile,
+  BiSun,
+} from "react-icons/bi";
+import { useEffect } from "react";
 
 const Home: NextPage = (allprops: any) => {
   const [colorScheme, setColorScheme] = useLocalStorageValue<ColorScheme>({
     key: "mantine-color-scheme",
     defaultValue: "light",
   });
+
+  const scrollPositions: Array<any> = [];
   const [scroll, scrollTo] = useWindowScroll();
   const toggleColorScheme = (value?: ColorScheme) => {
     setColorScheme(value || (colorScheme === "dark" ? "light" : "dark"));
   };
+
   useHotkeys([["mod+J", () => toggleColorScheme()]]);
+
+  useEffect(() => {
+    const aboutSectionElementPosition =
+      document.getElementById("aboutSection")?.offsetTop;
+
+    const workSectionElementPosition =
+      document.getElementById("workSection")?.offsetTop;
+
+    const projectsSectionElementPosition =
+      document.getElementById("projectsSection")?.offsetTop;
+
+    const reachOutSectionElementPosition =
+      document.getElementById("reachOutSection")?.offsetTop;
+
+    scrollPositions.push({ section: "home", position: 0 });
+    scrollPositions.push({
+      section: "about",
+      position: aboutSectionElementPosition,
+    });
+    scrollPositions.push({
+      section: "work",
+      position: workSectionElementPosition,
+    });
+    scrollPositions.push({
+      section: "projects",
+      position: projectsSectionElementPosition,
+    });
+    scrollPositions.push({
+      section: "reachOut",
+      position: reachOutSectionElementPosition,
+    });
+  }, [scrollPositions]);
 
   return (
     <ColorSchemeProvider
@@ -89,28 +135,69 @@ const Home: NextPage = (allprops: any) => {
             <link rel="icon" href="/favicon.ico" />
           </Head>
           <Container sx={{ marginTop: "1rem" }} size={5120}>
-            <Col
+            <Group
+              direction="row"
+              position="right"
               sx={{
-                display: "flex",
-                justifyContent: "flex-end",
+                margin: "0 20px 0px 20px",
+                paddingTop: "10px",
+                position: "fixed",
+                width: "100%",
+                right: 0,
+                top: 0,
+                zIndex: 1000,
+                backgroundColor: colorScheme === "dark" ? "#1A1B1E" : "#ffffff",
               }}
-              span={12}
             >
-              <ActionIcon
-                color="yellow"
-                size="xl"
-                radius="xl"
-                variant="transparent"
-                onClick={() => toggleColorScheme()}
-                title="Toggle color scheme"
-              >
-                {colorScheme === "dark" ? (
-                  <BiMoon size={20} />
-                ) : (
-                  <BiSun size={20} />
-                )}
-              </ActionIcon>
-            </Col>
+              <Group m={10}>
+                <ActionIcon
+                  title="Home"
+                  onClick={() => scrollTo({ y: scrollPositions[0].position })}
+                >
+                  <BiHomeAlt size={20} />
+                </ActionIcon>
+
+                <ActionIcon
+                  title="About"
+                  onClick={() => scrollTo({ y: scrollPositions[1].position })}
+                >
+                  <BiSmile size={20} />
+                </ActionIcon>
+
+                <ActionIcon
+                  title="Work"
+                  onClick={() => scrollTo({ y: scrollPositions[2].position })}
+                >
+                  <BiBriefcaseAlt2 size={20} />
+                </ActionIcon>
+
+                <ActionIcon
+                  title="Projects"
+                  onClick={() => scrollTo({ y: scrollPositions[3].position })}
+                >
+                  <BiCategoryAlt size={20} />
+                </ActionIcon>
+
+                <ActionIcon
+                  title="Reach out"
+                  onClick={() => scrollTo({ y: scrollPositions[4].position })}
+                >
+                  <BiMailSend size={20} />
+                </ActionIcon>
+
+                <ActionIcon
+                  color="yellow"
+                  onClick={() => toggleColorScheme()}
+                  title="Toggle color scheme"
+                >
+                  {colorScheme === "dark" ? (
+                    <BiMoon size={20} />
+                  ) : (
+                    <BiSun size={20} />
+                  )}
+                </ActionIcon>
+              </Group>
+            </Group>
             <Affix position={{ bottom: 20, right: 20 }}>
               <Transition transition="slide-up" mounted={scroll.y > 0}>
                 {(transitionStyles) => (
@@ -126,66 +213,72 @@ const Home: NextPage = (allprops: any) => {
               </Transition>
             </Affix>
             <Container size={1200}>
-              <Grid>
+              <Grid mt={50}>
                 <Header />
-
-                <Col className="section-spacing" span={12}>
-                  <Divider
-                    size="sm"
-                    label="About Me"
-                    labelProps={{ size: "lg", weight: "600" }}
-                  />
-                  <About />
-                </Col>
-                <Col className="section-spacing" span={12}>
-                  <Divider
-                    size="sm"
-                    label="Work Experience"
-                    labelProps={{ size: "lg", weight: "600" }}
-                  />
-                  <Work />
-                </Col>
-
-                <Col className="section-spacing" span={12}>
-                  <Divider
-                    size="sm"
-                    label="Projects"
-                    labelProps={{ size: "lg", weight: "600" }}
-                  />
-                  <Grid className="content-spacing" gutter="xl">
-                    {projects.map((project, key) => {
-                      return (
-                        <Col
-                          key={key}
-                          xs={12}
-                          sm={6}
-                          md={6}
-                          lg={12}
-                          xl={12}
-                          span={12}
-                        >
-                          <ProjectCard
-                            id={project.id}
-                            name={project.name}
-                            description={project.description}
-                            image={project.image}
-                            repo={project.repo}
-                            demo={project.demo}
-                            technologies={project.technologies}
-                          />
-                        </Col>
-                      );
-                    })}
-                  </Grid>
-                </Col>
-                <Col className="section-spacing" span={12}>
-                  <Divider
-                    size="sm"
-                    label="Reach Out"
-                    labelProps={{ size: "lg", weight: "600" }}
-                  />
-                  <ReachOut />
-                </Col>
+                <Box id="aboutSection">
+                  <Col className="section-spacing" span={12}>
+                    <Divider
+                      size="sm"
+                      label="About Me"
+                      labelProps={{ size: "lg", weight: "600" }}
+                    />
+                    <About />
+                  </Col>
+                </Box>
+                <Box id="workSection">
+                  <Col className="section-spacing" span={12}>
+                    <Divider
+                      size="sm"
+                      label="Work Experience"
+                      labelProps={{ size: "lg", weight: "600" }}
+                    />
+                    <Work />
+                  </Col>
+                </Box>
+                <Box id="projectsSection">
+                  <Col className="section-spacing" span={12}>
+                    <Divider
+                      size="sm"
+                      label="Projects"
+                      labelProps={{ size: "lg", weight: "600" }}
+                    />
+                    <Grid className="content-spacing" gutter="xl">
+                      {projects.map((project, key) => {
+                        return (
+                          <Col
+                            key={key}
+                            xs={12}
+                            sm={6}
+                            md={6}
+                            lg={12}
+                            xl={12}
+                            span={12}
+                          >
+                            <ProjectCard
+                              id={project.id}
+                              name={project.name}
+                              description={project.description}
+                              image={project.image}
+                              repo={project.repo}
+                              demo={project.demo}
+                              technologies={project.technologies}
+                            />
+                          </Col>
+                        );
+                      })}
+                    </Grid>
+                  </Col>
+                </Box>
+                <Box id="reachOutSection">
+                  <Col className="section-spacing" span={12}>
+                    <Divider
+                      size="sm"
+                      label="Reach Out"
+                      labelProps={{ size: "lg", weight: "600" }}
+                    />
+                    <ReachOut />
+                  </Col>
+                </Box>
               </Grid>
               <Footer allprops={allprops} />
             </Container>

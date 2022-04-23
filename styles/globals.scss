@@ -100,6 +100,7 @@ input,
 .mantine-Tooltip-body {
   font-size: 12px !important;
   font-weight: 600 !important;
+  z-index: 100000 !important;
 }
 
 @media screen and (max-width: 410px) {
@@ -107,12 +108,6 @@ input,
     margin-left: 0;
   }
 }
-
-/* @media screen and (max-width: 410px) {
-  .header-text {
-    font-size: 20px !important;
-  }
-} */
 
 .word-spacing-small {
   margin-left: 0.5rem;
