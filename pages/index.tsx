@@ -11,6 +11,8 @@ import {
   Button,
   ThemeIcon,
   Group,
+  Tooltip,
+  Space,
 } from "@mantine/core";
 import Head from "next/head";
 import type { NextPage } from "next";
@@ -86,8 +88,6 @@ const Home: NextPage = (allprops: any) => {
       section: "reachOut",
       position: reachOutSectionElementPosition,
     });
-
-    console.log(scrollPositions);
   }, [scrollPositions]);
 
   return (
@@ -139,44 +139,58 @@ const Home: NextPage = (allprops: any) => {
             <link rel="icon" href="/favicon.ico" />
           </Head>
           <Container sx={{ marginTop: "1rem" }} size={5120}>
-            <Col
+            <Group
+              direction="row"
+              position="right"
               sx={{
-                display: "flex",
-                justifyContent: "flex-end",
+                margin: "0 20px 0px 20px",
+                paddingTop: "10px",
+                position: "fixed",
+                width: "100%",
+                right: 0,
+                top: 0,
+                zIndex: 1000,
+                backgroundColor: colorScheme === "dark" ? "#1A1B1E" : "#ffffff",
               }}
-              span={12}
             >
-              <Group>
+              <Group m={10}>
                 <ActionIcon
+                  title="Home"
                   onClick={() => scrollTo({ y: scrollPositions[0].position })}
                 >
                   <BiHomeAlt size={20} />
                 </ActionIcon>
+
                 <ActionIcon
+                  title="About"
                   onClick={() => scrollTo({ y: scrollPositions[1].position })}
                 >
                   <BiSmile size={20} />
                 </ActionIcon>
+
                 <ActionIcon
+                  title="Work"
                   onClick={() => scrollTo({ y: scrollPositions[2].position })}
                 >
                   <BiBriefcaseAlt2 size={20} />
                 </ActionIcon>
+
                 <ActionIcon
+                  title="Projects"
                   onClick={() => scrollTo({ y: scrollPositions[3].position })}
                 >
                   <BiCategoryAlt size={20} />
                 </ActionIcon>
+
                 <ActionIcon
+                  title="Reach out"
                   onClick={() => scrollTo({ y: scrollPositions[4].position })}
                 >
                   <BiMailSend size={20} />
                 </ActionIcon>
+
                 <ActionIcon
                   color="yellow"
-                  size="xl"
-                  radius="xl"
-                  variant="transparent"
                   onClick={() => toggleColorScheme()}
                   title="Toggle color scheme"
                 >
@@ -187,7 +201,7 @@ const Home: NextPage = (allprops: any) => {
                   )}
                 </ActionIcon>
               </Group>
-            </Col>
+            </Group>
             <Affix position={{ bottom: 20, right: 20 }}>
               <Transition transition="slide-up" mounted={scroll.y > 0}>
                 {(transitionStyles) => (
@@ -203,11 +217,12 @@ const Home: NextPage = (allprops: any) => {
               </Transition>
             </Affix>
             <Container size={1200}>
-              <Grid>
+              <Grid mt={50}>
                 <Header />
 
                 <Col className="section-spacing" span={12}>
                   <Divider
+                    sx={{ marginTop: "140px" }}
                     size="sm"
                     label="About Me"
                     id="aboutSection"

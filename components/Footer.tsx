@@ -15,7 +15,6 @@ const Footer = (allprops: any) => {
           radius="xs"
           withArrow
         >
-          <Group></Group>
           <Text
             color="gray"
             className={styles.flexaligncenter}
