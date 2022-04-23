@@ -6,7 +6,7 @@
 </h3>
 
 <h4 align="center">
-Version 2 of my portfolio website with all of my developer related activities and information.
+Version 2 of my portfolio website with all of my developer related activities and information
 </h4>
 
 
