@@ -34,9 +34,9 @@ import {
   BiCategoryAlt,
   BiHomeAlt,
   BiMailSend,
+  BiMedal,
   BiMoon,
   BiSmile,
-  BiStar,
   BiSun,
 } from "react-icons/bi";
 import { useEffect } from "react";
@@ -192,7 +192,7 @@ const Home: NextPage = (allprops: any) => {
                   title="Testimonials"
                   onClick={() => scrollTo({ y: scrollPositions[4].position })}
                 >
-                  <BiStar size={20} />
+                  <BiMedal size={20} />
                 </ActionIcon>
 
                 <ActionIcon
