@@ -293,9 +293,10 @@ const Home: NextPage = (allprops: any) => {
                       label="Testimonials"
                       labelProps={{ size: "lg", weight: "600" }}
                     />
-                    {testimonials.map((testimonial) => {
+                    {testimonials.map((testimonial, key) => {
                       return (
                         <TestimonialCard
+                          key={key}
                           id={testimonial.id}
                           name={testimonial.name}
                           designation={testimonial.designation}
