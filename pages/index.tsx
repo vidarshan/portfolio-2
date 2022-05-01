@@ -39,7 +39,8 @@ import {
   BiSun,
 } from "react-icons/bi";
 import { useEffect } from "react";
-import Testimonials from "../components/Testimonials";
+import Testimonials from "../components/TestimonialCard";
+import TestimonialCard from "../components/TestimonialCard";
 
 const Home: NextPage = (allprops: any) => {
   const [colorScheme, setColorScheme] = useLocalStorageValue<ColorScheme>({
@@ -277,7 +278,7 @@ const Home: NextPage = (allprops: any) => {
                       label="Testimonials"
                       labelProps={{ size: "lg", weight: "600" }}
                     />
-                    <Testimonials />
+                    <TestimonialCard />
                   </Col>
                 </Box>
                 <Box id="reachOutSection">
