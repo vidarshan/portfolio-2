@@ -41,6 +41,7 @@ import {
 import { useEffect } from "react";
 import Testimonials from "../components/TestimonialCard";
 import TestimonialCard from "../components/TestimonialCard";
+import { testimonials } from "../data/testimonials";
 
 const Home: NextPage = (allprops: any) => {
   const [colorScheme, setColorScheme] = useLocalStorageValue<ColorScheme>({
@@ -278,7 +279,20 @@ const Home: NextPage = (allprops: any) => {
                       label="Testimonials"
                       labelProps={{ size: "lg", weight: "600" }}
                     />
-                    <TestimonialCard />
+                    {testimonials.map((testimonial) => {
+                      console.log(testimonial);
+
+                      return (
+                        <TestimonialCard
+                          id={testimonial.id}
+                          name={testimonial.name}
+                          designation={testimonial.designation}
+                          description={testimonial.description}
+                          link={testimonial.link}
+                          image={testimonial.avatar}
+                        />
+                      );
+                    })}
                   </Col>
                 </Box>
                 <Box id="reachOutSection">

@@ -1,7 +1,15 @@
-import { Anchor, Avatar, Blockquote, Card, Group, Text } from "@mantine/core";
+import {
+  Anchor,
+  Avatar,
+  Blockquote,
+  Card,
+  Group,
+  Text,
+  Image,
+} from "@mantine/core";
 import React, { PropsWithChildren } from "react";
 import { BiRightArrowAlt } from "react-icons/bi";
-import profileimg from "../images/myimage.webp";
+import hasith from "../images/hasith.webp";
 
 interface ITestimonialCard {
   id: number;
@@ -9,6 +17,7 @@ interface ITestimonialCard {
   designation: string;
   description: string;
   link: string;
+  image: string;
 }
 
 const TestimonialCard: React.FC<PropsWithChildren<ITestimonialCard>> = ({
@@ -17,12 +26,13 @@ const TestimonialCard: React.FC<PropsWithChildren<ITestimonialCard>> = ({
   designation,
   description,
   link,
+  image,
 }) => {
   return (
-    <Card key={id} padding={20} withBorder>
+    <Card mt={20} key={id} padding={20} withBorder>
       <Group position="apart">
         <Group>
-          <Avatar src={profileimg.src} />
+          <Avatar src={image} radius="xl" />
           <div>
             <Text size="sm" weight={600}>
               {name}
@@ -32,19 +42,17 @@ const TestimonialCard: React.FC<PropsWithChildren<ITestimonialCard>> = ({
             </Text>
           </div>
         </Group>
+      </Group>
+      <Blockquote mt={10}>
+        <Text align="justify" size="sm" weight={400}>
+          {description}
+        </Text>
+      </Blockquote>
+      <Group position="right">
         <Anchor href={link}>
           <BiRightArrowAlt />
         </Anchor>
       </Group>
-      <Blockquote mt={10} color="cyan">
-        <Text align="justify" size="sm" weight={600}>
-          {description}
-        </Text>
-      </Blockquote>
-
-      {/* <Anchor size="sm" weight={700}>
-          John Doe
-        </Anchor> */}
     </Card>
   );
 };
