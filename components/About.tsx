@@ -21,9 +21,9 @@ const About = () => {
             <Col span={12}>
               <Group>
                 <Image
-                  width={80}
-                  height={80}
-                  radius="sm"
+                  width={70}
+                  height={70}
+                  radius="xl"
                   src={profileimg.src}
                   alt="avatar"
                 />
