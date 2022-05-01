@@ -29,7 +29,7 @@ const TestimonialCard: React.FC<PropsWithChildren<ITestimonialCard>> = ({
   image,
 }) => {
   return (
-    <Card mt={20} key={id} padding={20} withBorder>
+    <Card mt={30} key={id} padding={20} withBorder>
       <Group position="apart">
         <Group>
           <Avatar src={image} radius="xl" />
@@ -43,12 +43,12 @@ const TestimonialCard: React.FC<PropsWithChildren<ITestimonialCard>> = ({
           </div>
         </Group>
       </Group>
-      <Blockquote mt={10}>
+      <Blockquote mt={20}>
         <Text align="justify" size="sm" weight={400}>
           {description}
         </Text>
       </Blockquote>
-      <Group position="right">
+      <Group mt={20} position="right">
         <Anchor href={link}>
           <BiRightArrowAlt />
         </Anchor>

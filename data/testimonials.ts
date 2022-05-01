@@ -14,7 +14,7 @@ export const testimonials = [
     designation: "Former Employer",
     avatar: "/images/beta.webp",
     description:
-      "He is highly technically competent and is proficient in use of Javascript, React JS, Express JS, Node JS, MySQL, Cypress ans SCSS. We observed him to be an honest and conscientious employee. He carried out his duties to provide the maximun outut across all projects he was assigned to. We are sure that he will be an excellent addition to any organization he opts to work in.",
+      "Vidarshan is highly technically competent and is proficient in use of Javascript, React JS, Express JS, Node JS, MySQL, Cypress ans SCSS. We observed him to be an honest and conscientious employee. He carried out his duties to provide the maximun outut across all projects he was assigned to. We are sure that he will be an excellent addition to any organization he opts to work in.",
     link: "https://www.betalaunch.io",
   },
 ];

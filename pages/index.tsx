@@ -36,10 +36,10 @@ import {
   BiMailSend,
   BiMoon,
   BiSmile,
+  BiStar,
   BiSun,
 } from "react-icons/bi";
 import { useEffect } from "react";
-import Testimonials from "../components/TestimonialCard";
 import TestimonialCard from "../components/TestimonialCard";
 import { testimonials } from "../data/testimonials";
 
@@ -67,6 +67,10 @@ const Home: NextPage = (allprops: any) => {
     const projectsSectionElementPosition =
       document.getElementById("projectsSection")?.offsetTop;
 
+    const testimonialsSectionElementPosition = document.getElementById(
+      "testimonialsSection"
+    )?.offsetTop;
+
     const reachOutSectionElementPosition =
       document.getElementById("reachOutSection")?.offsetTop;
 
@@ -82,6 +86,10 @@ const Home: NextPage = (allprops: any) => {
     scrollPositions.push({
       section: "projects",
       position: projectsSectionElementPosition,
+    });
+    scrollPositions.push({
+      section: "testimonials",
+      position: testimonialsSectionElementPosition,
     });
     scrollPositions.push({
       section: "reachOut",
@@ -180,10 +188,16 @@ const Home: NextPage = (allprops: any) => {
                 >
                   <BiCategoryAlt size={20} />
                 </ActionIcon>
+                <ActionIcon
+                  title="Testimonials"
+                  onClick={() => scrollTo({ y: scrollPositions[4].position })}
+                >
+                  <BiStar size={20} />
+                </ActionIcon>
 
                 <ActionIcon
                   title="Reach out"
-                  onClick={() => scrollTo({ y: scrollPositions[4].position })}
+                  onClick={() => scrollTo({ y: scrollPositions[5].position })}
                 >
                   <BiMailSend size={20} />
                 </ActionIcon>
