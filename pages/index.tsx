@@ -39,6 +39,7 @@ import {
   BiSun,
 } from "react-icons/bi";
 import { useEffect } from "react";
+import Testimonials from "../components/Testimonials";
 
 const Home: NextPage = (allprops: any) => {
   const [colorScheme, setColorScheme] = useLocalStorageValue<ColorScheme>({
@@ -267,6 +268,16 @@ const Home: NextPage = (allprops: any) => {
                         );
                       })}
                     </Grid>
+                  </Col>
+                </Box>
+                <Box id="testimonialsSection">
+                  <Col className="section-spacing" span={12}>
+                    <Divider
+                      size="sm"
+                      label="Testimonials"
+                      labelProps={{ size: "lg", weight: "600" }}
+                    />
+                    <Testimonials />
                   </Col>
                 </Box>
                 <Box id="reachOutSection">
