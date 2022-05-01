@@ -36,9 +36,12 @@ import {
   BiMailSend,
   BiMoon,
   BiSmile,
+  BiStar,
   BiSun,
 } from "react-icons/bi";
 import { useEffect } from "react";
+import TestimonialCard from "../components/TestimonialCard";
+import { testimonials } from "../data/testimonials";
 
 const Home: NextPage = (allprops: any) => {
   const [colorScheme, setColorScheme] = useLocalStorageValue<ColorScheme>({
@@ -64,6 +67,10 @@ const Home: NextPage = (allprops: any) => {
     const projectsSectionElementPosition =
       document.getElementById("projectsSection")?.offsetTop;
 
+    const testimonialsSectionElementPosition = document.getElementById(
+      "testimonialsSection"
+    )?.offsetTop;
+
     const reachOutSectionElementPosition =
       document.getElementById("reachOutSection")?.offsetTop;
 
@@ -79,6 +86,10 @@ const Home: NextPage = (allprops: any) => {
     scrollPositions.push({
       section: "projects",
       position: projectsSectionElementPosition,
+    });
+    scrollPositions.push({
+      section: "testimonials",
+      position: testimonialsSectionElementPosition,
     });
     scrollPositions.push({
       section: "reachOut",
@@ -177,10 +188,16 @@ const Home: NextPage = (allprops: any) => {
                 >
                   <BiCategoryAlt size={20} />
                 </ActionIcon>
+                <ActionIcon
+                  title="Testimonials"
+                  onClick={() => scrollTo({ y: scrollPositions[4].position })}
+                >
+                  <BiStar size={20} />
+                </ActionIcon>
 
                 <ActionIcon
                   title="Reach out"
-                  onClick={() => scrollTo({ y: scrollPositions[4].position })}
+                  onClick={() => scrollTo({ y: scrollPositions[5].position })}
                 >
                   <BiMailSend size={20} />
                 </ActionIcon>
@@ -267,6 +284,29 @@ const Home: NextPage = (allprops: any) => {
                         );
                       })}
                     </Grid>
+                  </Col>
+                </Box>
+                <Box id="testimonialsSection">
+                  <Col className="section-spacing" span={12}>
+                    <Divider
+                      size="sm"
+                      label="Testimonials"
+                      labelProps={{ size: "lg", weight: "600" }}
+                    />
+                    {testimonials.map((testimonial) => {
+                      console.log(testimonial);
+
+                      return (
+                        <TestimonialCard
+                          id={testimonial.id}
+                          name={testimonial.name}
+                          designation={testimonial.designation}
+                          description={testimonial.description}
+                          link={testimonial.link}
+                          image={testimonial.avatar}
+                        />
+                      );
+                    })}
                   </Col>
                 </Box>
                 <Box id="reachOutSection">
