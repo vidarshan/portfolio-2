@@ -84,10 +84,10 @@ const Work = () => {
               JS based web applications.
             </List.Item>
             <List.Item>
-              Modified and improved backend REST API's functialities.
+              Modified and improved backend REST {`API's`} functialities.
             </List.Item>
             <List.Item>
-              Modified relational database's structures to cater new
+              Modified relational {`database's`} structures to cater new
               functionalities.
             </List.Item>
           </List>
@@ -135,10 +135,10 @@ const Work = () => {
               JS based web applications.
             </List.Item>
             <List.Item>
-              Modified and improved backend REST API's functialities.
+              Modified and improved backend REST {`API's`} functialities.
             </List.Item>
             <List.Item>
-              Modified relational database's structures to cater new
+              Modified relational {`database's`} structures to cater new
               functionalities.
             </List.Item>
           </List>
