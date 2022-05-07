@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, Timeline, Card, Badge, Group, List, Space } from "@mantine/core";
-import { BsCheckCircle, BsDash, BsDashCircle, BsDashLg } from "react-icons/bs";
-import { BiCalendar, BiData, BiHistory } from "react-icons/bi";
+import { BsDash } from "react-icons/bs";
+import { BiCalendar, BiHistory } from "react-icons/bi";
 
 const Work = () => {
   return (
