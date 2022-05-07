@@ -1,6 +1,7 @@
 import React from "react";
-import { Text, Timeline, Card, Badge, Group } from "@mantine/core";
+import { Text, Timeline, Card, Badge, Group, List, Space } from "@mantine/core";
 import { BsCheckCircle, BsDash, BsDashCircle, BsDashLg } from "react-icons/bs";
+import { BiCalendar, BiData } from "react-icons/bi";
 
 const Work = () => {
   return (
@@ -15,7 +16,7 @@ const Work = () => {
         <Timeline.Item
           bullet={<BsDash />}
           align="right"
-          title="Freelance Web Developer "
+          title="Intern Software Engineer"
         >
           <Text
             className="row-bottom-top-spacing-half"
@@ -25,12 +26,24 @@ const Work = () => {
           >
             Excalibur Systems, Sri Lanka
           </Text>
-          <Text weight={700} color="dimmed" size="sm">
-            Created web based applications for clients desiring solutions for
-            their day-to-day problems that occur in their small/mid scaled
-            businesses.
-          </Text>
-          <Group className="row-bottom-top-spacing">
+          <List size="sm" mt={30}>
+            <List.Item>
+              Contributed to existing web applications based on React JS, to
+              extend and improve their functionality.
+            </List.Item>
+            <List.Item>
+              Designed user Interfaces and implemented the designs with code.
+            </List.Item>
+            <List.Item>
+              Built completely new web applications for small-mid scale
+              businesses.
+            </List.Item>
+            <List.Item>
+              Gained knowledge on deploying applications to the web.
+            </List.Item>
+          </List>
+          <Space h="md" />
+          <Group mt={30} className="row-bottom-top-spacing">
             <Badge size="md" variant="dot" radius="xs">
               React JS
             </Badge>
@@ -43,13 +56,17 @@ const Work = () => {
             <Badge size="md" color="blue" variant="dot" radius="xs">
               Postgres
             </Badge>
-            <Badge size="md" color="blue" variant="dot" radius="xs">
-              Typescript
+            <Badge size="md" color="yellow" variant="dot" radius="xs">
+              Javascript
             </Badge>
           </Group>
-          <Text weight={500} className="row-bottom-top-spacing" size="xs">
-            12-2020 &#8212; 04-2021
-          </Text>
+
+          <Group position="left" direction="row">
+            <BiCalendar />
+            <Text weight={600} className="row-bottom-top-spacing" size="xs">
+              12-2020 &#8212; 04-2021
+            </Text>
+          </Group>
         </Timeline.Item>
         <Timeline.Item
           bullet={<BsDash />}
@@ -80,9 +97,12 @@ const Work = () => {
               SCSS
             </Badge>
           </Group>
-          <Text weight={500} className="row-bottom-top-spacing" size="xs">
-            04-2021 &#8212; 09-2021
-          </Text>
+          <Group>
+            <BiData size="10px" />
+            <Text weight={500} className="row-bottom-top-spacing" size="xs">
+              04-2021 &#8212; 09-2021
+            </Text>
+          </Group>
         </Timeline.Item>
 
         <Timeline.Item
