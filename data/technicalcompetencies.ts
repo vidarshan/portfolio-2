@@ -137,4 +137,10 @@ export const technologies = [
     color: "indigo",
     type: "other",
   },
+  {
+    id: 23,
+    name: "Figma",
+    color: "pink",
+    type: "other",
+  },
 ];
