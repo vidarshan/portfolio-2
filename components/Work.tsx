@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, Timeline, Card, Badge, Group, List, Space } from "@mantine/core";
 import { BsDash } from "react-icons/bs";
-import { BiCalendar, BiHistory } from "react-icons/bi";
+import { BiCalendar, BiStop } from "react-icons/bi";
 
 const Work = () => {
   return (
@@ -20,7 +20,7 @@ const Work = () => {
           >
             Excalibur Systems, Sri Lanka
           </Text>
-          <List spacing="xs" size="sm" center icon={<BiHistory />} mt={30}>
+          <List spacing="xs" size="sm" center icon={<BiStop />} mt={30}>
             <List.Item>
               Contributed to existing web applications based on React JS, to
               extend and improve their functionality.
@@ -74,7 +74,7 @@ const Work = () => {
           >
             Beta Launch, Sri Lanka
           </Text>
-          <List spacing="xs" size="sm" center icon={<BiHistory />} mt={30}>
+          <List spacing="xs" size="sm" center icon={<BiStop />} mt={30}>
             <List.Item>
               Revamped web applications with old user interfaces to modern and
               updated user interfaces.
@@ -125,7 +125,7 @@ const Work = () => {
           >
             Beta Launch, Sri Lanka
           </Text>
-          <List spacing="xs" size="sm" center icon={<BiHistory />} mt={30}>
+          <List spacing="xs" size="sm" center icon={<BiStop />} mt={30}>
             <List.Item>
               Gained knowledge and implemented end-to-end testing for web
               applications.
@@ -176,7 +176,7 @@ const Work = () => {
           >
             Dev4s, Sri Lanka
           </Text>
-          <List spacing="xs" size="sm" center icon={<BiHistory />} mt={30}>
+          <List spacing="xs" size="sm" center icon={<BiStop />} mt={30}>
             <List.Item>
               Designed user interfaces with Figma and implemented those with
               code.
