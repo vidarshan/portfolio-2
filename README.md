@@ -60,7 +60,7 @@ Version 2 of my portfolio website with all of my developer related activities an
 - Replace content in the `data/projects.ts` and `data/technicalcompetencies.ts` files with your own content. Put the images related to this content in the `public/images` folder.
         
 ## 🗒️ Note
-- The stackoverflow keys and the github keys are needed for the integrated stackoverflow/github stats section on the footer of the website. If these keys cannot be provided consider commenting out the `<Footer/>` and the related API calls in the `pages/index.tsx` to avoid errors.
+- The stackoverflow keys and the github keys are needed for the integrated stackoverflow/github stats section on the footer of the website. If these keys cannot be provided, it will display some hardcoded values in place. To fetch actual numbers, please provide API keys.
 
 ## 💬 Inquiries
 - Email me via vidarshanadithya3@gmail.com to contact me directly.
