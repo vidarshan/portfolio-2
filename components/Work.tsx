@@ -230,10 +230,9 @@ const Work = () => {
           </Text>
           <Space h="md" />
           <Text weight={700} size="sm">
-            Contributing to build a low-code mobile application building
-            platform, which allows users to create mobile applications with
-            great with ease. Contributing as a frontend engineer within the
-            team.
+            Building a low-code mobile application creating platform, which
+            allows users to create mobile applications with great with ease.
+            Contributing as a frontend engineer within the team.
           </Text>
           <Space h="md" />
           <Group className="row-bottom-top-spacing">
