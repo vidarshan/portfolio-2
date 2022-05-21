@@ -165,41 +165,41 @@ const Home: NextPage = (allprops: any) => {
                   title="Home"
                   onClick={() => scrollTo({ y: scrollPositions[0].position })}
                 >
-                  <BiHomeAlt size={20} />
+                  <BiHomeAlt size={18} />
                 </ActionIcon>
 
                 <ActionIcon
                   title="About"
                   onClick={() => scrollTo({ y: scrollPositions[1].position })}
                 >
-                  <BiSmile size={20} />
+                  <BiSmile size={18} />
                 </ActionIcon>
 
                 <ActionIcon
                   title="Work"
                   onClick={() => scrollTo({ y: scrollPositions[2].position })}
                 >
-                  <BiBriefcaseAlt2 size={20} />
+                  <BiBriefcaseAlt2 size={18} />
                 </ActionIcon>
 
                 <ActionIcon
                   title="Projects"
                   onClick={() => scrollTo({ y: scrollPositions[3].position })}
                 >
-                  <BiCategoryAlt size={20} />
+                  <BiCategoryAlt size={18} />
                 </ActionIcon>
                 <ActionIcon
                   title="Testimonials"
                   onClick={() => scrollTo({ y: scrollPositions[4].position })}
                 >
-                  <BiMedal size={20} />
+                  <BiMedal size={18} />
                 </ActionIcon>
 
                 <ActionIcon
                   title="Reach out"
                   onClick={() => scrollTo({ y: scrollPositions[5].position })}
                 >
-                  <BiMailSend size={20} />
+                  <BiMailSend size={18} />
                 </ActionIcon>
 
                 <ActionIcon
@@ -208,9 +208,9 @@ const Home: NextPage = (allprops: any) => {
                   title="Toggle color scheme"
                 >
                   {colorScheme === "dark" ? (
-                    <BiMoon size={20} />
+                    <BiMoon size={18} />
                   ) : (
-                    <BiSun size={20} />
+                    <BiSun size={18} />
                   )}
                 </ActionIcon>
               </Group>

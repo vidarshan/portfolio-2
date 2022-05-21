@@ -23,12 +23,13 @@ import {
   BsStackOverflow,
   BsTwitter,
   BsMailbox,
+  BsInfoCircleFill,
 } from "react-icons/bs";
 import { SiGmail } from "react-icons/si";
 import { useNotifications } from "@mantine/notifications";
 import { useForm } from "@mantine/hooks";
 import emailjs from "emailjs-com";
-import { BiSad } from "react-icons/bi";
+import { BsFillCircleFill } from "react-icons/bs";
 
 const ReachOut = () => {
   const notifications = useNotifications();
@@ -84,9 +85,14 @@ const ReachOut = () => {
   return (
     <Grid gutter="xl" className="content-spacing">
       <Col span={12}>
-        <Alert icon={<BiSad />} title="Hmm..." color="red" radius="xs">
-          {`I'm not available for any offers at this moment, but feel free to
-          reach to me if you have something interesting.`}
+        <Alert
+          icon={<BsFillCircleFill />}
+          title="Available"
+          color="green"
+          radius="xs"
+        >
+          Feel free to drop a message if you have an interesting opportunity for
+          me.
         </Alert>
       </Col>
       <Col xs={12} sm={8} md={8} lg={8} xl={8} span={9}>

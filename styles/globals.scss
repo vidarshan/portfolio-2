@@ -55,6 +55,10 @@ div {
   margin: 0.4rem 0.2rem !important;
 }
 
+li{
+  font-weight: 700 !important;
+}
+
 button,
 input,
 .mantine-Card-root {
@@ -252,4 +256,8 @@ input,
     height: 16px !important;
     width: 16px !important;
   }
+}
+
+button {
+  text-decoration: none;
 }

@@ -111,7 +111,7 @@ const Work = () => {
           </Group>
           <Group position="left" direction="row">
             <BiCalendar />
-            <Text weight={500} className="row-bottom-top-spacing" size="xs">
+            <Text weight={600} className="row-bottom-top-spacing" size="xs">
               04-2021 &#8212; 09-2021
             </Text>
           </Group>
@@ -162,7 +162,7 @@ const Work = () => {
           </Group>
           <Group position="left" direction="row">
             <BiCalendar />
-            <Text weight={500} className="row-bottom-top-spacing" size="xs">
+            <Text weight={600} className="row-bottom-top-spacing" size="xs">
               09-2021 &#8212; 03-2022
             </Text>
           </Group>
@@ -210,7 +210,7 @@ const Work = () => {
           </Group>
           <Group position="left" direction="row">
             <BiCalendar />
-            <Text weight={500} className="row-bottom-top-spacing" size="xs">
+            <Text weight={600} className="row-bottom-top-spacing" size="xs">
               03-2022 &#8212; 04-2022
             </Text>
           </Group>
@@ -229,10 +229,11 @@ const Work = () => {
             Appspotr
           </Text>
           <Space h="md" />
-          <Text weight={500} size="sm">
+          <Text weight={700} size="sm">
             Contributing to build a low-code mobile application building
             platform, which allows users to create mobile applications with
-            great convenience and ease.
+            great with ease. Contributing as a frontend engineer within the
+            team.
           </Text>
           <Space h="md" />
           <Group className="row-bottom-top-spacing">
@@ -245,7 +246,7 @@ const Work = () => {
           </Group>
           <Group position="left" direction="row">
             <BiCalendar />
-            <Text weight={500} className="row-bottom-top-spacing" size="xs">
+            <Text weight={600} className="row-bottom-top-spacing" size="xs">
               05-2022 &#8212; Present
             </Text>
           </Group>

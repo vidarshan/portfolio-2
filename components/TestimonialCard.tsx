@@ -6,6 +6,7 @@ import {
   Group,
   Text,
   Image,
+  ActionIcon,
 } from "@mantine/core";
 import React, { PropsWithChildren } from "react";
 import { BiRightArrowAlt } from "react-icons/bi";
@@ -49,9 +50,11 @@ const TestimonialCard: React.FC<PropsWithChildren<ITestimonialCard>> = ({
         </Text>
       </Blockquote>
       <Group mt={20} position="right">
-        <Anchor href={link}>
-          <BiRightArrowAlt />
-        </Anchor>
+        <ActionIcon variant="light">
+          <Anchor href={link}>
+            <BiRightArrowAlt />
+          </Anchor>
+        </ActionIcon>
       </Group>
     </Card>
   );
