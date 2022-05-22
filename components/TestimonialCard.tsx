@@ -35,17 +35,17 @@ const TestimonialCard: React.FC<PropsWithChildren<ITestimonialCard>> = ({
         <Group>
           <Avatar src={image} radius="xl" />
           <div>
-            <Text size="sm" weight={600}>
+            <Text color="blue" size="sm" weight={600}>
               {name}
             </Text>
-            <Text size="sm" weight={600}>
+            <Text size="xs" weight={600}>
               {designation}
             </Text>
           </div>
         </Group>
       </Group>
       <Blockquote mt={20}>
-        <Text align="justify" size="sm" weight={400}>
+        <Text align="justify" size="sm" weight={600}>
           {description}
         </Text>
       </Blockquote>

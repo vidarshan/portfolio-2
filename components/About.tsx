@@ -23,7 +23,7 @@ const About = () => {
                 <Image
                   width={70}
                   height={70}
-                  radius="xl"
+                  radius="xs"
                   src={profileimg.src}
                   alt="avatar"
                 />
@@ -37,9 +37,6 @@ const About = () => {
                   <Text color="dimmed" weight={700} size="xs">
                     Computing Graduate
                   </Text>
-                  <Text color="dimmed" weight={700} size="xs">
-                    Colombo, Sri Lanka
-                  </Text>
                 </div>
               </Group>
             </Col>
@@ -47,7 +44,7 @@ const About = () => {
               <Divider />
               <Blockquote cite="- Vidarshan">
                 {" "}
-                <Text size="sm" weight={600}>
+                <Text size="sm" weight={700}>
                   {`I'm`} a Software Engineer who likes to see things being
                   built one line of code at a time. Well organised and prefers
                   to have incremental self-development based on the knowledge
@@ -68,10 +65,6 @@ const About = () => {
       </Col>
       <Col xs={12} sm={6} md={6} lg={5} xl={5} span={5}>
         <Card withBorder>
-          <Text weight={500} size="sm">
-            Technical Competencies
-          </Text>
-
           <Grid className="item-spacing-half">
             <Col span={12}>
               <Divider

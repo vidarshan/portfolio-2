@@ -9,6 +9,8 @@ import {
   Group,
   Tooltip,
   Anchor,
+  Spoiler,
+  Space,
 } from "@mantine/core";
 import { FaGithub, FaGlobeAfrica } from "react-icons/fa";
 import { PropsWithChildren } from "react";
@@ -35,7 +37,7 @@ const ProjectCard: React.FC<PropsWithChildren<IProjectCard>> = ({
   return (
     <Card withBorder padding="lg">
       <Grid>
-        <Col xs={12} sm={12} md={12} lg={5} xl={5} span={6}>
+        <Col xs={12} sm={12} md={12} lg={5} xl={12} span={6}>
           <Card.Section>
             <Image
               className="project-image"
@@ -54,7 +56,7 @@ const ProjectCard: React.FC<PropsWithChildren<IProjectCard>> = ({
           sm={12}
           md={12}
           lg={7}
-          xl={7}
+          xl={12}
           span={6}
         >
           <Group position="apart" className="item-spacing-1">
@@ -106,34 +108,29 @@ const ProjectCard: React.FC<PropsWithChildren<IProjectCard>> = ({
               )}
             </div>
           </Group>
-
-          <div style={{ marginTop: "1rem" }}>
+          <Space h="xl" />
+          <Spoiler maxHeight={100} showLabel="Show more" hideLabel="Show less">
             <Text weight={600} align="justify" size="sm">
               {description}
             </Text>
-          </div>
-          <div style={{ marginTop: "1rem" }}>
-            <Divider
-              labelProps={{ size: "xs", weight: 500 }}
-              label="Tech Stack"
-            />
-            <Group style={{ marginTop: ".6rem" }}>
-              {technologies.map((technology: any, key: number) => {
-                return (
-                  <Badge
-                    key={key}
-                    className="badge-spacing"
-                    radius="xs"
-                    size="md"
-                    variant="dot"
-                    color={technology.color}
-                  >
-                    {technology.name}
-                  </Badge>
-                );
-              })}
-            </Group>
-          </div>
+          </Spoiler>
+          <Space h="xl" />
+          <Group style={{ marginTop: ".6rem" }}>
+            {technologies.map((technology: any, key: number) => {
+              return (
+                <Badge
+                  key={key}
+                  className="badge-spacing"
+                  radius="xs"
+                  size="md"
+                  variant="dot"
+                  color={technology.color}
+                >
+                  {technology.name}
+                </Badge>
+              );
+            })}
+          </Group>
         </Col>
       </Grid>
     </Card>

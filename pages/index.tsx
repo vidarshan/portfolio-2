@@ -10,6 +10,7 @@ import {
   Divider,
   Group,
   Box,
+  Title,
 } from "@mantine/core";
 import Head from "next/head";
 import type { NextPage } from "next";
@@ -234,31 +235,19 @@ const Home: NextPage = (allprops: any) => {
                 <Header />
                 <Box id="aboutSection">
                   <Col className="section-spacing" span={12}>
-                    <Divider
-                      size="sm"
-                      label="About Me"
-                      labelProps={{ size: "lg", weight: "600" }}
-                    />
+                    <Title order={1}>About Me</Title>
                     <About />
                   </Col>
                 </Box>
                 <Box id="workSection">
                   <Col className="section-spacing" span={12}>
-                    <Divider
-                      size="sm"
-                      label="Work Experience"
-                      labelProps={{ size: "lg", weight: "600" }}
-                    />
+                    <Title order={1}>Work Experience</Title>
                     <Work />
                   </Col>
                 </Box>
                 <Box id="projectsSection">
                   <Col className="section-spacing" span={12}>
-                    <Divider
-                      size="sm"
-                      label="Projects"
-                      labelProps={{ size: "lg", weight: "600" }}
-                    />
+                    <Title order={1}>Projects</Title>
                     <Grid className="content-spacing" gutter="xl">
                       {projects.map((project, key) => {
                         return (
@@ -268,7 +257,7 @@ const Home: NextPage = (allprops: any) => {
                             sm={6}
                             md={6}
                             lg={12}
-                            xl={12}
+                            xl={6}
                             span={12}
                           >
                             <ProjectCard
@@ -288,33 +277,29 @@ const Home: NextPage = (allprops: any) => {
                 </Box>
                 <Box id="testimonialsSection">
                   <Col className="section-spacing" span={12}>
-                    <Divider
-                      size="sm"
-                      label="Testimonials"
-                      labelProps={{ size: "lg", weight: "600" }}
-                    />
-                    {testimonials.map((testimonial, key) => {
-                      return (
-                        <TestimonialCard
-                          key={key}
-                          id={testimonial.id}
-                          name={testimonial.name}
-                          designation={testimonial.designation}
-                          description={testimonial.description}
-                          link={testimonial.link}
-                          image={testimonial.avatar}
-                        />
-                      );
-                    })}
+                    <Title order={1}>Testimonials</Title>
+                    <Grid>
+                      {testimonials.map((testimonial, key) => {
+                        return (
+                          <Col xs={12} sm={12} md={6} lg={6} xl={6} span={6}>
+                            <TestimonialCard
+                              key={key}
+                              id={testimonial.id}
+                              name={testimonial.name}
+                              designation={testimonial.designation}
+                              description={testimonial.description}
+                              link={testimonial.link}
+                              image={testimonial.avatar}
+                            />
+                          </Col>
+                        );
+                      })}
+                    </Grid>
                   </Col>
                 </Box>
                 <Box id="reachOutSection">
                   <Col className="section-spacing" span={12}>
-                    <Divider
-                      size="sm"
-                      label="Reach Out"
-                      labelProps={{ size: "lg", weight: "600" }}
-                    />
+                    <Title order={1}>Reach Out</Title>
                     <ReachOut />
                   </Col>
                 </Box>

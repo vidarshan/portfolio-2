@@ -56,8 +56,8 @@ const Work = () => {
           </Group>
           <Group position="left" direction="row">
             <BiCalendar />
-            <Text weight={600} className="row-bottom-top-spacing" size="xs">
-              12-2020 &#8212; 04-2021
+            <Text weight={700} className="row-bottom-top-spacing" size="xs">
+              December-2020 &#8212; April-2021
             </Text>
           </Group>
         </Timeline.Item>
@@ -111,8 +111,8 @@ const Work = () => {
           </Group>
           <Group position="left" direction="row">
             <BiCalendar />
-            <Text weight={600} className="row-bottom-top-spacing" size="xs">
-              04-2021 &#8212; 09-2021
+            <Text weight={700} className="row-bottom-top-spacing" size="xs">
+              April-2021 &#8212; September-2021
             </Text>
           </Group>
         </Timeline.Item>
@@ -162,8 +162,8 @@ const Work = () => {
           </Group>
           <Group position="left" direction="row">
             <BiCalendar />
-            <Text weight={600} className="row-bottom-top-spacing" size="xs">
-              09-2021 &#8212; 03-2022
+            <Text weight={700} className="row-bottom-top-spacing" size="xs">
+              September-2021 &#8212; March-2022
             </Text>
           </Group>
         </Timeline.Item>
@@ -210,8 +210,8 @@ const Work = () => {
           </Group>
           <Group position="left" direction="row">
             <BiCalendar />
-            <Text weight={600} className="row-bottom-top-spacing" size="xs">
-              03-2022 &#8212; 04-2022
+            <Text weight={700} className="row-bottom-top-spacing" size="xs">
+              March-2022 &#8212; April-2022
             </Text>
           </Group>
         </Timeline.Item>
@@ -245,8 +245,8 @@ const Work = () => {
           </Group>
           <Group position="left" direction="row">
             <BiCalendar />
-            <Text weight={600} className="row-bottom-top-spacing" size="xs">
-              05-2022 &#8212; Present
+            <Text weight={700} className="row-bottom-top-spacing" size="xs">
+              May-2022 &#8212; Present
             </Text>
           </Group>
         </Timeline.Item>
