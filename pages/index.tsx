@@ -281,7 +281,15 @@ const Home: NextPage = (allprops: any) => {
                     <Grid>
                       {testimonials.map((testimonial, key) => {
                         return (
-                          <Col xs={12} sm={12} md={6} lg={6} xl={6} span={6}>
+                          <Col
+                            key={key}
+                            xs={12}
+                            sm={12}
+                            md={6}
+                            lg={6}
+                            xl={6}
+                            span={6}
+                          >
                             <TestimonialCard
                               key={key}
                               id={testimonial.id}
