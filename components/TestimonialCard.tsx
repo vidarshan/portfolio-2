@@ -7,9 +7,15 @@ import {
   Text,
   Image,
   ActionIcon,
+  Spoiler,
 } from "@mantine/core";
 import React, { PropsWithChildren } from "react";
 import { BiRightArrowAlt } from "react-icons/bi";
+import {
+  BsArrow90DegDown,
+  BsArrowBarRight,
+  BsArrowRight,
+} from "react-icons/bs";
 import hasith from "../images/hasith.webp";
 
 interface ITestimonialCard {
@@ -45,16 +51,18 @@ const TestimonialCard: React.FC<PropsWithChildren<ITestimonialCard>> = ({
         </Group>
       </Group>
       <Blockquote mt={20}>
-        <Text align="justify" size="sm" weight={600}>
-          {description}
-        </Text>
+        <Spoiler maxHeight={120} showLabel="Show more" hideLabel="Show less">
+          <Text align="justify" size="sm" weight={600}>
+            {description}
+          </Text>
+        </Spoiler>
       </Blockquote>
       <Group mt={20} position="right">
-        <ActionIcon variant="light">
-          <Anchor href={link}>
-            <BiRightArrowAlt />
-          </Anchor>
-        </ActionIcon>
+        <Anchor href={link}>
+          <ActionIcon variant="hover">
+            <BsArrowRight />
+          </ActionIcon>
+        </Anchor>
       </Group>
     </Card>
   );

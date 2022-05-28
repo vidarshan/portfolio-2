@@ -1,5 +1,14 @@
 import React from "react";
-import { Text, Timeline, Card, Badge, Group, List, Space } from "@mantine/core";
+import {
+  Text,
+  Timeline,
+  Card,
+  Badge,
+  Group,
+  List,
+  Space,
+  Divider,
+} from "@mantine/core";
 import { BsDash } from "react-icons/bs";
 import { BiCalendar, BiStop } from "react-icons/bi";
 
@@ -54,12 +63,12 @@ const Work = () => {
               Javascript
             </Badge>
           </Group>
-          <Group position="left" direction="row">
-            <BiCalendar />
+          <Group position="right" direction="row">
             <Text weight={700} className="row-bottom-top-spacing" size="xs">
-              December-2020 &#8212; April-2021
+              December 2020 &#8212; April 2021
             </Text>
           </Group>
+          <Divider />
         </Timeline.Item>
         <Timeline.Item
           bullet={<BsDash />}
@@ -109,12 +118,12 @@ const Work = () => {
               Express JS
             </Badge>
           </Group>
-          <Group position="left" direction="row">
-            <BiCalendar />
+          <Group position="right" direction="row">
             <Text weight={700} className="row-bottom-top-spacing" size="xs">
-              April-2021 &#8212; September-2021
+              April 2021 &#8212; September 2021
             </Text>
           </Group>
+          <Divider />
         </Timeline.Item>
         <Timeline.Item bullet={<BsDash />} title="Associate Software Engineer">
           <Text
@@ -160,12 +169,12 @@ const Work = () => {
               MySQL
             </Badge>
           </Group>
-          <Group position="left" direction="row">
-            <BiCalendar />
+          <Group position="right" direction="row">
             <Text weight={700} className="row-bottom-top-spacing" size="xs">
-              September-2021 &#8212; March-2022
+              September 2021 &#8212; March 2022
             </Text>
           </Group>
+          <Divider />
         </Timeline.Item>
         <Timeline.Item bullet={<BsDash />} title="Associate Software Engineer">
           <Text
@@ -208,12 +217,12 @@ const Work = () => {
               Figma
             </Badge>
           </Group>
-          <Group position="left" direction="row">
-            <BiCalendar />
+          <Group position="right" direction="row">
             <Text weight={700} className="row-bottom-top-spacing" size="xs">
-              March-2022 &#8212; April-2022
+              March 2022 &#8212; April 2022
             </Text>
           </Group>
+          <Divider />
         </Timeline.Item>
         <Timeline.Item
           bullet={<BsDash />}
@@ -243,10 +252,9 @@ const Work = () => {
               React Native
             </Badge>
           </Group>
-          <Group position="left" direction="row">
-            <BiCalendar />
+          <Group position="right" direction="row">
             <Text weight={700} className="row-bottom-top-spacing" size="xs">
-              May-2022 &#8212; Present
+              May 2022 &#8212; Present
             </Text>
           </Group>
         </Timeline.Item>

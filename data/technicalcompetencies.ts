@@ -143,4 +143,22 @@ export const technologies = [
     color: "pink",
     type: "other",
   },
+  {
+    id: 25,
+    name: "Yarn",
+    color: "blue",
+    type: "other",
+  },
+  {
+    id: 26,
+    name: "NPM",
+    color: "red",
+    type: "other",
+  },
+  {
+    id: 27,
+    name: "Styled Components",
+    color: "pink",
+    type: "other",
+  },
 ];
