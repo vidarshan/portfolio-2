@@ -46,7 +46,7 @@ const About = () => {
               <Divider />
               <Blockquote cite="- Vidarshan">
                 {" "}
-                <Text size="sm" weight={500}>
+                <Text size="sm" weight={600}>
                   {`I'm`} a Software Engineer who likes to see things being
                   built one line of code at a time. Well organised and prefers
                   to have incremental self-development based on the knowledge

@@ -139,24 +139,18 @@ export const technologies = [
   },
   {
     id: 24,
-    name: "Figma",
-    color: "pink",
-    type: "other",
-  },
-  {
-    id: 25,
     name: "Yarn",
     color: "blue",
     type: "other",
   },
   {
-    id: 26,
+    id: 25,
     name: "NPM",
     color: "red",
     type: "other",
   },
   {
-    id: 27,
+    id: 26,
     name: "Styled Components",
     color: "pink",
     type: "other",
