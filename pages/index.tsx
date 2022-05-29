@@ -29,6 +29,7 @@ import {
   useWindowScroll,
   useLocalStorageValue,
   useHotkeys,
+  useColorScheme,
 } from "@mantine/hooks";
 import {
   BiBriefcaseAlt2,
@@ -40,21 +41,18 @@ import {
   BiSmile,
   BiSun,
 } from "react-icons/bi";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import TestimonialCard from "../components/TestimonialCard";
 import { testimonials } from "../data/testimonials";
 
 const Home: NextPage = (allprops: any) => {
-  const [colorScheme, setColorScheme] = useLocalStorageValue<ColorScheme>({
-    key: "mantine-color-scheme",
-    defaultValue: "light",
-  });
-
+  const preferredColorScheme = useColorScheme();
+  const [colorScheme, setColorScheme] =
+    useState<ColorScheme>(preferredColorScheme);
   const scrollPositions: Array<any> = [];
   const [scroll, scrollTo] = useWindowScroll();
-  const toggleColorScheme = (value?: ColorScheme) => {
+  const toggleColorScheme = (value?: ColorScheme) =>
     setColorScheme(value || (colorScheme === "dark" ? "light" : "dark"));
-  };
 
   useHotkeys([["mod+J", () => toggleColorScheme()]]);
 
