@@ -125,7 +125,6 @@ const ReachOut = () => {
                 type="submit"
                 leftIcon={<RiSendPlaneFill />}
                 variant="default"
-                color="dark"
                 fullWidth
               >
                 Send Message
@@ -153,7 +152,7 @@ const ReachOut = () => {
                   withArrow
                 >
                   <Anchor href="mailto:vidarshanadithya3@gmail.com">
-                    <ActionIcon variant="hover" color="dark" size="md">
+                    <ActionIcon variant="hover" size="md">
                       <SiGmail style={{ width: 18, height: 18 }} />
                     </ActionIcon>
                   </Anchor>
@@ -169,7 +168,7 @@ const ReachOut = () => {
                     href="https://www.linkedin.com/in/vidarshan-rathnayake/"
                     target="_blank"
                   >
-                    <ActionIcon variant="hover" color="dark" size="md">
+                    <ActionIcon variant="hover" size="md">
                       <BsLinkedin style={{ width: 18, height: 18 }} />
                     </ActionIcon>
                   </Anchor>
@@ -185,7 +184,7 @@ const ReachOut = () => {
                     href="https://github.com/vidarshanadithya"
                     target="_blank"
                   >
-                    <ActionIcon variant="hover" color="dark" size="md">
+                    <ActionIcon variant="hover" size="md">
                       <BsGithub style={{ width: 18, height: 18 }} />
                     </ActionIcon>
                   </Anchor>
@@ -201,7 +200,7 @@ const ReachOut = () => {
                     href="https://stackoverflow.com/users/15415996/vidarshan-adithya"
                     target="_blank"
                   >
-                    <ActionIcon variant="hover" color="dark" size="md">
+                    <ActionIcon variant="hover" size="md">
                       <BsStackOverflow style={{ width: 18, height: 18 }} />
                     </ActionIcon>
                   </Anchor>
@@ -214,7 +213,7 @@ const ReachOut = () => {
                   withArrow
                 >
                   <Anchor href="https://twitter.com/VidarshanR" target="_blank">
-                    <ActionIcon variant="hover" color="dark" size="md">
+                    <ActionIcon variant="hover" size="md">
                       <BsTwitter style={{ width: 18, height: 18 }} />
                     </ActionIcon>
                   </Anchor>
@@ -235,7 +234,6 @@ const ReachOut = () => {
                 <Button
                   leftIcon={<BsCloudDownload />}
                   variant="default"
-                  color="dark"
                   fullWidth
                 >
                   Download my Resume
