@@ -180,10 +180,7 @@ const ReachOut = () => {
                   radius="xs"
                   withArrow
                 >
-                  <Anchor
-                    href="https://github.com/vidarshanadithya"
-                    target="_blank"
-                  >
+                  <Anchor href="https://github.com/vidarshan" target="_blank">
                     <ActionIcon variant="hover" size="md">
                       <BsGithub style={{ width: 18, height: 18 }} />
                     </ActionIcon>
