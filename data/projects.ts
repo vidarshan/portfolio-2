@@ -6,7 +6,7 @@ export const projects = [
       "An e-commerce website, ideal for a tech gadget store. The minimalist user interface allows users to navigate within the application easily. Only the relevant information is shown, which makes the user interface even better. Includes the most needed features for an ecommerce website, such as search filters, shopping cart and an integrated mock payment gateway with Paypal.",
     image: "/images/techstop.webp",
     repo: "https://github.com/vidarshan/tech-stop",
-    demo: "https://cryptic-escarpment-74612.herokuapp.com/",
+    demo: "https://tech-stop.onrender.com/",
     technologies: [
       {
         id: 1,
