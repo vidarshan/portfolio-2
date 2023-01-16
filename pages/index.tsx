@@ -131,7 +131,7 @@ const Home: NextPage = (allprops: any) => {
             <meta name="keywords" content="Portfolio website" />
             <meta name="keywords" content="Developer portfolio" />
             <meta name="description" content="Vidarshan's portfolio website" />
-            <meta property="og:title" content="Vidarshan's Portolio" />
+            <meta property="og:title" content="Vidarshan's Portfolio" />
             <meta property="og:type" content="article" />
             <meta property="og:url" content="https://www.vidarshan.dev/" />
             <meta
@@ -341,19 +341,16 @@ export async function getStaticProps() {
       username: GITHUB_USERNAME as string,
       token: GITHUB_PAT as string,
     });
-
     const githubstars = await githubresponse.json();
     const githubstarscount = { star_count: githubstars.length };
     const githubcontributionscount = {
       contributions_count: githubcontributionsresponse.data,
     };
-
     let allprops = {
       ...stackoverflow,
       ...githubstarscount,
       ...githubcontributionscount,
     };
-
     return {
       props: { allprops },
       revalidate: 1,
