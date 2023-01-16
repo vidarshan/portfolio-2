@@ -102,9 +102,29 @@ export const projects = [
       },
     ],
   },
-
   {
     id: 5,
+    name: "Great Success",
+    description:
+      "Great quotes to get you inspired and moving through the day, a simple yet, inspiring project. Deployed to Vercel.",
+    image: "../images/greatsuccess.webp",
+    repo: "https://github.com/vidarshan/great-success",
+    demo: "https://great-success-lovat.vercel.app/",
+    technologies: [
+      {
+        id: 1,
+        name: "React JS",
+        color: "blue",
+      },
+      {
+        id: 2,
+        name: "Mantine",
+        color: "blue",
+      },
+    ],
+  },
+  {
+    id: 6,
     name: "Findmystay",
     description:
       "A mock website to find hotels in california. The users can view hotels, the rates of the hotels, images of the hotels, the facilities in the hotels and the ratings given to the hotels. Almost a static website made for convenience of the travellers.",
@@ -136,7 +156,7 @@ export const projects = [
   },
 
   {
-    id: 6,
+    id: 7,
     name: "Carmax ERP",
     description:
       "An Enterprise Resource Planning application for a car service center, which is used to manage their day-to-day workflow, such as managing service operations, maintaining employee records, inventory control and tracking cash inflows and outflows.",
@@ -172,7 +192,7 @@ export const projects = [
     ],
   },
   {
-    id: 7,
+    id: 8,
     name: "Portfolio V1",
     description:
       "The very first version of my portfolio website made with no UI frameworks. Served the primary purpose of showing my information. Almost every element was implemented with SCSS. Deprecated in favour of the portfolio website you are currently viewing, as this has much better performance and responsiveness.",
