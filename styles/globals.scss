@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Manrope", sans-serif !important;
+  font-family: 'PT Mono', monospace;
 }
 
 a {
@@ -29,7 +29,7 @@ span,
 .mantine-Spoiler-control,
 .mantine-Anchor-root,
 div {
-  font-family: "Manrope", sans-serif !important;
+  font-family: 'PT Mono', monospace;
 }
 
 .mantine-Spoiler-control {
@@ -62,7 +62,7 @@ li{
 button,
 input,
 .mantine-Card-root {
-  border-radius: 0 !important;
+  border-radius: 10px !important;
 }
 
 .mantine-Timeline-itemTitle {
@@ -81,16 +81,24 @@ input,
 
 .row-bottom-top-spacing {
   margin-top: 1rem !important;
+  font-family: 'PT Mono', monospace !important;
   margin-bottom: 1rem !important;
 }
 
 .row-bottom-top-spacing-half {
   margin-top: 0.5rem !important;
   margin-bottom: 0.5rem !important;
+  font-family: 'PT Mono', monospace !important;
 }
 
 .content-spacing {
   margin-top: 2rem !important;
+  font-family: 'PT Mono', monospace;
+
+  div{
+    font-family: 'PT Mono', monospace;
+    font-weight: 400;
+  }
 }
 
 .item-spacing-half {
@@ -109,6 +117,7 @@ input,
   font-size: 12px !important;
   font-weight: 600 !important;
   z-index: 100000 !important;
+  font-family: 'PT Mono', monospace !important;
 }
 
 @media screen and (max-width: 410px) {
@@ -191,9 +200,14 @@ input,
   }
 }
 
+.mantine-Text-root{
+  font-family: 'PT Mono', monospace !important;
+}
+
 @media screen and (max-width: 608px) {
   .header-text {
     font-size: 40px !important;
+    font-family: 'PT Mono', monospace !important;
   }
   .header-img img {
     height: 38px !important;
@@ -204,12 +218,14 @@ input,
 @media screen and (max-width: 590px) {
   .header-text {
     font-size: 34px !important;
+    font-family: 'PT Mono', monospace !important;
   }
 }
 
 @media screen and (max-width: 445px) {
   .header-text {
     font-size: 30px !important;
+    font-family: 'PT Mono', monospace !important;
   }
 
   .header-img img {
@@ -220,6 +236,7 @@ input,
 
 @media screen and (max-width: 395px) {
   .header-text {
+    font-family: 'PT Mono', monospace !important;
     font-size: 26px !important;
   }
   .header-img img {
@@ -231,6 +248,7 @@ input,
 @media screen and (max-width: 350px) {
   .header-text {
     font-size: 22px !important;
+    font-family: 'PT Mono', monospace !important;
   }
   .header-img img {
     height: 20px !important;
@@ -241,6 +259,7 @@ input,
 @media screen and (max-width: 305px) {
   .header-text {
     font-size: 20px !important;
+    font-family: 'PT Mono', monospace !important;
   }
   .header-img img {
     height: 18px !important;
@@ -251,6 +270,7 @@ input,
 @media screen and (max-width: 284px) {
   .header-text {
     font-size: 18px !important;
+    font-family: 'PT Mono', monospace !important;
   }
   .header-img img {
     height: 16px !important;
@@ -270,4 +290,13 @@ button {
 
 h1{
   font-family: inherit !important;
+}
+
+textarea{
+  border-radius: 10px !important;
+
+}
+
+.full-height-card{
+ min-height: 100%;
 }

@@ -25,13 +25,13 @@ const About = () => {
                 <Image
                   width={70}
                   height={70}
-                  radius="xs"
+                  radius="sm"
                   src={profileimg.src}
                   alt="avatar"
                 />
                 <div>
                   <Text weight={600} size="md">
-                    Vidarshan Adithya
+                    Vidarshan Adithya Rathnayake
                   </Text>
                   <Text weight={500} size="sm">
                     Software Engineer
@@ -50,14 +50,21 @@ const About = () => {
                   {`I'm`} a Software Engineer who likes to see things being
                   built one line of code at a time. Well organised and prefers
                   to have incremental self-development based on the knowledge
-                  gained. <br /> <br />I have nearly 2 years of industry
+                  gained. <br /> <br />I have nearly 3 years of industry
                   experience, and I am gaining more knowledge day-by-day, as I
                   am a quick learner who likes to implement and make use of the
-                  knowledge gained in order to create great things.
+                  knowledge gained, in order to create great things.
+                  <br /> <br />
+                  {`I'm`} currently working with javascript and typescript based
+                  frameworks such as React, React Native, Node JS, Express JS
+                  and much more.
                   <br /> <br />
                   My goal is to create high quality software products written
                   with quality code and based on unique ideas, which will have a
-                  positive impact to the society, while becoming a great
+                  positive impact and make positive changes in the day-to-day
+                  lives of people.
+                  <br /> <br />
+                  {`I'm`} also working towards my target of becoming a great
                   software engineer among the best software engineers.{`"`}
                 </Text>
               </Blockquote>{" "}
@@ -81,7 +88,7 @@ const About = () => {
                         key={tech.id}
                         color={tech.color}
                         variant="dot"
-                        radius="xs"
+                        radius="lg"
                         size="lg"
                       >
                         {tech.name}
@@ -103,7 +110,7 @@ const About = () => {
                           key={tech.id}
                           color={tech.color}
                           variant="dot"
-                          radius="xs"
+                          radius="lg"
                           size="lg"
                         >
                           {tech.name}
@@ -128,7 +135,7 @@ const About = () => {
                           key={tech.id}
                           color={tech.color}
                           variant="dot"
-                          radius="xs"
+                          radius="lg"
                           size="lg"
                         >
                           {tech.name}

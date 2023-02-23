@@ -162,6 +162,7 @@ const Home: NextPage = (allprops: any) => {
               <Group m={10}>
                 <ActionIcon
                   title="Home"
+                  radius="xs"
                   onClick={() => scrollTo({ y: scrollPositions[0].position })}
                 >
                   <BiHomeAlt size={18} />
@@ -169,6 +170,7 @@ const Home: NextPage = (allprops: any) => {
 
                 <ActionIcon
                   title="About"
+                  radius="xs"
                   onClick={() => scrollTo({ y: scrollPositions[1].position })}
                 >
                   <BiSmile size={18} />
@@ -176,6 +178,7 @@ const Home: NextPage = (allprops: any) => {
 
                 <ActionIcon
                   title="Work"
+                  radius="xs"
                   onClick={() => scrollTo({ y: scrollPositions[2].position })}
                 >
                   <BiBriefcaseAlt2 size={18} />
@@ -183,12 +186,14 @@ const Home: NextPage = (allprops: any) => {
 
                 <ActionIcon
                   title="Projects"
+                  radius="xs"
                   onClick={() => scrollTo({ y: scrollPositions[3].position })}
                 >
                   <BiCategoryAlt size={18} />
                 </ActionIcon>
                 <ActionIcon
                   title="Testimonials"
+                  radius="xs"
                   onClick={() => scrollTo({ y: scrollPositions[4].position })}
                 >
                   <BiMedal size={18} />
@@ -196,6 +201,7 @@ const Home: NextPage = (allprops: any) => {
 
                 <ActionIcon
                   title="Reach out"
+                  radius="xs"
                   onClick={() => scrollTo({ y: scrollPositions[5].position })}
                 >
                   <BiMailSend size={18} />
@@ -203,6 +209,7 @@ const Home: NextPage = (allprops: any) => {
 
                 <ActionIcon
                   color="yellow"
+                  radius="xs"
                   onClick={() => toggleColorScheme()}
                   title="Toggle color scheme"
                 >
@@ -220,8 +227,9 @@ const Home: NextPage = (allprops: any) => {
                   <ActionIcon
                     style={transitionStyles}
                     onClick={() => scrollTo({ y: 0 })}
-                    color="dark"
+                    color="blue"
                     variant="filled"
+                    radius="lg"
                   >
                     <FiArrowUp />
                   </ActionIcon>
@@ -266,6 +274,7 @@ const Home: NextPage = (allprops: any) => {
                               repo={project.repo}
                               demo={project.demo}
                               technologies={project.technologies}
+                              tags={project.tags}
                             />
                           </Col>
                         );

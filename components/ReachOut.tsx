@@ -89,7 +89,8 @@ const ReachOut = () => {
           icon={<BsFillCircleFill />}
           title="Available"
           color="green"
-          radius="xs"
+          radius="lg"
+          variant="light"
         >
           Feel free to drop a message if you have an interesting opportunity for
           me.
@@ -124,7 +125,7 @@ const ReachOut = () => {
               <Button
                 type="submit"
                 leftIcon={<RiSendPlaneFill />}
-                variant="default"
+                color="blue"
                 fullWidth
               >
                 Send Message
@@ -225,14 +226,10 @@ const ReachOut = () => {
             </Col>
             <Col span={12}>
               <Anchor
-                href="https://drive.google.com/file/d/1tMXI9REgu2wbN5duMX3p97M9HkFRV5w_/view?usp=sharing"
+                href="https://drive.google.com/file/d/1OeF-l8vg8hDI0eVMWhzG2aacRChCWtEy/view?usp=share_link"
                 target="_blank"
               >
-                <Button
-                  leftIcon={<BsCloudDownload />}
-                  variant="default"
-                  fullWidth
-                >
+                <Button leftIcon={<BsCloudDownload />} color="blue" fullWidth>
                   Download my Resume
                 </Button>
               </Anchor>

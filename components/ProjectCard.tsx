@@ -23,6 +23,7 @@ interface IProjectCard {
   repo: string;
   demo: string;
   technologies: Array<any>;
+  tags: Array<string>;
 }
 
 const ProjectCard: React.FC<PropsWithChildren<IProjectCard>> = ({
@@ -33,9 +34,10 @@ const ProjectCard: React.FC<PropsWithChildren<IProjectCard>> = ({
   repo,
   demo,
   technologies,
+  tags,
 }) => {
   return (
-    <Card withBorder padding="lg">
+    <Card className="full-height-card" padding="lg" withBorder>
       <Grid>
         <Col xs={12} sm={12} md={12} lg={5} xl={12} span={6}>
           <Card.Section>
@@ -46,6 +48,9 @@ const ProjectCard: React.FC<PropsWithChildren<IProjectCard>> = ({
               alt="project image"
             />
           </Card.Section>
+        </Col>
+        <Col>
+          <Divider />
         </Col>
         <Col
           sx={{
@@ -64,15 +69,28 @@ const ProjectCard: React.FC<PropsWithChildren<IProjectCard>> = ({
               <Text size="md" weight={700}>
                 {name}
               </Text>
-              {id === 1 && (
-                <Badge radius="xs" variant="filled" color="yellow">
-                  Top
-                </Badge>
-              )}
+              {tags.map((tag) => {
+                return (
+                  <Badge
+                    key={tag}
+                    radius="lg"
+                    variant="dot"
+                    color={
+                      tag === "Frontend"
+                        ? "yellow"
+                        : tag === "Full-stack"
+                        ? "red"
+                        : "green"
+                    }
+                  >
+                    {tag}
+                  </Badge>
+                );
+              })}
             </Group>
             <div>
               {repo === "no-repo" && demo === "no-demo" ? (
-                <Badge radius="xs" variant="outline">
+                <Badge radius="xs" variant="dot">
                   Upcoming
                 </Badge>
               ) : (
@@ -109,7 +127,12 @@ const ProjectCard: React.FC<PropsWithChildren<IProjectCard>> = ({
             </div>
           </Group>
           <Space h="xl" />
-          <Spoiler maxHeight={100} showLabel="Show more" hideLabel="Show less">
+          <Spoiler
+            color=""
+            maxHeight={100}
+            showLabel="Show more"
+            hideLabel="Show less"
+          >
             <Text weight={600} align="justify" size="sm">
               {description}
             </Text>
@@ -121,8 +144,8 @@ const ProjectCard: React.FC<PropsWithChildren<IProjectCard>> = ({
                 <Badge
                   key={key}
                   className="badge-spacing"
-                  radius="xs"
-                  size="md"
+                  radius="lg"
+                  size="lg"
                   variant="dot"
                   color={technology.color}
                 >
