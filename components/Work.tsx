@@ -11,7 +11,7 @@ import {
   Anchor,
 } from "@mantine/core";
 import { BsDash } from "react-icons/bs";
-import { BiBriefcase, BiStop } from "react-icons/bi";
+import { BiBriefcase, BiCircle, BiStop } from "react-icons/bi";
 import Link from "next/link";
 
 const Work = () => {
@@ -40,7 +40,7 @@ const Work = () => {
           <Text weight={700} size="sm">
             Contributed as a full stack developer to the team.
           </Text>
-          <List spacing="xs" size="sm" center icon={<BiStop />} mt={30}>
+          <List spacing="xs" size="sm" center icon={<BiCircle />} mt={30}>
             <List.Item>
               Contributed to existing web applications based on React JS, to
               extend and improve their functionality.
@@ -95,7 +95,7 @@ const Work = () => {
           <Text weight={700} size="sm">
             Contributed as a full stack developer to the team.
           </Text>
-          <List spacing="xs" size="sm" center icon={<BiStop />} mt={30}>
+          <List spacing="xs" size="sm" center icon={<BiCircle />} mt={30}>
             <List.Item>
               Revamped web applications with old user interfaces to modern and
               updated user interfaces.
@@ -151,7 +151,7 @@ const Work = () => {
           <Text weight={700} size="sm">
             Contributed as a full stack developer to the team.
           </Text>
-          <List spacing="xs" size="sm" center icon={<BiStop />} mt={30}>
+          <List spacing="xs" size="sm" center icon={<BiCircle />} mt={30}>
             <List.Item>
               Gained knowledge and implemented end-to-end testing for web
               applications.
@@ -209,7 +209,7 @@ const Work = () => {
           <Text weight={700} size="sm">
             Contributed as a full stack developer to the team.
           </Text>
-          <List spacing="xs" size="sm" center icon={<BiStop />} mt={30}>
+          <List spacing="xs" size="sm" center icon={<BiCircle />} mt={30}>
             <List.Item>
               Designed user interfaces with Figma and implemented those with
               code.
@@ -266,7 +266,7 @@ const Work = () => {
             allows users to create mobile applications with ease. Contributing
             as a frontend engineer to the team.
           </Text>
-          <List spacing="xs" size="sm" center icon={<BiStop />} mt={30}>
+          <List spacing="xs" size="sm" center icon={<BiCircle />} mt={30}>
             <List.Item>
               Implementing extensive Javascript/ Typescript based
               functionalities to design and develop mobile apps from a content
