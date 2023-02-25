@@ -4,9 +4,57 @@ import wave from "../images/wave.webp";
 import React from "react";
 import { BsCommand } from "react-icons/bs";
 import { useOs } from "@mantine/hooks";
+import { motion } from "framer-motion";
 
 const Header = () => {
   const os = useOs();
+  const words = [
+    <Group key={1}>
+      <Text className="header-text" size="xl" weight={700}>
+        Hello
+      </Text>
+      <Image height={40} width={40} src={wave.src} alt="wave" />
+    </Group>,
+    <Text
+      className="header-text"
+      size="xl"
+      weight={700}
+      key={2}
+    >{`I'm Vidarshan.`}</Text>,
+    <Group key={3}>
+      <Text className="header-text" size="xl" weight={700}>
+        A Software Engineer.
+      </Text>
+      <Image
+        className="header-img"
+        height={40}
+        width={40}
+        src={technologist.src}
+        alt="avatar"
+      />
+    </Group>,
+  ];
+
+  const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  };
+
   return (
     <Group
       position="apart"
@@ -19,33 +67,18 @@ const Header = () => {
         minWidth: "100%",
       }}
     >
-      <Group>
-        <Text className="header-text" size="xl" weight={700}>
-          Hello
-        </Text>
-        <Image
-          className="header-img wave"
-          height={40}
-          width={40}
-          src={wave.src}
-          alt="wave"
-        />
-      </Group>
-      <Text className="header-text" size="xl" weight={700}>
-        {`I'm Vidarshan.`}
-      </Text>
-      <Group>
-        <Text className="header-text" size="xl" weight={700}>
-          A Software Engineer.
-        </Text>
-        <Image
-          className="header-img"
-          height={40}
-          width={40}
-          src={technologist.src}
-          alt="avatar"
-        />
-      </Group>
+      <motion.div
+        className="container"
+        variants={container}
+        initial="hidden"
+        animate="visible"
+      >
+        {words.map((index) => (
+          <motion.div key={index.key} className="item" variants={item}>
+            {index}
+          </motion.div>
+        ))}
+      </motion.div>
       {os === "macos" || os === "windows" || os === "linux" ? (
         <div style={{ display: "flex", alignItems: "center" }}>
           <Kbd>{os === "macos" ? <BsCommand /> : "Ctrl"}</Kbd>

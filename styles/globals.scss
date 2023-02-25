@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 a {
@@ -11,7 +11,7 @@ a {
   text-decoration: none;
 }
 
-li{
+li {
   font-weight: 500 !important;
 }
 
@@ -29,7 +29,7 @@ span,
 .mantine-Spoiler-control,
 .mantine-Anchor-root,
 div {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 .mantine-Spoiler-control {
@@ -55,7 +55,7 @@ div {
   margin: 0.4rem 0.2rem !important;
 }
 
-li{
+li {
   font-weight: 700 !important;
 }
 
@@ -81,22 +81,22 @@ input,
 
 .row-bottom-top-spacing {
   margin-top: 1rem !important;
-  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-family: "Plus Jakarta Sans", sans-serif !important;
   margin-bottom: 1rem !important;
 }
 
 .row-bottom-top-spacing-half {
   margin-top: 0.5rem !important;
   margin-bottom: 0.5rem !important;
-  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-family: "Plus Jakarta Sans", sans-serif !important;
 }
 
 .content-spacing {
   margin-top: 2rem !important;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
 
-  div{
-    font-family: 'Plus Jakarta Sans', sans-serif;
+  div {
+    font-family: "Plus Jakarta Sans", sans-serif;
     font-weight: 400;
   }
 }
@@ -117,7 +117,7 @@ input,
   font-size: 12px !important;
   font-weight: 600 !important;
   z-index: 100000 !important;
-  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-family: "Plus Jakarta Sans", sans-serif !important;
 }
 
 @media screen and (max-width: 410px) {
@@ -200,14 +200,14 @@ input,
   }
 }
 
-.mantine-Text-root{
-  font-family: 'Plus Jakarta Sans', sans-serif !important;
+.mantine-Text-root {
+  font-family: "Plus Jakarta Sans", sans-serif !important;
 }
 
 @media screen and (max-width: 608px) {
   .header-text {
     font-size: 40px !important;
-    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-family: "Plus Jakarta Sans", sans-serif !important;
   }
   .header-img img {
     height: 38px !important;
@@ -218,14 +218,14 @@ input,
 @media screen and (max-width: 590px) {
   .header-text {
     font-size: 34px !important;
-    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-family: "Plus Jakarta Sans", sans-serif !important;
   }
 }
 
 @media screen and (max-width: 445px) {
   .header-text {
     font-size: 30px !important;
-    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-family: "Plus Jakarta Sans", sans-serif !important;
   }
 
   .header-img img {
@@ -236,7 +236,7 @@ input,
 
 @media screen and (max-width: 395px) {
   .header-text {
-    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-family: "Plus Jakarta Sans", sans-serif !important;
     font-size: 26px !important;
   }
   .header-img img {
@@ -248,7 +248,7 @@ input,
 @media screen and (max-width: 350px) {
   .header-text {
     font-size: 22px !important;
-    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-family: "Plus Jakarta Sans", sans-serif !important;
   }
   .header-img img {
     height: 20px !important;
@@ -259,7 +259,7 @@ input,
 @media screen and (max-width: 305px) {
   .header-text {
     font-size: 20px !important;
-    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-family: "Plus Jakarta Sans", sans-serif !important;
   }
   .header-img img {
     height: 18px !important;
@@ -270,7 +270,7 @@ input,
 @media screen and (max-width: 284px) {
   .header-text {
     font-size: 18px !important;
-    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-family: "Plus Jakarta Sans", sans-serif !important;
   }
   .header-img img {
     height: 16px !important;
@@ -282,25 +282,38 @@ button {
   text-decoration: none;
 }
 
-.mantine-Spoiler-control{
+.mantine-Spoiler-control {
   color: #339af0;
   font-weight: 600;
   font-size: 14px !important;
 }
 
-h1{
+h1 {
   font-family: inherit !important;
 }
 
-textarea{
+textarea {
   border-radius: 10px !important;
-
 }
 
-.full-height-card{
- min-height: 100%;
+.full-height-card {
+  min-height: 100%;
 }
 
-li{
+li {
   line-height: 1.6 !important;
+}
+
+.container {
+  width: 100%;
+}
+
+.item {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 50px;
+  font-weight: 700;
 }
