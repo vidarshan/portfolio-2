@@ -317,3 +317,12 @@ li {
   font-size: 50px;
   font-weight: 700;
 }
+
+.progress {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #339af0;
+  top: 0px;
+}

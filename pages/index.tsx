@@ -41,15 +41,16 @@ import {
   BiSmile,
   BiSun,
 } from "react-icons/bi";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import TestimonialCard from "../components/TestimonialCard";
 import { testimonials } from "../data/testimonials";
+import { motion, useScroll, useSpring } from "framer-motion";
 
 const Home: NextPage = (allprops: any) => {
   const preferredColorScheme = useColorScheme();
   const [colorScheme, setColorScheme] =
     useState<ColorScheme>(preferredColorScheme);
-  const scrollPositions: Array<any> = [];
+  const scrollPositions: Array<any> = useMemo(() => [], []);
   const [scroll, scrollTo] = useWindowScroll();
   const toggleColorScheme = (value?: ColorScheme) =>
     setColorScheme(value || (colorScheme === "dark" ? "light" : "dark"));
@@ -95,6 +96,13 @@ const Home: NextPage = (allprops: any) => {
       position: reachOutSectionElementPosition,
     });
   }, [scrollPositions]);
+
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
 
   return (
     <ColorSchemeProvider
@@ -159,6 +167,7 @@ const Home: NextPage = (allprops: any) => {
                 backgroundColor: colorScheme === "dark" ? "#1A1B1E" : "#ffffff",
               }}
             >
+              <motion.div className="progress" style={{ scaleX }} />
               <Group m={10}>
                 <ActionIcon
                   title="Home"

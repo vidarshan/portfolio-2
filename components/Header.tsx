@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 
 const Header = () => {
   const os = useOs();
+
   const words = [
     <Group key={1}>
       <Text className="header-text" size="xl" weight={700}>
