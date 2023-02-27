@@ -63,10 +63,7 @@ const Footer = (allprops: any) => {
         <Text weight={600} size="xs" align="center">
           &copy; Created by Vidarshan using Next.js
         </Text>
-        <Anchor
-          href="https://github.com/vidarshan/portfolio-v2"
-          target="_blank"
-        >
+        <Anchor href="https://github.com/vidarshan/portfolio-2" target="_blank">
           <Text color="blue" weight={600} size="xs" align="center">
             View Repo
           </Text>
