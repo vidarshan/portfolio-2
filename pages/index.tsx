@@ -131,7 +131,7 @@ const Home: NextPage = (allprops: any) => {
         }}
         withGlobalStyles
       >
-        <NotificationsProvider position="top-right">
+        <NotificationsProvider position="bottom-right">
           <Head>
             <title> {`Vidarshan's Portfolio`}</title>
             <meta name="Vidarshans" content="Vidarshan's portfolio website" />
