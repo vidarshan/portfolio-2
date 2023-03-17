@@ -5,9 +5,9 @@ export const projects = [
     description:
       "An e-commerce website, ideal for a tech gadget store. The minimalist user interface allows users to navigate within the application easily. Only the relevant information is shown, which makes the user interface even better. Includes the most needed features for an ecommerce website, such as search filters, shopping cart and an integrated mock payment gateway with Paypal.",
     image: "/images/techstop.webp",
-    repo: "https://github.com/vidarshan/tech-stop",
+    repo: "https://github.com/vidarshan/mern-gadget-shop",
     demo: "https://tech-stop.onrender.com/",
-    tags: ['Full-stack'],
+    tags: ["Full-stack"],
     technologies: [
       {
         id: 1,
@@ -48,7 +48,7 @@ export const projects = [
       "A mobile application, built with cross platform mobile development tools. Suitable for a small-mid local restaurant which needs to maintain a separate mobile application for their business operations. Consists of functionalities such as maintaining meal categories, customization of meals, maintaining meals in a cart, ordering meals and keeping track of deliveries.",
     image: "/images/mealcentral.webp",
     demo: "no-demo",
-    tags: ['Mobile'],
+    tags: ["Mobile"],
     repo: "https://github.com/vidarshan/restaurant-app",
     technologies: [
       {
@@ -76,7 +76,7 @@ export const projects = [
     image: "/images/openweather.webp",
     repo: "https://github.com/vidarshan/open-weather-app",
     demo: "https://beautiful-mandazi-1399bc.netlify.app/",
-    tags: ['Frontend'],
+    tags: ["Frontend"],
     technologies: [
       {
         id: 1,
@@ -113,7 +113,7 @@ export const projects = [
     image: "../images/githuber.webp",
     repo: "https://github.com/vidarshan/github-search",
     demo: "https://github-search-3.vercel.app/",
-    tags: ['Frontend'],
+    tags: ["Frontend"],
     technologies: [
       {
         id: 1,
@@ -140,7 +140,7 @@ export const projects = [
     image: "../images/greatsuccess.webp",
     repo: "https://github.com/vidarshan/great-success",
     demo: "https://great-success-lovat.vercel.app/",
-    tags: ['Frontend'],
+    tags: ["Frontend"],
     technologies: [
       {
         id: 1,
@@ -162,7 +162,7 @@ export const projects = [
     image: "../images/findmystay.webp",
     repo: "https://github.com/vidarshan/findmystayfe",
     demo: "https://find-your-home.vercel.app/",
-    tags: ['Full-stack'],
+    tags: ["Full-stack"],
     technologies: [
       {
         id: 1,
@@ -195,7 +195,7 @@ export const projects = [
     image: "/images/carmax.webp",
     repo: "no-repo",
     demo: "https://silly-villani-ee1088.netlify.app/",
-    tags: ['Full-stack'],
+    tags: ["Full-stack"],
     technologies: [
       {
         id: 1,
@@ -230,9 +230,9 @@ export const projects = [
     description:
       "The very first version of my portfolio website made with no UI frameworks. Served the primary purpose of showing my information. Almost every element was implemented with SCSS. Deprecated in favour of the portfolio website you are currently viewing, as this has much better performance and responsiveness.",
     image: "../images/portfolio.webp",
-    repo: "https://github.com/vidarshan/portfolio",
+    repo: "https://github.com/vidarshan/portfolio-1",
     demo: "https://brave-ritchie-79c17c.netlify.app/",
-    tags: ['Frontend'],
+    tags: ["Frontend"],
     technologies: [
       {
         id: 1,
