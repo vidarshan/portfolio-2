@@ -203,19 +203,6 @@ const ReachOut = () => {
                     </ActionIcon>
                   </Anchor>
                 </Tooltip>
-                <Tooltip
-                  transitionTimingFunction="ease"
-                  label="Twitter"
-                  position="bottom"
-                  radius="xs"
-                  withArrow
-                >
-                  <Anchor href="https://twitter.com/VidarshanR" target="_blank">
-                    <ActionIcon variant="hover" size="md">
-                      <BsTwitter style={{ width: 18, height: 18 }} />
-                    </ActionIcon>
-                  </Anchor>
-                </Tooltip>
               </Group>
             </Col>
             <Col span={12}>
