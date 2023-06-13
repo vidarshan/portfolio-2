@@ -1,16 +1,8 @@
 <h1 align="center">👨🏻‍💻 Portfolio 2</h1>
 
-<h3 align="center">
-  https://vidarshan.dev/
-</h3>
-
 <h4 align="center">
-Version 2 of my portfolio website with all of my developer related activities and information.
+Discontinued. Go to https://github.com/vidarshan/portfolio-3 for a better and an updated version
 </h4>
-
-<div align="center">
-<img src="https://therealsujitk-vercel-badge.vercel.app/?app=portfolio-v2" />
-</div>
 
 <br/>
 
