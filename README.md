@@ -1,7 +1,7 @@
 <h1 align="center">👨🏻‍💻 Portfolio 2</h1>
 
 <h4 align="center">
-Discontinued. Go to https://github.com/vidarshan/portfolio-3 for a better and an updated version
+🚫 Discontinued. Go to https://github.com/vidarshan/portfolio-3 for a better and an updated version 🚫
 </h4>
 
 <br/>
