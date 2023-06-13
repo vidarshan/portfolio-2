@@ -1,5 +1,8 @@
 <h1 align="center">👨🏻‍💻 Portfolio 2</h1>
 
+<h5 align='center'>https://brave-ritchie-79c17c.netlify.app/</h5>
+
+
 <h4 align="center">
 🚫 Discontinued. Go to https://github.com/vidarshan/portfolio-3 for a better and an updated version 🚫
 </h4>
@@ -10,6 +13,10 @@
   
 <img src="https://user-images.githubusercontent.com/48169745/162748995-1fc0a078-86eb-49dd-a105-4aa802d9bd26.png" />
 </div>
+
+## Update: 13-06-2023
+- This version of my portfolio was Discontinued on 13th June 2023, in favour of https://github.com/vidarshanadithya/portfolio-3. You can visit the new site with the link https://vidarshan.dev/.
+
 
 ## 🎛️ Tech Stack
 
