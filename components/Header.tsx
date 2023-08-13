@@ -1,4 +1,4 @@
-import { Group, Text, Image, Kbd } from "@mantine/core";
+import { Group, Text, Image, Kbd, Alert, Anchor } from "@mantine/core";
 import technologist from "../images/technologist.webp";
 import wave from "../images/wave.webp";
 import React from "react";
@@ -57,41 +57,62 @@ const Header = () => {
   };
 
   return (
-    <Group
-      position="apart"
-      sx={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "flex-start",
-        flexDirection: "column",
-        height: "90vh",
-        minWidth: "100%",
-      }}
-    >
-      <motion.div
-        className="container"
-        variants={container}
-        initial="hidden"
-        animate="visible"
+    <>
+      <Alert
+        mt={20}
+        variant="outline"
+        title="Attention!"
+        color="yellow"
+        radius="xs"
+        className="discontinued"
       >
-        {words.map((index) => (
-          <motion.div key={index.key} className="item" variants={item}>
-            {index}
-          </motion.div>
-        ))}
-      </motion.div>
-      {os === "macos" || os === "windows" || os === "linux" ? (
-        <div style={{ display: "flex", alignItems: "center" }}>
-          <Kbd>{os === "macos" ? <BsCommand /> : "Ctrl"}</Kbd>
-          <span style={{ margin: "0 5px" }}>+</span>
-          <Kbd>j</Kbd>
-          <Text className="word-spacing-small" weight={600} size="xs">
-            {" "}
-            to toggle theme
-          </Text>
-        </div>
-      ) : null}
-    </Group>
+        This version of portfolio is now discontinued and does not get updated.
+        Visit the newer version{" "}
+        <Anchor
+          size="sm"
+          color="green"
+          href="https://vidarshan.dev/"
+          target="_blank"
+        >
+          @ vidarshan.dev
+        </Anchor>
+      </Alert>
+      <Group
+        position="apart"
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "flex-start",
+          flexDirection: "column",
+          height: "90vh",
+          minWidth: "100%",
+        }}
+      >
+        <motion.div
+          className="container"
+          variants={container}
+          initial="hidden"
+          animate="visible"
+        >
+          {words.map((index) => (
+            <motion.div key={index.key} className="item" variants={item}>
+              {index}
+            </motion.div>
+          ))}
+        </motion.div>
+        {os === "macos" || os === "windows" || os === "linux" ? (
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <Kbd>{os === "macos" ? <BsCommand /> : "Ctrl"}</Kbd>
+            <span style={{ margin: "0 5px" }}>+</span>
+            <Kbd>j</Kbd>
+            <Text className="word-spacing-small" weight={600} size="xs">
+              {" "}
+              to toggle theme
+            </Text>
+          </div>
+        ) : null}
+      </Group>
+    </>
   );
 };
 
